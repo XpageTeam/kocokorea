@@ -1,3 +1,4 @@
+.mobile-menu
 header.head
 	.head-top-cont
 		.wrapper
@@ -5,36 +6,39 @@ header.head
 				.head-logo
 					a(href="")
 						include ../../img/logo.svg
-	.head-mid-cont
-		.wrapper
-			.head-middle
-				.head-logo
-					a(href="")
-
-				.search-cont
+				.head-search-cont
 					form(action="")
-						.search
-							input(type="text" placeholder="Поиск по сайту")
-							input(type="submit" value="Поиск").btn
-				a(href="").btn.btn--white Вход
-				a(href="").btn Регистрация
+						.head-search
+							input(type="text" palceholder='Что будем искать?')
+							input(type="submit" value="Искать")
+				.head-phone
+					a(href="tel:89184899841") 8 918 489-98-41
+
+				.head-callback
+					a(href="").fancybox Заказать звонок
+				.head-city
+					span Челябинск
+				.head-favorite
+					span
+						include ../../img/ico-favorite.svg
+				.head-cart
+					span
+						include ../../img/ico-cart.svg
 				.burger
 					span
+
 	.head-bot-cont
 		.wrapper
 			.head-bot
 				nav.main-nav
 					ul.main-nav__list
 						li.main-nav__item
-							a(href="#menu").main-nav__link.fancybox.btn Получить поддержку
-						each title, i in ['Онлайн-запись', 'Календарь мероприятий', 'Новости', 'Документы', 'Контакты', 'Игра']
+							a(href="#menu").main-nav__link.fancybox.btn Продукция
+						each title, i in ['Бренды', 'Блог', 'О компании', 'История о Ким', 'YouTube', 'Отзывы', 'Контакты']
 							li.main-nav__item
 								a(href="").main-nav__link=title
 
-				.head-phone
-					a(href="tel:88003502474") 8 800 350 24 74
-					a(href="#").fancybox Заказать звонок
+				
 				
 
-.mobile-menu
 	

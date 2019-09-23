@@ -8,6 +8,66 @@ html(lang="ru")
 	body.main.loading
 		include inc/header.pug
 		main#content
+			.main-banner-cont
+				.wrapper
+					.main-banner
+						.swiper-wrapper
+							- for (let i = 0; i < 5; i++)
+								.swiper-slide
+									a(href="").main-banner__slide
+										figure.main-banner__slide-img
+											picture
+												source(srcset="img/photos/main-slide.jpg" media="screen and (min-width: 660px)" data-main="data-main")
+												source(srcset="img/photos/main-slide-mobile.jpg" media="screen and (max-width: 660px)")
+												img
+										.main-banner__info-cont
+											.wrapper
+												.main-banner__info
+													.main-banner__info-label
+													.main-banner__info-title
+													.main-banner__info-btn
+														.btn
+						.swiper-pagination
+						.swiper-button.swiper-button-prev
+						.swiper-button.swiper-button-next
+
+			.main-youtube-cont
+				.wrapper
+					.main-youtube
+						.main-youtube__info
+							.main-youtube__title САМЫЕ ПОПУЛЯРНЫЕ ПАТЧИ ОТ PETITFEE
+							.main-youtube__text PETITFEE – самый популярный в Южной Корее бренд, специализирующийся на гидрогелевых патчах и масках. Отличительная особенность патчей PETITFEE – идеальное прилегание к коже.
+							.main-youtube__link
+								a(href="") Смотреть на YouTube
+						.main-youtube__video
+							a(href="").main-youtube__img
+								img(src="img/photos/youtube.jpg", alt="")
+			.slider-default
+				.slider-default__title Новинки
+				.slider-default__link Смотреть всё
+				.swiper-list
+					.swiper-wrapper
+						.swiper-slide
+							.slider-default__slide
+								figure.slider-default__img
+									img(src="", alt="")
+									.label--new new
+									a(href="").slider-default__favorite
+										span
+											include ../../img/ico-favorite.svg
+
+								.slider-default__brand
+								.slider-default__title
+								.slider-default__price
+								.slider-default__btn
+									a(href="").btn
+
+
+
+
+
+
+
 			
 
 
