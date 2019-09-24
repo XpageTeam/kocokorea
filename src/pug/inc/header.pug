@@ -9,7 +9,7 @@ header.head
 				.head-search-cont
 					form(action="")
 						.head-search
-							input(type="text" palceholder='Что будем искать?')
+							input(type="text" placeholder="Что будем искать?")
 							input(type="submit" value="Искать")
 				.head-phone
 					a(href="tel:89184899841") 8 918 489-98-41
@@ -19,11 +19,13 @@ header.head
 				.head-city
 					span Челябинск
 				.head-favorite
-					span
-						include ../../img/ico-favorite.svg
+					a(href="")
+						span(data-count="2")
+							include ../../img/ico-favorite.svg
 				.head-cart
-					span
-						include ../../img/ico-cart.svg
+					a(href="")
+						span(data-count="2")
+							include ../../img/ico-cart.svg
 				.burger
 					span
 
@@ -33,10 +35,10 @@ header.head
 				nav.main-nav
 					ul.main-nav__list
 						li.main-nav__item
-							a(href="#menu").main-nav__link.fancybox.btn Продукция
-						each title, i in ['Бренды', 'Блог', 'О компании', 'История о Ким', 'YouTube', 'Отзывы', 'Контакты']
+							a(href="").main-nav__link Продукция
+						each item, i in [{title: 'Бренды', href: ""}, {title: 'Блог', href: ""}, {title: 'О компании', href: ""}, {title: 'История о Ким', href: ""}, {title: 'YouTube', href: "youtube"}, {title: 'Отзывы', href: ""}, {title: 'Контакты', href: ""}]
 							li.main-nav__item
-								a(href="").main-nav__link=title
+								a(href=''+item.href+'').main-nav__link=item.title
 
 				
 				

@@ -23,10 +23,10 @@ html(lang="ru")
 										.main-banner__info-cont
 											.wrapper
 												.main-banner__info
-													.main-banner__info-label
-													.main-banner__info-title
+													.main-banner__info-label Новые поступления
+													.main-banner__info-title Уход от ETUDE HOUSE<br> Baking Powder
 													.main-banner__info-btn
-														.btn
+														.btn Подробнее
 						.swiper-pagination
 						.swiper-button.swiper-button-prev
 						.swiper-button.swiper-button-next
@@ -42,25 +42,149 @@ html(lang="ru")
 						.main-youtube__video
 							a(href="").main-youtube__img
 								img(src="img/photos/youtube.jpg", alt="")
-			.slider-default
-				.slider-default__title Новинки
-				.slider-default__link Смотреть всё
-				.swiper-list
-					.swiper-wrapper
-						.swiper-slide
-							.slider-default__slide
-								figure.slider-default__img
-									img(src="", alt="")
-									.label--new new
-									a(href="").slider-default__favorite
-										span
-											include ../../img/ico-favorite.svg
+			.slider-default-cont
+				.wrapper
+					.slider-default
+						.slider-default__title Новинки
+						.slider-default__link 
+							a(href="") Смотреть всё
+						.swiper-list
+							.swiper-wrapper
+								- for (let i = 0; i < 5; i++)
+									each item, i in [{brand: "Ayoume", title: "Крем с муцином черной улитки", price: "139 руб."}, {brand: "Secret Nature", title: " Увлажняющая сыворотка с зеленым чаем", price: "1399 руб."}, {brand: "Frudia", title: "Очищающая пенка с экстрактом манго", price: "459 руб."}, {brand: "Berrisom", title: "Точечный патч против акне", price: "699 руб."}]
+										.swiper-slide
+											.slider-default__slide
+												figure.slider-default__img
+													img(src="img/photos/slider-default-"+i+".png", alt="")
+													.slider-default__label
+														.label--new new
+													a(href="").slider-default__favorite
+														span
+															include ../img/ico-favorite.svg
 
-								.slider-default__brand
-								.slider-default__title
-								.slider-default__price
-								.slider-default__btn
-									a(href="").btn
+												.slider-default__brand=item.brand
+												.slider-default__title=item.title
+												.slider-default__price=item.price
+												.slider-default__btn
+													a(href="").btn Добавить в корзину
+			.main-catalog-cont
+				.wrapper
+					.main-catalog
+						.main-catalog__list
+							each title, i in ["Уход за лицом", "Специальные комплексы", "Для волос", "Для тела", "Макияж", "Гигиена", "Для дома"]
+								a(href="").main-catalog__item
+									.main-catalog__item-info
+										.main-catalog__item-title=title
+										.main-catalog__item-link Смотреть
+									.main-catalog__item-img
+										img(src="img/photos/main-cat-"+i+".png", alt="")
+			.about-kim-cont
+				.wrapper
+					.about-kim
+						.about-kim__info
+							.about-kim__title Знакомьтесь! Это малышка Ким Коко
+							.about-kim__text
+								.text-page
+									p Она приехала из маленькой красочной деревушки Букчон в Южной Кореи погостить у своей русской бабушки. 
+									p В Корее Ким учится в старшей школе и занимается танцами. А ещё она не может представить и дня без уходовой косметики! И Ким готова делиться своими бьюти-секретами со своими русскими друзьями!
+							.about-kim__link
+								a(href="").btn Читать историю о Ким
+						.about-kim__img
+							img(src="img/photos/about-kim.png", alt="")
+
+			.slider-default-cont
+				.wrapper
+					.slider-default
+						.slider-default__title Бестселлеры
+						.slider-default__link 
+							a(href="") Смотреть всё
+						.swiper-list
+							.swiper-wrapper
+								.swiper-slide
+									.slider-default__slide
+										figure.slider-default__img
+											img(src="img/photos/slider-default-5.png", alt="")
+											.slider-default__label
+												.label--new new
+												.label--percent %
+											a(href="").slider-default__favorite
+												span
+													include ../img/ico-favorite.svg
+
+										.slider-default__brand Secret  Key
+										.slider-default__title Увлажняющий паровой крем с цветочным ароматом
+										.slider-default__price 
+											.price-old 979 руб.
+											.price 879 руб.
+										.slider-default__btn
+											a(href="").btn Добавить в корзину
+
+								- for (let i = 4; i < 9; i++)
+									each item, i in [{brand: "Pretti", title: "Увлажняющий крем для осветления на основе...", price: "579 руб."}, {brand: "Secret  Key", title: "  Увлажняющий паровой крем с цветочным ароматом", price: "1399 руб."}, {brand: "The Histoty of Whoo", title: "Увлажняющий мист длительного действия", price: "1790 руб."}, {brand: "Elizavecca", title: "Пенка с древесным углем для очищения и сужения пор", price: "699 руб."}]
+										.swiper-slide
+											.slider-default__slide
+												figure.slider-default__img
+													img(src="img/photos/slider-default-"+i+".png", alt="")
+													.slider-default__label
+														.label--new new
+														.label--percent %
+													a(href="").slider-default__favorite
+														span
+															include ../img/ico-favorite.svg
+
+												.slider-default__brand=item.brand
+												.slider-default__title=item.title
+												.slider-default__price
+													.price=item.price
+												.slider-default__btn
+													a(href="").btn Добавить в корзину
+			.brands-cont
+				.wrapper
+					.brands
+						.brands__list
+							- for (let i = 0; i < 4; i++)
+								a(href="").brands__item
+									figure
+										img(src="img/brands-"+i+".png", alt="")
+
+							- for (let i = 0; i < 4; i++)
+								a(href="").brands__item
+									figure
+										img(src="img/brands-"+i+".png", alt="")
+			.testemonials-cont
+				.wrapper
+					.testemonials
+						.testemonials__title Отзывы #Kocokorea
+							.swiper-wrapper
+								- for (let i = 0; i < 3; i++)
+									.swiper-slide
+										a(href="").testemonials__item
+											figure
+												img(src="img/photos/testemonials-"+i+".jpg", alt="")
+											.testemonials__item-info
+												.testemonials__item-name
+												.testemonials__item-ico
+													span
+														include ../img/ico-instagram.svg
+							.swiper-button.swiper-button-prev
+							.swiper-button.swiper-button-next
+			.main-soc-cont
+				.wrapper
+					.main-soc
+						.main-soc__title Присоединяйтесь к нам!
+						.main-soc__list
+							a(href="").main-soc__item
+								.main-soc__item-img
+									include ../img/ico-vk.svg
+								.main-soc__item-img 2 тыс.
+							a(href="").main-soc__item
+								.main-soc__item-img
+									include ../img/ico-inst.svg
+								.main-soc__item-text 10 тыс.
+							a(href="").main-soc__item
+								.main-soc__item-img
+									include ../img/ico-youtube.svg
+								.main-soc__item-text 1 тыс.
 
 
 
@@ -68,7 +192,7 @@ html(lang="ru")
 
 
 
-			
+
 
 
 			

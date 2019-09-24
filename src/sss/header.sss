@@ -1,1 +1,179 @@
-.header
+.head
+	margin-bottom: 50px
+
+	&-top
+		display: flex
+		align-items: center
+
+		&-cont
+			padding: 40px 0
+
+	&-logo
+		margin-right: 55px	
+
+	&-phone
+		margin-right: 10px
+
+		a
+			position: relative
+			padding-left: 20px
+			color: #373737
+			font-size: em(14)
+			font-weight: 500
+
+
+
+			&:before
+				content: ''
+				display: block
+				position: absolute
+				left: 0
+				top: 0
+				size: 10px
+				background-image: url('../img/ico-phone.svg')
+				background-repeat: no-repeat
+
+
+	&-callback
+		a 
+			font-size: em(11)
+			color: #E499B6
+
+	&-search
+		position: relative
+
+		input
+			&[type="text"]
+				border: 0
+				border-bottom: 1px solid #D4D4D4
+				height: 40px
+				padding: 0
+				width: 100%
+				padding-right: 60px
+
+			&[type="submit"]
+				position: absolute
+				top: 0
+				right: 0
+				border: 0
+				background-color: transparent
+				font-size: 0
+				padding: 0
+				background-image: url('../img/ico-zoom.svg')
+				background-repeat: no-repeat
+				background-position: right 0 top 0
+				size: 40px
+
+		&-cont
+			margin-right: auto
+			max-width: 400px
+			width: 100%
+
+
+	&-city
+		position: relative
+		margin-left: 55px
+		font-size: em(13)
+		display: flex
+		align-items: flex-start
+
+		span
+			font-weight: 500
+
+		&:before
+			content: ''
+			display: inline-block
+			size: 9px 10px
+			margin-right: 10px
+			background-image: url('../img/ico-location.svg')
+			background-repeat: no-repeat
+			background-position: center
+
+	&-cart, &-favorite
+		position: relative
+		margin-left: 30px
+
+		span
+			&:after
+				content: attr(data-count)
+				display: block
+				position: absolute
+				top: -3px
+				right: -7px
+				size: 15px
+				border-radius: 50%
+				border: 1px solid #fff
+				background-color: var(--main-color)
+				color: #fff
+				font-size: 6px
+				font-weight: bold
+				text-align: center
+				line-height: 13px
+
+	&-bot-cont
+		background-color: #FFF4F8
+		padding: 20px 0
+
+
+.main-nav
+	&__list
+		display: flex
+		margin: 0
+
+	&__item
+		position: relative
+		display: flex
+
+
+		&:first-child
+
+			> a
+				color: var(--main-color)
+				font-weight: 600
+
+			&:before
+				content: ''
+				display: inline-block
+				margin-right: 13px
+				size: 10px
+				background-image: url('../img/ico-burger.svg')
+				background-repeat: no-repeat
+				background-position: center
+
+		&:not(:last-child)
+			margin-right: 40px
+
+	&__link
+		line-height: 1
+		font-size: em(14)
+		font-weight: 500
+		transition: color .3s ease
+
+		&:hover
+			color: var(--main-color)
+
+		&[href*="youtube"]
+			position: relative
+			display: flex
+			align-items: center
+
+			&:before
+				content: ''
+				size: 15px 10px
+				display: inline-block
+				margin-right: 10px
+				background-image: url('../img/ico-youtube.svg')
+				background-repeat: no-repeat
+				background-size: contain
+
+
+
+
+
+
+
+
+
+
+
+

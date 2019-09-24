@@ -39,17 +39,26 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	
 
-	// var supportsSwiper = new Swiper('.supports-slider', {
-	// 	effect: "fade",
-	// 	slidesPerView: 1,
-	// 	loop: true,
-	// 	roundLengths: true,
-	// 	a11y: false,
-	// 	navigation: {
-	// 		nextEl: '.supports-slider__arrows .swiper-button-next',
-	// 		prevEl: '.supports-slider__arrows .swiper-button-prev',
-	// 	},
-	// });
+	var mainSlaiderSwiper = new Swiper('.main-banner', {
+		effect: "fade",
+		slidesPerView: 1,
+		loop: true,
+		roundLengths: true,
+		a11y: false,
+		navigation: {
+			nextEl: '.main-banner .swiper-button-next',
+			prevEl: '.main-banner .swiper-button-prev',
+		},
+		pagination: {
+			el: ".swiper-pagination",
+			type: "bullets",
+			clickable: true
+		},
+		fadeEffect: {
+			crossFade: true
+		},
+
+	});
 
 
 
