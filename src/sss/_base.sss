@@ -128,7 +128,7 @@ a
 		white-space: nowrap
 
 	&:not([class])
-		color: var(--second-color)
+		color: var(--main-color)
 		transition: color .3s ease
 
 		&:hover, &:focus
@@ -184,15 +184,14 @@ li
 		border: 1px solid rgba(255, 255, 255, 0.1)
 		size: 50px
 		border-radius: 50%
-		transition: background .3s ease, border-color .3s ease
 		flex: none
+
+		img
+			max-width: 17px
 
 		&:not(:last-child)
 			margin-right: 12px
 
-		&:hover
-			background: #20274e
-			border-color: transparent
 
 
 .swiper-list

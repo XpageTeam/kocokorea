@@ -2,9 +2,30 @@
 	display: flex
 	align-items: center
 
+	&__info
+		margin-right: auto
+
 	&__video
+		position: relative
 		flex: none
 		margin-left: 50px
+
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			top: calc(50% - 43px)
+			left: calc(50% - 40px)
+			size: 80px 55px
+			background-image: url('../img/ico-youtube-play.svg')
+			background-repeat: no-repeat
+			background-position: center
+			transition: background-image .3s ease
+
+		&:hover
+			&:before
+				background-image: url('../img/ico-youtube-play-hover.svg')
+
 
 	&__title
 		font-weight: 600
@@ -13,4 +34,41 @@
 		text-transform: uppercase
 		margin-bottom: 30px
 
-	// &-cont
+
+
+	&__link
+		position: relative
+		display: flex
+		align-items: center
+		margin-top: 30px
+
+		&:before
+			content: ''
+			display: inline-block
+			size: 50px
+			border-radius: 50%
+			background-image: url('../img/ico-youtube-w.svg')
+			background-repeat: no-repeat
+			background-position: center
+			background-color: var(--main-color)
+			margin-right: 25px
+
+		a
+			position: relative
+			display: flex
+			align-items: center
+			font-weight: 600
+			color: var(--main-color)
+
+			&:after
+				content: ''
+				display: block
+				height: 1px
+				width: 100%
+				background-color: var(--main-color)
+				position: absolute
+				bottom: -2px
+				left: 0
+
+
+

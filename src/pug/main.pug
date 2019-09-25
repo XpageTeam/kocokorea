@@ -35,8 +35,8 @@ html(lang="ru")
 				.wrapper
 					.main-youtube
 						.main-youtube__info
-							.main-youtube__title САМЫЕ ПОПУЛЯРНЫЕ ПАТЧИ ОТ PETITFEE
-							.main-youtube__text PETITFEE – самый популярный в Южной Корее бренд, специализирующийся на гидрогелевых патчах и масках. Отличительная особенность патчей PETITFEE – идеальное прилегание к коже.
+							.main-youtube__title Самые популярные патчи<br> от petitfee
+							.main-youtube__text PETITFEE – самый популярный в Южной Корее бренд,<br> специализирующийся на гидрогелевых патчах и масках.<br> Отличительная особенность патчей PETITFEE – идеальное<br> прилегание к коже.
 							.main-youtube__link
 								a(href="") Смотреть на YouTube
 						.main-youtube__video
@@ -45,33 +45,41 @@ html(lang="ru")
 			.slider-default-cont
 				.wrapper
 					.slider-default
-						.slider-default__title Новинки
-						.slider-default__link 
-							a(href="") Смотреть всё
+						.slider-default__top
+							.slider-default__title Новинки
+							.slider-default__link 
+								a(href="") Смотреть всё
+
 						.swiper-list
 							.swiper-wrapper
 								- for (let i = 0; i < 5; i++)
 									each item, i in [{brand: "Ayoume", title: "Крем с муцином черной улитки", price: "139 руб."}, {brand: "Secret Nature", title: " Увлажняющая сыворотка с зеленым чаем", price: "1399 руб."}, {brand: "Frudia", title: "Очищающая пенка с экстрактом манго", price: "459 руб."}, {brand: "Berrisom", title: "Точечный патч против акне", price: "699 руб."}]
 										.swiper-slide
-											.slider-default__slide
-												figure.slider-default__img
+											a(href="").slider__slide
+												figure.slider__slide-img
 													img(src="img/photos/slider-default-"+i+".png", alt="")
-													.slider-default__label
-														.label--new new
-													a(href="").slider-default__favorite
+													.slider__slide-label
+														.label.label--new(style="background-color: #6CB98D;") new
+													.slider__slide-favorite
 														span
 															include ../img/ico-favorite.svg
 
-												.slider-default__brand=item.brand
-												.slider-default__title=item.title
-												.slider-default__price=item.price
-												.slider-default__btn
-													a(href="").btn Добавить в корзину
+												.slider__slide-info
+													.slider__slide-brand=item.brand
+													.slider__slide-title=item.title
+													.slider__slide-price
+														.price=item.price
+													.slider__slide-btn
+														.btn Добавить в корзину
+						.swiper-button.swiper-button-prev
+						.swiper-button.swiper-button-next
 			.main-catalog-cont
 				.wrapper
 					.main-catalog
 						.main-catalog__list
+							//- - for (let j = 0; j < 5; j++)
 							each title, i in ["Уход за лицом", "Специальные комплексы", "Для волос", "Для тела", "Макияж", "Гигиена", "Для дома"]
+								//- if (j != 4 && i != 7)
 								a(href="").main-catalog__item
 									.main-catalog__item-info
 										.main-catalog__item-title=title
@@ -95,66 +103,79 @@ html(lang="ru")
 			.slider-default-cont
 				.wrapper
 					.slider-default
-						.slider-default__title Бестселлеры
-						.slider-default__link 
-							a(href="") Смотреть всё
+						.slider-default__top
+							.slider-default__title Бестселлеры
+							.slider-default__link 
+								a(href="#") Смотреть всё
 						.swiper-list
 							.swiper-wrapper
 								.swiper-slide
-									.slider-default__slide
-										figure.slider-default__img
+									a(href="").slider__slide
+										figure.slider__slide-img
 											img(src="img/photos/slider-default-5.png", alt="")
-											.slider-default__label
-												.label--new new
-												.label--percent %
-											a(href="").slider-default__favorite
+											.slider__slide-label
+												.label.label--hit(style="background-color: #AEB2D9;") hit
+												.label.label--percent(style="background-color: #DE81A5;") %
+											.slider__slide-favorite
 												span
 													include ../img/ico-favorite.svg
 
-										.slider-default__brand Secret  Key
-										.slider-default__title Увлажняющий паровой крем с цветочным ароматом
-										.slider-default__price 
-											.price-old 979 руб.
-											.price 879 руб.
-										.slider-default__btn
-											a(href="").btn Добавить в корзину
+										.slider__slide-info
+											.slider__slide-brand Secret  Key
+											.slider__slide-title Увлажняющий паровой крем с цветочным ароматом
+											.slider__slide-price 
+												.price-old 979 руб.
+												.price 879 руб.
+											.slider__slide-btn
+												.btn Добавить в корзину
 
-								- for (let i = 4; i < 9; i++)
+								- for (let t = 4; t < 9; t++)
 									each item, i in [{brand: "Pretti", title: "Увлажняющий крем для осветления на основе...", price: "579 руб."}, {brand: "Secret  Key", title: "  Увлажняющий паровой крем с цветочным ароматом", price: "1399 руб."}, {brand: "The Histoty of Whoo", title: "Увлажняющий мист длительного действия", price: "1790 руб."}, {brand: "Elizavecca", title: "Пенка с древесным углем для очищения и сужения пор", price: "699 руб."}]
 										.swiper-slide
-											.slider-default__slide
-												figure.slider-default__img
+											a(href="").slider__slide
+												figure.slider__slide-img
 													img(src="img/photos/slider-default-"+i+".png", alt="")
-													.slider-default__label
-														.label--new new
-														.label--percent %
-													a(href="").slider-default__favorite
+													.slider__slide-label
+														.label.label--new new
+														.label.label--percent %
+													.slider__slide-favorite
 														span
 															include ../img/ico-favorite.svg
 
-												.slider-default__brand=item.brand
-												.slider-default__title=item.title
-												.slider-default__price
-													.price=item.price
-												.slider-default__btn
-													a(href="").btn Добавить в корзину
+												.slider__slide-info
+													.slider__slide-brand=item.brand
+													.slider__slide-title=item.title
+													.slider__slide-price
+														.price=item.price
+													.slider__slide-btn
+														.btn Добавить в корзину
+						.swiper-button.swiper-button-prev
+						.swiper-button.swiper-button-next
 			.brands-cont
 				.wrapper
 					.brands
-						.brands__list
-							- for (let i = 0; i < 4; i++)
-								a(href="").brands__item
-									figure
-										img(src="img/brands-"+i+".png", alt="")
+						.swiper-list
+							.swiper-wrapper
+								- for (let i = 0; i < 4; i++)
+									.swiper-slide
+										a(href="").brands__item
+											figure
+												img(src="img/brands-"+i+".png", alt="")
 
-							- for (let i = 0; i < 4; i++)
-								a(href="").brands__item
-									figure
-										img(src="img/brands-"+i+".png", alt="")
+								- for (let i = 0; i < 4; i++)
+									.swiper-slide
+										a(href="").brands__item
+											figure
+												img(src="img/brands-"+i+".png", alt="")
+
+							.swiper-button.swiper-button-prev
+							.swiper-button.swiper-button-next
+
 			.testemonials-cont
 				.wrapper
 					.testemonials
 						.testemonials__title Отзывы #Kocokorea
+						.swiper-list
 							.swiper-wrapper
 								- for (let i = 0; i < 3; i++)
 									.swiper-slide
@@ -162,7 +183,7 @@ html(lang="ru")
 											figure
 												img(src="img/photos/testemonials-"+i+".jpg", alt="")
 											.testemonials__item-info
-												.testemonials__item-name
+												.testemonials__item-name anna_andreeva
 												.testemonials__item-ico
 													span
 														include ../img/ico-instagram.svg
@@ -176,7 +197,7 @@ html(lang="ru")
 							a(href="").main-soc__item
 								.main-soc__item-img
 									include ../img/ico-vk.svg
-								.main-soc__item-img 2 тыс.
+								.main-soc__item-text 2 тыс.
 							a(href="").main-soc__item
 								.main-soc__item-img
 									include ../img/ico-inst.svg

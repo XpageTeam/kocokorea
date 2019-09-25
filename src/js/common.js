@@ -61,6 +61,50 @@ document.addEventListener("DOMContentLoaded", function(){
 	});
 
 
+	var defaultSlaiderSwiper = new Swiper('.slider-default .swiper-list', {
+		slidesPerView: 4,
+		loop: true,
+		roundLengths: true,
+		a11y: false,
+		spaceBetween: 20,
+		navigation: {
+			nextEl: '.slider-default .swiper-button-next',
+			prevEl: '.slider-default .swiper-button-prev',
+		},
+
+
+	});
+
+
+	var brandSwiper = new Swiper('.brands .swiper-list', {
+		slidesPerView: 5,
+		loop: true,
+		roundLengths: true,
+		a11y: false,
+		spaceBetween: 10,
+		navigation: {
+			nextEl: '.brands .swiper-button-next',
+			prevEl: '.brands .swiper-button-prev',
+		},
+
+
+	});
+
+	var testemonialsSwiper = new Swiper('.testemonials .swiper-list', {
+		slidesPerView: 4,
+		loop: true,
+		roundLengths: true,
+		a11y: false,
+		spaceBetween: 20,
+		navigation: {
+			nextEl: '.testemonials .swiper-button-next',
+			prevEl: '.testemonials .swiper-button-prev',
+		},
+
+
+	});
+
+
 
 })
 

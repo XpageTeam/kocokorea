@@ -1,0 +1,201 @@
+.slider-default
+	position: relative
+	margin: 75px 0 20px
+
+	&__top
+		display: flex
+		justify-content: space-between
+		margin-bottom: 10px
+
+	&__title
+		font-size: em(20)
+		font-weight: 600
+
+	&__link
+
+		a
+			position: relative
+			font-weight: 600
+			font-size: em(14)
+
+
+			&:after
+				content: ''
+				display: block
+				position: absolute
+				bottom: -3px
+				left: 0
+				height: 1px
+				width: 100%
+				background-color: var(--main-color)
+
+
+	.swiper-wrapper
+		height: auto !important
+
+	.swiper-slide
+		display: flex !important
+		height: auto !important
+
+	.swiper-list
+		padding: 0 20px
+		margin: 0 -20px
+
+
+.slider__slide
+	display: flex
+	flex-direction: column
+	flex: 1 1 auto
+	transition: box-shadow .3s ease
+	margin: 20px 0
+
+	&:hover
+		box-shadow: 0px 0px 20px #E6E6E6
+
+		.slider__slide
+			&-img
+				border-color: transparent
+
+			&-btn
+				opacity: 1
+				pointer-events: all
+
+	&-info
+		padding: 0 30px 30px 30px
+
+	&-img
+		position: relative
+		display: flex
+		justify-content: center
+		align-items: center
+		padding: 20px
+		width: 100%
+		min-height: 295px
+		border: 1px solid var(--border-color)
+		border-radius: 6px
+		margin-bottom: 15px
+		transition: border-color .5s ease
+
+
+
+	&-brand
+		text-align: center
+		color: #9F9F9F
+
+	&-title
+		margin-top: 15px
+		text-align: center
+
+	&-price
+		margin-top: 35px
+		display: flex
+		justify-content: center
+		margin-bottom: 20px
+
+		.price
+			font-weight: 600
+			font-size: em(16)
+			line-height: 1
+
+			&-old
+				position: relative
+				color: #9F9F9F
+				font-size: em(14)
+				font-weight: 400
+				margin-right: 10px
+
+				&:before
+					content: ''
+					display: block
+					position: absolute
+					top: calc(50% - 2px)
+					left: 0
+					width: 100%
+					height: 1px
+					background-color: #9F9F9F
+
+				+ .price
+					color: var(--main-color)
+
+
+
+
+	&-btn
+		margin-top: auto
+		text-align: center
+		display: flex
+		justify-content: center
+		opacity: 0
+		pointer-events: none
+		transition: opacity .3s ease
+
+		.btn
+			display: flex
+			align-items: center
+			text-indent: 30px
+
+			&:before
+				content: ''
+				display: inline-block
+				size: 17px 20px
+				background-image: url('../img/ico-cart.svg')
+				background-repeat: no-repeat
+				background-position: center
+				background-size: contain
+				margin-right: 15px
+				filter: invert(1)
+				margin-left: -15px
+
+	&-label
+		position: absolute
+		top: 0
+		left: 0
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+
+	&-favorite
+		position: absolute
+		right: 0
+		top: 0
+
+
+		span
+			display: block
+			margin: 15px 15px 0 0
+
+		svg
+			path
+				fill: #fff
+				stroke: #DE81A5 !important
+				transition: fill .3s ease
+
+		&.added, &:hover
+			svg
+				path
+					fill: #DE81A5
+
+
+
+
+.label
+	color: #fff
+	border-radius: 21px
+	padding: 7px 12px
+	line-height: 1
+	text-transform: uppercase
+	font-weight: bold
+	font-size: em(10)
+	margin: 15px 0 0 15px
+	min-width: 50px
+	min-height: 30px
+	text-align: center
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+
+	&--percent
+		font-size: em(16)
+		font-weight: bold
+

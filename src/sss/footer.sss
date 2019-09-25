@@ -1,0 +1,76 @@
+.footer
+	background-color: var(--background-color)
+	margin-top: 60px
+
+
+	&__top
+		display: flex
+
+		&-cont
+			padding: 50px 0
+
+	&__bot
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+		&-cont
+			border-top: 1px solid #E6E6E6
+			padding: 35px 0
+
+
+	&__menu
+		column-count: 2
+		column-gap: 190px
+		break-inside: avoid
+
+		&-item
+			margin-bottom: 10px
+
+		&-link
+			font-weight: 500
+
+
+	&__contacts
+		&-item
+			&:not(:last-child)
+				margin-bottom: 10px
+			a
+				&[href^="tel"]
+					color: #000
+					font-weight: 500
+
+				&[href^="mailto:"]
+					color: #000
+
+					&:hover
+						color: var(--main-color)
+
+			.fancybox
+				font-size: em(12)
+				color: var(--main-color)
+				margin-left: 10px
+				text-decoration: underline
+
+	&__text
+		display: flex
+		flex-direction: column
+
+
+.f-soc
+	margin-left: em(175)
+	margin-right: auto
+
+
+.dev
+	display: flex
+	align-items: center
+
+	&-logo
+		background-color: #E8E8E8
+		padding: 6px 8px
+		border-radius: 5px
+		margin-left: 10px
+
+		img
+			display: block
