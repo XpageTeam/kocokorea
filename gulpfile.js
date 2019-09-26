@@ -52,7 +52,7 @@ gulp.task('browser-sync', () =>  {
 
 gulp.task("postcss", _ => 
 	gulp.src([
-			"src/sss/main.sss", 
+			"src/sss/main-new.sss", 
 			"!src/sss/_*.sss"
 		])
 		.pipe(sourcemaps.init())

@@ -7,7 +7,7 @@ const ignoredGSAPFiles = ['BezierPlugin', 'DirectionalRotationPlugin', 'RoundPro
 module.exports = (env, argv) => {
 	return {
 		entry: {
-			base: "./src/js/common.js",
+			base: "./src/js/common-new.js",
 			// common: "./src/ts/common.ts",
 			// "main-page": "./src/ts/main-page.ts"
 		},
@@ -101,12 +101,12 @@ module.exports = (env, argv) => {
 		                enforce: true,
 		                chunks: 'all'
 		            },
-		            xpage: {
-		            	test: /^.*xpage((?!index.ts).)*$/,
-		            	name: 'js/xpage',
-		                enforce: true,
-		                chunks: 'all'
-		            }
+		            // xpage: {
+		            // 	test: /^.*xpage((?!index.ts).)*$/,
+		            // 	name: 'js/xpage',
+		            //     enforce: true,
+		            //     chunks: 'all'
+		            // }
 		        }
 	    	}
 		},
