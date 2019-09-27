@@ -1,4 +1,5 @@
 .head
+	display: block !important
 	margin-bottom: 50px
 
 	&-top
@@ -121,8 +122,13 @@
 		margin: 0
 
 	&__item
-		position: relative
+		// position: relative
 		display: flex
+
+		&:hover
+			.submenu
+				opacity: 1
+				pointer-events: all
 
 
 		&:first-child
