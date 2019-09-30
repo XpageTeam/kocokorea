@@ -1,0 +1,2611 @@
+a 
+	transition: color .3s ease
+
+	&:hover 
+		color: var(--main-color)
+
+.block-paysystem_list-title
+	margin-bottom: 10px
+
+
+
+
+.soc__widget
+	position: absolute
+	bottom: 42px
+	width: auto
+.soc
+	position: relative
+	display: flex
+
+	> div
+		&:hover
+			> a + div
+				display: block !important
+
+
+	iframe + iframe 
+		display: none !important
+
+
+
+
+@keyframes progress_bar 
+	0% 
+		background-position: 0 0
+
+	100% 
+		background-position: 26px 0
+
+.cart-steps
+	background: url("../img/steps-counter-bg.png") repeat-x, var(--main-color)
+	height: 77px
+	color: #fff
+	text-align: center
+	display: flex
+	justify-content: center
+	align-items: center
+	overflow: hidden
+	position: relative
+	animation: progress_bar 0.8s linear infinite
+
+	&:after
+		content: ""
+		position: absolute
+		right: 0
+		top: 0
+		bottom: 0
+		background: var(--main-color)
+		border-left: 2px solid #4e9946
+
+	&--1
+
+		&:after
+			width: 66.66%
+
+	&--2
+
+		&:after
+			width: 33.33%
+
+	&--3
+
+		&:after
+			display: none
+
+	&--4
+
+		&:after
+			display: none
+
+	span
+		position: relative
+		z-index: 2
+
+.block-bonus
+
+	.forms-input-cont
+		width: 100%
+
+.pickup-list
+
+	&__item
+
+		&:not(:first-child)
+			margin: 22px 0 0
+
+.pickup-block
+	margin: 15px 0 0
+
+.hidden-items
+
+	&__item
+
+		&:not(:first-child)
+			margin: 6px 0 0
+
+.hidden-item
+	padding: 18px 20px
+	display: flex
+	align-items: center
+	justify-content: space-between
+	background: #eff0f0
+	flex-wrap: wrap
+
+	&__title
+		margin-right: 15px
+		width: calc(100% - 140px)
+
+	&__count
+		flex: none
+		white-space: nowrap
+		width: 120px
+		text-align: right
+
+	&__remove
+		width: 100%
+		margin: 7px 0 0
+
+		a
+			color: var(--main-color)
+
+.pickup-radio
+	max-width: 800px
+
+	&__hidden-items
+		margin: 20px 0 0
+
+	&__label
+		font-size: 15px
+		display: flex !important
+		align-items: center
+		padding-top: 0 !important
+		margin: 0 !important
+		flex-wrap: wrap
+
+		> span
+
+			&:first-child
+				// width: 330px
+				width: 100%
+
+			&:nth-last-child(2):not(:first-child), &:last-child
+				color: rgba(#000, .5)
+
+			span
+				color: #000
+
+		&-btn
+			margin-left: 20px
+			display: flex
+			align-items: center
+
+			&-popup
+				margin-left: 16px
+				background: url("../img/ico-warning.png") no-repeat
+				background-size: contain !important
+				size: 20px 21px
+				display: inline-block
+				position: relative
+
+				&:hover
+
+					span
+						opacity: 1
+
+				span
+					position: absolute
+					cursor: default
+					color: #000
+					pointer-events: none
+					background: #fff
+					padding: 15px 20px
+					border-radius: 8px
+					box-shadow: 0 -1px 12px 0 rgba(0,0,0,.1)
+					bottom: calc(100% + 10px)
+					min-width: 300px
+					left: 50%
+					opacity: 0
+					transform: translateX(-50%)
+					font-size: 14px
+					z-index: 1
+
+	&__input
+
+		&:not(:checked)
+
+			+ label
+
+				&:after
+					content: ""
+					position: absolute
+					top: 11px
+					left: 11px
+					display: block
+					width: 9px
+					height: 9px
+					background-color: #eff0f0
+					border-radius: 50px
+
+			~ .pickup-radio__hidden-items
+				display: none
+
+		&:checked
+
+			+ label
+
+				.pickup-radio__btn
+					background: var(--main-color)
+					color: #fff
+
+	&__btn
+		transition: background .3s ease, color .3s ease
+		background: #eff0f0
+		font-size: 14px
+		color: rgba(#000, .5)
+		padding: 10px 21px 11px
+		text-decoration: none
+		border-radius: 22px
+		display: inline-block
+
+		&:hover
+			background: var(--main-color)
+			color: #fff
+
+#step_2, #step_3
+	margin-bottom: -55px
+
+.bonuses-field
+
+	.forms
+
+		&-input-cont
+			width: 100%
+
+.user-data
+	position: relative
+
+	&--step4
+		display: flex
+		flex-wrap: wrap
+		max-width: 1200px
+
+		.user-data
+
+			&__bot
+				width: 100%
+
+			&__left
+				width: 55%
+
+				.forms-textarea-cont
+
+					textarea
+						max-width: none !important
+
+			&__right
+				padding-left: 10%
+				width: 45%
+
+				.user-data
+
+					&__form
+						flex-direction: column
+						// margin: -32px 0 0
+
+					&__input
+						margin: 0
+						width: auto
+
+						&:not(:first-child)
+							margin: 20px 0 0
+
+	&__form
+		display: flex
+		flex-wrap: wrap
+		margin: 0 0 -31px -31px
+
+	&__input
+		width: calc((100% - 31px * 4) / 4)
+		margin: 0 0 31px 31px
+
+		.forms
+
+			&__input
+				height: 53px
+
+				&-cont
+					display: flex
+					flex-direction: column-reverse
+					position: relative
+
+			&__label
+
+				&:after
+					color: #59aa50 !important
+
+	&__bot
+		display: flex
+		align-items: center
+		margin: 55px 0 0
+
+		&-btns
+			display: flex
+			width: calc((100% - 23px * 4) / 4)
+
+			.default-btn
+				flex: none
+				font-size: 15px
+				padding: 12px 26px 14px
+				font-weight: 100
+
+				&:not(:last-child)
+					margin-right: 32px
+
+		&-text
+			flex: 1 1 auto
+			margin-left: 31px
+
+			display: none
+
+.delivery
+
+	&-row
+
+		&:after
+			content: ""
+			display: table
+			clear: both
+
+	&-col
+
+		.input--location
+			width: 100% !important
+
+		.user-data
+			margin-left: 0 !important
+
+			&__form
+				margin-left: 0 !important
+
+			&__input
+				width: 100% !important
+				margin-left: 0 !important
+
+		&:last-child
+			float: left
+
+		&:not(:first-child)
+
+			.delivery-col__title
+				position: absolute
+				top: 0 
+				left: calc(50% + 15px)
+
+		&__title
+			background: #eff0f0
+			padding: 15px 20px
+			margin-bottom: 26px
+			display: inline-block
+
+			label
+				margin: 0 !important
+				padding-bottom: 5px !important
+
+				span
+					display: block
+					margin: 2px 0 0
+					color: rgba(0,0,0,.6)
+
+			input[type="radio"]
+
+				&:not(:checked)
+
+					+ label
+
+						&:after
+							content: ""
+							position: absolute
+							top: 11px
+							left: 11px
+							display: block
+							width: 9px
+							height: 9px
+							background-color: #eff0f0
+							border-radius: 50px
+
+.delivery-block
+	margin: 20px 0 0
+	
+.time-br
+	margin: 2px 0 0
+	display: block
+	color: #a5a0a0
+	font-size: 14px
+
+.delivery-radio
+
+	.time
+
+		a
+			display: none
+
+	.rub
+		font-size: inherit
+
+	.price
+		white-space: nowrap
+
+		&:nth-last-child(4), &:nth-last-child(2)
+			font-weight: bold
+			font-size: 17px
+			margin-right: 5px
+
+	.old-price
+		white-space: nowrap
+
+		display: none
+
+		&:nth-last-child(3), &:last-child
+			color: #dedede
+			position: relative
+
+			&:after
+				content: ""
+				size: 100% 1px
+				position: absolute
+				top: calc(50% - 1px)
+				left: 0
+				background: #dedede
+	
+	&__input
+
+		&:not(:checked)
+
+			+ label
+
+				&:after
+					content: ""
+					position: absolute
+					top: 11px
+					left: 11px
+					display: block
+					width: 9px
+					height: 9px
+					background-color: #eff0f0
+					border-radius: 50px
+
+.req-text
+
+	&:before
+		content: "*"
+		display: inline-block
+		border-radius: 50%
+		font-weight: 400
+		font-size: 18px
+		background: var(--main-color)
+		color: #fff
+		size: 31px
+		text-align: center
+		line-height: 38px
+		vertical-align: middle
+		margin-right: 12px
+
+.cart
+
+	&__steps
+		margin: 0 0 55px
+
+	.text-message
+		font-size: 18px
+		margin-bottom: 20px
+
+	&-header 
+		padding: 12px 0
+		display: flex
+		justify-content: space-between
+		font-size: rem(14)
+		letter-spacing: 0.01rem
+		border-bottom: 1px solid #dedede
+
+		&__name
+			width: calc(51% - 17px)
+
+		&__price 
+			width: 16.4%
+
+		&__quantity
+			width: 18.92%
+
+		&__price-total
+			width: calc(17.14% + 45px)
+
+	&-item
+		display: flex 
+		justify-content: space-between
+		align-items: center
+		padding: 31px 25px 33px 0
+
+		&:not(:first-child)
+			border-top: 1px solid #dedede
+
+		&__title 
+			font-size: rem(18)
+			line-height: rem(22)
+			font-weight: 300
+			text-transform: uppercase
+			letter-spacing: 0.01rem
+
+			a
+				color: #000
+				text-decoration: none
+
+		&__text 
+			font-size: rem(14)
+			line-height: rem(16)
+			font-weight: 100
+			letter-spacing: 0.01rem
+			color: #aaaaa8
+			margin-top: 10px
+
+		&__name
+			display: flex 
+			width: persent(710, 1400)
+			align-items: center
+
+			&-foto 
+				position: relative
+				display: flex
+				flex: none
+				align-items: center
+				flex-direction: row-reverse
+				width: 90px !important
+
+				img
+					margin-left: 10px
+					max-width: calc(100% - 28px)
+
+				.cat2__one-fav-add
+					margin-right: auto
+					background: url(data:image/pngbase64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAWCAYAAADeiIy1AAAB8ElEQVR42uxVTUvDQBDt1tiWplUQRA9NwJPeehP0F/gHPHkRetCjiBdRVBQEe/UgggdPgj/Bi0dF/BOmakBtK02/krbp+kY2UtsktQV70YXHJJnZednZt7OMcx4YxGB/iyiTyYzCzAEK8ArcqKr6JnwTMPPAJPAofPmeiJCEwaSAw0gkMi5JUsC27UC1Wi3j2w4QBPai0agcDAYd37vwnYDQ7koEEkqyEYvFjkqlkonnIaAhVvQSj8dnGWMBwzCe8T4GhMXUJnxSsVjcxHMaZM1uREmYe0BSFIU53+mvdV2v4vEOmKaSkZ9IW+ZSsjowBSL9W2IicqBpmgQc42+52wAZh78ANLnHyGazFLMEsNbcUlsph4FkKBRy3VDaj0QiMULWa5TLZVrVTMdcl1jLT4l+JC3DQOm4HxHV99o0zb7PSzgcpk277bYikuUF9qhQq9V6JoEYGpZlPQjBeBOJ5T4B65C2o6Ifk+DM0Z6nkKfeEdCqjDb1HeRyOe6nMGcgxhaxa275Pvfcy0HyBNL5fN6XjHyCZNcrF6Fbr6PSbqHV7FcqFY6SfMXTQaXSyrLMIOltalftSuupe4u+twicATJAkmSi9VDvWwUu3fpbX9cECFWYU6xgQRzMK5gVEGi/ch+BcFko9Pz/hh0I0YcAAwDHy9Wo8CGjfgAAAABJRU5ErkJggg==) no-repeat
+					size: 18px 16px
+					background-size: contain !important
+					border: none !important
+					flex: none 
+					border-radius: 0 !important
+
+					&:before
+						position: static !important
+						display: inline-block
+
+		&__info 
+			width: 70%
+			margin-left: 53px
+	
+			.cart-item__quantity
+				width: 100%
+
+		&__price 
+			width: persent(230, 1400)
+			font-size: rem(24)
+			font-weight: 300
+			white-space: nowrap
+
+			.rub
+				font-size: inherit
+
+		&__quantity
+			width: persent(265, 1400)
+
+		&__price-total
+			width: persent(240, 1400)
+			font-size: rem(24)
+			font-weight: 300
+
+			.rub
+				font-size: inherit
+
+		&__close
+			width: persent(50, 1400)
+
+	&-counter
+
+		&-wrapper
+			max-width: 115px
+			height: 46px
+			border: 1px solid var(--border-color)
+			display: flex 
+			align-items: center
+			justify-content: center
+
+		&__input
+			max-width: 50px
+			border: 0
+			text-align: center
+			font-size: rem(20)
+			color: #000
+
+		&__link
+
+			&--minus
+				position: relative
+				display: flex
+				align-items: center
+				justify-content: center
+				cursor: pointer
+				size: 20px
+
+				&:before
+					content: ""
+					display: inline-block
+					width: 13px
+					height: 1px
+					background: #000
+
+			&--plus 
+				position: relative
+				display: flex
+				align-items: center
+				justify-content: center
+				cursor: pointer
+				size:20px
+
+				&:before
+					content: ""
+					display: inline-block
+					width: 13px
+					height: 1px
+					background: #000
+
+				&:after 
+					content: ""
+					position: absolute
+					width: 1px
+					height: 13px
+					background: #000
+
+
+	&-footer
+		display: flex
+		align-items: center !important
+		justify-content: flex-end
+		margin-bottom: 42px
+		margin-top: 15px
+		font-size: rem(24)
+		font-weight: 300
+
+		.text-message
+			font-size: 16px
+
+		&__btn
+			margin-right: 20px
+
+			.default-btn
+				padding: 12px 26px 14px
+				font-size: 16px
+				font-weight: 100
+
+		&__price
+			margin-left: auto
+			white-space: nowrap
+
+		.rub
+			font-size: inherit
+
+	.favorites
+
+		&:before 
+			content: ""
+			width: 20px
+			height: 15px
+			background: url(../img/ico-favorits.png) no-repeat center	
+	
+	.close 
+		display: inline-block
+		background: url(../img/ico-close.png) no-repeat center
+		size: 11px
+		margin-right: 10px
+
+	&__forms
+		border: 1px solid var(--border-color)
+		padding: 53px 69px
+
+		&-wrap 
+			display: flex
+			flex-wrap: wrap
+
+		.forms
+
+			&__input
+
+				&-wrap
+					display: flex 
+					flex-wrap: wrap
+
+			&__text-bottom
+				text-align: left
+				font-size: rem(16)
+
+			&-wrap
+
+				&:after
+					content: ""
+					width: 30.35714%
+
+				textarea
+					border: 1px solid var(--border-color)
+
+		.forms-input-cont
+			width: persent(425, 1400)
+			&:not(:nth-child(3n))
+				margin-right: persent(60, 1400)
+
+		.forms-textarea-cont
+			width: persent(910, 1400)
+			display: flex 
+			flex-direction: column-reverse
+			margin-right: persent(65, 1400)
+
+		.textarea 
+			width: 100%
+			height: 137px
+			resize: none
+			padding: 10px 17px
+			border: 1px solid var(--border-color)
+
+		.recaptcha
+			margin-top: 27px
+
+			&-wrap
+				width: persent(425, 1400)
+				margin: 30px 0 0
+
+		.btn__forms
+			font-size: rem(16)
+			letter-spacing: 0.01rem
+			margin-top: 58px
+
+			.btn
+				padding: 21px 54px 23px
+				font-size: rem(16)
+
+
+
+
+
+
+.tag
+	size: 45px
+	
+	&--new
+		background: url("../img/ico-new.png") no-repeat
+
+	&--hit
+		background: url("../img/ico-hit.png") no-repeat
+
+.tags
+
+	&__link
+		color: #6e6e6e
+		text-decoration: none
+		display: inline-block
+		font-size: rem(14)
+
+		&:not(:last-child)
+			margin-right: 5px
+
+			&:after
+				content: ","
+
+.cat2__one-fav-add
+	display: block
+	color: #fff
+
+	path
+		stroke: var(--main-color)
+
+	&.added
+		path
+			fill: var(--main-color)
+
+
+.cat2
+	display: flex
+	flex-wrap: wrap
+	position: relative
+	border-bottom: none
+	margin: 0 0 -20px -20px
+
+	&:before
+		// content: ""
+		position: absolute
+		bottom: 0
+		left: 0
+		size: 100% 1px
+		background: #fff
+		z-index: 3
+
+	&__one
+		position: relative
+		text-align: center
+		display: flex
+		flex-direction: column
+		width: 100%
+		align-items: center
+		padding-bottom: 33px
+
+		.rating
+			margin: 20px 0 0
+
+			&__list
+				margin-right: 0
+
+		&-quantity
+			margin: 0 0 35px
+
+		&-tag-cont, &-fav-add-cont
+			position: absolute
+			top: 32px
+
+		&-tag-cont
+			left: 18px
+
+		&-fav-add-cont
+			right: 18px
+
+		&-wrap
+			display: flex
+			width: calc((100% - 20px * 3) / 3)
+			margin: 0 0 20px 20px
+				
+
+		&-img
+			max-width: none
+
+			&:not([src*="no-image"])
+				filter: brightness(108%)
+
+			&-cont
+				width: 100%
+				display: flex
+				justify-content: center
+				align-items: center
+				margin-bottom: 15px
+				overflow: hidden
+				border: 1px solid var(--border-color)
+				border-radius: 6px
+
+		&-tags
+			margin-bottom: 13px
+
+		&-title
+			color: #000
+			text-decoration: none
+			display: inline-block
+			max-width: 235px
+			font-size: em(14)
+
+		&-buy
+			padding-top: 30px
+			margin-top: auto
+			width: 100%
+			max-width: 257px
+
+		&-price
+			font-weight: 300
+			font-size: rem(24)
+			margin-bottom: 15px
+
+		&-add-to-cart
+			transition: color .3s ease, background .3s ease
+			border: 1px solid var(--main-color)
+			padding: 20px 30px 20px 45px
+			background: url("../img/ico-cat-cart.png") center left 25px no-repeat
+			text-align: right
+			text-decoration: none
+			display: block
+			color: #000
+			white-space: nowrap
+			display: none
+
+			&.added
+				color: #fff
+				background: url("../img/ico-cat-cart-added.png") center left 25px no-repeat, var(--main-color)
+			
+			&--subscribe
+				background: #fff !important
+				text-align: center
+				padding: 20px 30px 
+		
+		&-subscribe-desc
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			text-align: center
+			color: #8b8b8b
+
+.fancybox-inner
+	background: #fff
+
+
+.catalog-filter
+
+	&_btns
+		display: flex
+		flex-direction: column
+
+		.btn
+			margin-top: 25px
+
+	&__categories
+
+		&-title
+			text-transform: uppercase
+			font-weight: 300
+			font-size: rem(18)
+
+	&__cont
+		width: 240px
+
+
+.categories
+	
+	&__one
+
+		&-title
+			padding: 15px 25px 15px 0
+			border-bottom: 1px solid var(--border-color)
+			cursor: pointer
+			position: relative
+			font-weight: 500
+
+			&:after
+				content: ""
+				position: absolute
+				size: 7px 4px
+				background: url("../img/ico-select-arrow.png") no-repeat
+				right: 2px
+				top: calc(50% - 2px)
+				transition: transform .3s ease
+
+			a
+				color: #000
+				text-decoration: none
+
+			&.nosubsection
+
+				&:after
+					display: none
+
+		&.closed
+
+			.categories__one
+
+				&-title:after
+					transform: rotate(180deg)
+
+				&-main
+					display: none
+
+		&-main
+			padding: 30px 17px
+			border-bottom: 1px solid var(--border-color)
+
+
+
+		&-link
+			color: #000
+			text-decoration: none
+			font-size: rem(14)
+
+			&:after
+				display: inline-block
+				content: " / " attr(data-count)
+				color: #969696
+				margin-left: 5px
+
+.filter
+	
+	&__checks-group
+		display: flex
+		flex-wrap: wrap
+		border-bottom: 1px solid var(--border-color)
+		padding: 29px 0 14px
+
+		&:first-child
+			padding-top: 0
+
+		&--icons
+
+			.checkbox
+
+				&__label
+
+					&:before
+						top: calc(50% - 9px)
+
+					&:after
+						top: calc(50% - 3px)
+
+		.checkbox
+			width: 50%
+			margin-bottom: 15px
+			padding-right: 20px
+
+
+.filter__one
+
+	&:not(:first-child)
+		border-top: 1px solid var(--border-color)
+
+	&-title
+		font-size: rem(18)
+		text-transform: uppercase
+		letter-spacing: .01em
+		font-weight: 300
+
+		&-cont
+			padding: 35px 0 30px
+
+
+	&-block
+		padding-bottom: 35px
+
+.price-filter
+	
+	&__inputs
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+		&:before
+			order: 1
+			content: "-"
+
+	&__input
+		width: persent(93, 210)
+		//flex: 1 1 auto
+		height: 51px
+		border: 1px solid var(--border-color)
+		padding: 0 15px
+		font-family: "Roboto"
+
+		&:first-child
+			order: 0
+
+		&:last-child
+			order: 2
+
+	&__range
+		margin: 28px 0 10px
+
+.ui-slider 
+	
+	.ui-slider
+
+		&-range
+			background: var(--main-color)
+
+		&-handle
+			border: 1px solid var(--border-color)
+			background: #fff
+			size: 22px
+			top: calc(50% - 11px)
+			margin-left: -11px
+
+			&:after
+				background: var(--main-color)
+				border-radius: 50%
+				size: 8px
+
+.ui-widget-content
+	background: var(--border-color)
+
+.filter-checks
+	
+	&__list
+		max-height: 215px
+		overflow-y: auto
+
+		&::-webkit-scrollbar
+			width: 2px
+
+			&-track
+				background: var(--border-color)
+
+			&-thumb
+				background: var(--main-color)
+
+		&-el
+
+			&:not(first-child)
+				margin-top: 17px
+
+			.checkbox
+
+				&__label
+					display: block
+
+					span
+						display: inline-block
+						margin-left: 8px
+						color: #b0b0b0
+
+.jsp
+	
+	&Track
+		background: var(--border-color)
+
+	&VerticalBar
+		width: 2px
+
+	&Drag
+		background: var(--main-color)
+
+.main-slider
+	
+	&__cont
+		margin-bottom: 116px
+
+	> .main-slider__slide:not(:first-child)
+		display: none !important
+
+	.slick
+
+		&-arrow
+			z-index: 4
+			position: absolute
+			top: 0
+			size: 7% 100%
+			background: url("../img/ico-main-slider-arrow.png") center no-repeat
+
+		&-prev
+			left: 0
+			transform: rotate(180deg)
+
+		&-next
+			right: 0
+	
+	&__slide
+		display: flex !important
+
+		&-text
+			width: persent(756, 1800)
+			display: flex
+			align-items: center
+			padding: 30px 5.5% 30px 7.33333%
+
+			.rub 
+				font-size: 100%
+				
+
+		&-img
+
+			&-cont
+				width: persent(1044, 1800)
+
+	&__text
+
+		&-top-plate
+			display: inline-block
+			padding: 9px 18px 10px
+			font-size: rem(28)
+			font-weight: 300
+
+			&--sale
+				color: #fff
+				background: #ee8896
+
+		&-title
+			font-size: rem(69)
+			line-height: rem(72)
+			letter-spacing: .01em
+			font-weight: bold
+			text-transform: uppercase
+			margin-top: rem(55)
+
+		&-link
+			color: #000
+			text-decoration: none
+			border-bottom: 1px solid #000
+
+			&-cont
+				margin-top: rem(55)
+
+.promo
+	display: flex
+	justify-content: space-between
+	
+	&__cont
+
+	&__new
+		width: persent(676)
+
+	&__list
+		width: persent(673)
+		display: flex
+
+.tovar__rating-user
+	display: flex
+	flex-wrap: wrap
+
+.tovar-buy__quantity
+	margin-left: auto
+
+.new
+	border: 1px solid var(--border-color)
+	// padding: 53px 83px
+	padding: rem(35) rem(60)
+
+	&-slider
+
+		.cat2
+
+			&__one
+				padding-bottom: 0
+
+				&-img
+					// max-height: none
+					max-height: 100%
+
+					&-cont
+						// height: auto
+
+				&-quantity
+					margin-bottom: 0
+
+
+	.slick
+
+		&-arrow
+			border: 1px solid var(--border-color)
+			size: 47px 45px
+			background: url("../img/ico-slick-arrow.png") center no-repeat, #fff
+
+		&-prev
+			transform: rotate(180deg)
+			border-left: none
+			margin-left: 20px
+
+			&:nth-last-child(3)
+				margin-left: auto
+
+	&__title
+		// text-transform: uppercase
+		font-size: rem(40)
+		letter-spacing: .01em
+		font-weight: 100
+		order: -2
+
+		&-link
+			order: -1
+			margin-left: auto
+
+			+ .slick-arrow
+				//margin-right: 50px
+
+		&-cont
+			display: flex
+			align-items: center
+			// margin-bottom: 50px
+
+.all
+	text-decoration: none
+
+.promo-list
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	width: 100%
+
+	&__link
+		position: relative
+		color: #000
+
+		&:nth-last-child(3):first-child ~ .promo-list__link,
+		&:nth-last-child(3):first-child,
+			flex: 1 1 auto
+			overflow: hidden
+			position: relative
+
+			.promo-list__link-img
+				position: absolute
+				top: 50%
+				left: 50%
+				max-width: none
+				min-width: 100%
+				min-height: 100%
+				transform: translate3d(-50%, -50% , 0)
+
+		&-img
+			display: block
+
+		&:not(:first-child)
+			margin-top: 50px
+
+		&-desc
+			position: absolute
+			left: 0
+			top: 0
+			size: 100%
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+			justify-content: center
+			padding: 20px 95px
+
+		&-title
+			font-size: rem(30)
+			font-weight: 100
+			letter-spacing: .01em
+
+		&-fake-btn
+			border: 1px solid var(--border-color)
+			size: 47px 45px
+			background: url("../img/ico-slick-arrow.png") center no-repeat
+			margin-top: 37px
+
+.bestseller
+	
+	&:after
+		content: ""
+		display: table
+		clear: both
+	
+	&s__cont
+		margin: 70px 0 0
+
+		.slick
+
+			&-track
+				display: flex
+
+			&-slide
+				display: flex !important
+
+			&-arrow
+				border: 1px solid var(--border-color)
+				size: 47px 45px
+				background: url("../img/ico-slick-arrow.png") center no-repeat, #fff
+
+			&-prev
+				margin-left: 20px
+				transform: rotate(180deg)
+				border-left: none
+
+	> .bestseller__slide:nth-child(n + 4)
+		display: none
+
+	&__slide
+		float: left
+
+.partners
+
+	> .partners__slide:nth-child(n + 9)
+		display: none
+
+	&__cont
+		margin-top: 90px
+
+	.slick
+
+		&-track
+			display: flex
+
+		&-arrow
+			position: absolute
+			size: 5px 9px
+			background: url("../img/ico-slick-arrow.png") center no-repeat
+			top: calc(50% - 5px)
+			z-index: 2
+
+		&-prev
+			transform: rotate(180deg)
+			left: 0
+
+		&-next
+			right: 0
+	
+	&__slide
+		float: left
+		display: flex !important
+		align-items: center
+		justify-content: center
+
+		img
+			filter: grayscale(100%)
+			transition: filter .3s ease
+
+		&-img-cont
+
+			&:hover, &:focus
+
+				img
+					filter: grayscale(0)
+
+.tovar
+	
+	&-top
+		display: flex
+		justify-content: space-between
+
+	&__sliders
+		width: persent(834)
+
+	&__info
+		width: persent(525)
+
+.tovar-sliders
+	display: flex
+	justify-content: space-between
+	height: 790px
+
+	&__small
+		width: 144px
+		flex: none
+		padding-bottom: 130px
+		display: flex
+		position: relative
+
+	&__big
+		width: calc(100% - 178px)
+		height: 100%
+		border: 1px solid var(--border-color)
+		position: relative
+		display: flex
+		flex-direction: column
+		justify-content: center
+
+.tovar-big-slider
+	overflow: hidden
+	height: 100%
+
+	.slick
+
+		&-list, &-track
+			height: 100%
+
+		&-track
+			display: flex
+
+		&-arrow
+			size: 70px 100%
+			top: 0
+			z-index: 2
+			position: absolute
+			background: url("../img/ico-tovar-slider-arrow.png") center no-repeat
+
+		&-prev
+			left: 0
+			transform: rotate(180deg)
+
+		&-next
+			right: 0
+
+	> .tovar-big-slider__slide:not(:first-child)
+		display: none !important
+
+	&__slide
+		display: flex !important
+		align-items: center
+		justify-content: center
+		overflow: hidden
+		height: 100%
+
+		img:not([src*="no-image"])
+			filter: brightness(108%)
+			width: 100%
+			height: 100%
+			object-fit: cover
+			object-position: center
+
+.tovar-smallslider
+	display: flex
+	flex-direction: column
+
+	.slick
+
+		&-track	
+			//display: flex
+			//flex-direction: column
+
+		&-list
+			height: auto !important
+	
+	&__slide
+		border: 1px solid var(--border-color) !important
+		display: flex !important
+		align-items: center
+		justify-content: center
+		height: 145px !important
+		cursor: pointer
+
+		img
+			// filter: brightness(108%)
+
+		&:not(:first-child)
+			margin-top: 26px
+
+.tovar__share
+	position: absolute
+	width: 100%
+	left: 0
+	bottom: 0
+	z-index: 999
+
+	&-yashare
+		background: #fff
+		padding: 10px
+		border: 1px solid var(--border-color)
+		position: absolute
+		bottom: calc(100% + 15px)
+		left: 0
+		border-radius: 2px
+		transition: opacity .3s ease
+		pointer-events: none
+		opacity: 0
+
+		&.js__visible
+			opacity: 1
+			pointer-events: all
+
+.ya-share2
+	
+	&__icon
+		width: 44px !important
+		height: 44px !important
+		border-radius: 50%
+
+	&__list
+		display: flex !important
+		justify-content: space-around
+		flex-wrap: wrap
+		margin-bottom: -12px !important
+
+		&:after
+			content: ""
+			width: 44px
+
+	&__item
+		margin-right: 0 !important
+		margin-bottom: 12px !important
+
+	&__badge
+		border-radius: 50% !important
+
+	&__item
+
+		&_service
+
+			&_vkontakte
+	
+				.ya-share2
+
+					&__icon
+						background: url("../img/ico-vk.png") center no-repeat !important
+
+			&_facebook
+
+				.ya-share2
+
+					&__icon
+						background: url("../img/ico-fb.png") center no-repeat !important
+
+.share
+	font-weight: bold
+	display: flex
+	flex-direction: column
+	align-items: center
+	text-align: center
+	color: #000
+	text-decoration: none
+
+	&__img
+		margin-bottom: 15px
+
+.tovar-fav-add__cont
+	position: absolute
+	top: 28px
+	right: 28px
+	z-index: 4
+
+.tovar-info
+
+.tovar
+	
+	&__subtitle
+		color: #949494
+		margin-bottom: 20px
+
+	&__title
+		font-weight: 300
+		font-size: rem(26)
+		line-height: rem(39)
+		letter-spacing: .01em
+		// text-transform: uppercase
+
+	&__rating
+		margin-top: 18px
+
+	&__buy
+		margin-top: 42px
+
+	&__desc
+		margin-top: 36px
+
+	&__tabs
+		margin-top: 37px
+
+.tovar-buy
+	border-top: 1px solid var(--border-color)
+	border-bottom: 1px solid var(--border-color)
+	padding: 32px 0
+	display: flex
+	align-items: center
+	
+.tovar-buy
+
+	&__counter, &__add-to-cart
+		display: none
+	
+	&__counter
+		margin: 0 23px 0 auto
+		width: 117px
+		flex: none
+
+	&__add-to-cart
+		background: url("../img/ico-cat-cart-added.png") center left 26px no-repeat, var(--main-color)
+		border: 1px solid #139658
+		color: #fff
+		padding: 20px 35px 21px 66px
+		text-decoration: none
+		white-space: nowrap
+
+.tovar-price
+	font-weight: bold
+	font-size: rem(38)
+	letter-spacing: .01em
+	white-space: nowrap
+
+	.rub
+		font-size: rem(28)
+		//letter-spacing: .01em
+
+.tovar-desc
+	font-size: rem(14)
+	font-weight: 300
+	
+	&__row
+
+		&:not(:first-child)
+			margin-top: 20px
+
+		&-title
+			color: #9a9a9a
+			display: inline-block
+			margin-right: 18px
+
+.tabs
+	font-weight: 300
+	
+	&__tabs
+		display: flex
+		border-bottom: 1px solid var(--background-color)
+
+
+	&-tab
+		padding: 12px 17px
+		cursor: pointer
+		user-select: none
+		font-size: em(14)
+		border-radius: 6px 6px 0 0
+		transition: background .3s ease
+		color: #9F9F9F
+
+		&.active, &:hover
+			background-color: var(--background-color)
+
+		&.active
+			font-weight: 600
+			color: #000
+
+
+	&__main
+		padding-top: 25px
+		position: relative
+
+	&-content
+		position: absolute
+		pointer-events: none
+		opacity: 0
+		font-size: rem(14)
+		max-width: 850px
+
+		.btn-deail-text
+			display: none
+			
+			color: var(--main-color)
+			margin-top: 10px
+			cursor: pointer
+
+		&.active
+			opacity: 1
+			pointer-events: all
+			position: static
+
+
+.tovar-bot
+	margin-top: 84px
+
+	&__tabs
+
+		.tabs
+
+			&-tab
+				font-weight: bold
+				padding: 35px 50px
+				text-transform: uppercase
+
+			&__main
+				border: 1px solid var(--border-color)
+				border-top-color: transparent
+				padding: 53px 45px 65px 
+
+.bl_contacts_top
+	margin: 0 0 50px
+	max-width: 800px
+
+	&_text
+		margin-bottom: 25px
+
+.bl_contacts
+
+	&_item
+		padding: 15px 0
+		display: flex
+		align-items: center
+		flex-wrap: wrap
+		width: 50%
+
+		&s
+			display: flex
+			flex-wrap: wrap
+
+		img
+			margin-right: 15px
+
+		p
+			width: 100%
+			margin-top: 10px
+
+		a
+			color: #000
+			text-decoration: none
+
+div.title-search-result
+	border-color: var(--border-color) !important
+
+@media screen and (min-width: 1000px)
+	div.title-search-result
+		width: 400px !important
+
+table.title-search-result
+	width: 100% !important
+
+.title-search
+	
+	&-all
+		padding-top: 20px !important
+		padding-left: 8px !important
+
+	&-selected
+
+		td, a
+			background: var(--second-color) !important
+
+		.title-search-all, .title-search-all a
+			background: none !important
+
+.recaptcha
+	
+	img
+		max-width: none
+		width: 302px
+
+@media screen and (min-width: 660px)
+	.js__moved-head-link
+		display: none
+
+#item_add_to_cart
+	
+	.forms-submit-cont
+
+		> div
+			display: flex
+			justify-content: space-between
+			width: 100%
+
+	.forms
+
+		&__submit
+			width: 48%
+			padding: 15px
+			text-align: center
+
+			&:first-child
+				background: var(--main-color)
+				color: #fff
+
+.forms-input-cont
+	
+	.rating
+
+		&__list
+			// flex: 1 1 auto
+			// align-items: center
+			// align-self: center
+			margin: 0 0 3px 20px
+
+		&__list:not(.js__voted)
+
+			&:hover
+
+				.rating
+
+					&__start
+						cursor: pointer
+						background: url("../img/ico-star-active.png") top right no-repeat
+
+						&:nth-child(odd)
+							background-position: left top
+
+						&:nth-child(odd):not(:first-child)
+							background-position: left 4px top
+
+						&:hover
+
+							~ .rating__start
+								background: url("../img/ico-star.png") top right no-repeat
+
+								&:nth-child(odd)
+									background-position: left top
+
+								&:nth-child(odd):not(:first-child)
+									background-position: left 4px top
+
+// &:nth-child(odd)
+// 	background-position: left top
+
+// &:nth-child(odd):not(:first-child)
+// 	padding-left: 4px
+// 	width: 12px
+// 	background-position: left 4px top
+
+// &.active
+// 	background: url("../img/ico-star-active.png") top right no-repeat
+
+// 	&:nth-child(odd)
+// 		background-position: left top
+
+// 	&:nth-child(odd):not(:first-child)
+// 		background-position: left 4px top
+
+// .div-recaptcha + label
+// 	// display: none
+// 	height: 19px
+
+#product-review
+	padding: 35px 45px
+
+.reviews
+	
+	&__title
+		text-transform: uppercase
+		font-weight: bold
+		font-size: rem(18)
+		margin-bottom: 30px
+	
+	&__cont
+		max-width: 965px
+
+	&__one
+
+		.rating
+
+			&__list
+				margin-right: 0
+
+		&-date
+			line-height: rem(14)
+			margin-right: 23px
+			padding-right: 23px
+			border-right: 1px solid var(--border-color)
+
+		&-top
+			display: flex
+			align-items: center
+			justify-content: space-between
+			border: 1px solid var(--border-color)
+			padding: 12px 20px
+
+		&-user, &-date-rating
+			display: flex
+			align-items: center
+
+		&-username
+			// margin-left: 22px
+
+		&-text
+			padding: 20px
+			font-size: rem(15)
+			line-height: rem(20)
+			max-width: 900px
+
+.tovar__reviews-btn
+	margin: 25px 0 0
+
+.base-page
+	display: flex
+	flex-wrap: wrap
+	flex-direction: row-reverse
+	justify-content: space-between
+	max-width: none
+
+	&__news-list
+		width: 304px
+		// position: sticky
+		// top: 20px
+
+		+ .text-page
+			width: calc(100% - 360px)
+
+.news-backurl
+	// order: 2
+	margin: 15px 0 0
+	width: 100%
+	// display: none
+
+.news-navbar
+	// order: 1
+	margin: 15px 0 0
+	width: 100%
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	// display: none
+
+.news-list
+	border: 1px solid var(--border-color)
+
+	&__btn
+		margin: rem(35) 0 0
+
+		.default-btn
+			width: 100%
+
+	&__one
+		padding: 2rem
+
+		&:not(:first-child)
+			border-top: inherit
+
+		&-date
+			font-weight: 100
+			color: #6e6e6e
+			font-size: rem(14)
+			margin: 0 0 rem(30)
+
+		&-title
+			text-transform: uppercase
+			font-size: rem(18)
+			line-height: 1.22
+			margin: 0 0 rem(25)
+
+		&-link
+			text-decoration: none
+			display: inline-block
+
+			&:after
+				content: ""
+				display: inline-block
+				size: 4px 7px
+				background: url("../img/ico-green-arrow.png") no-repeat
+				margin: 0 0 0 10px
+
+.default-btn
+	display: inline-block
+	color: #000
+	text-decoration: none
+	text-align: center
+	padding: 20px 25px
+	font-size: rem(18)
+	transition: color .3s ease, background .3s ease
+	border: 1px solid var(--main-color)
+
+	&:hover, &:focus, &--green
+		background: var(--main-color)
+		color: #fff
+
+
+.page-404
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+	&__img
+		&-cont
+			flex: none
+			margin-right: 150px
+
+
+
+
+	&__cont
+		margin: 40px 0 0
+
+	&__title
+		margin: 0 0 30px 0
+		font-weight: 600
+		color: var(--main-color)
+		font-size: em(24)
+
+	&__subtitle
+		font-size: em(14)
+
+
+.doc-panel
+	
+	&__text
+		margin-top: 30px
+
+.shops
+	display: flex
+	justify-content: space-between
+
+	&__aside
+		width: 422px
+		flex: none
+
+		&-app
+			margin-bottom: 44px
+
+		&-address, &-contact
+			margin-bottom: 29px
+
+	&__about
+		width: calc(100% - 451px)
+
+.shop-slider
+
+	> .shop-slider__slide:not(:first-child)
+		display: none
+
+	.slick
+
+		&-arrow
+			position: absolute
+			bottom: 26px
+			z-index: 1
+			size: 45px 49px
+			background: url("../img/ico-shops-arrow.png") center no-repeat, #fff
+
+		&-next
+			right: 60px
+
+		&-prev
+			transform: rotate(180deg)
+			right: 105px
+
+.shop__desc
+	border: 1px solid var(--border-color)
+	padding: rem(35) rem(42)
+
+
+.shop
+
+	&__title
+		text-transform: uppercase
+		font-weight: bold
+		margin-bottom: 15px
+
+.app
+
+	&__title
+		text-transform: uppercase
+		font-weight: bold
+		margin-bottom: 28px
+
+	&__one
+		display: inline-block
+
+		&:not(:last-child)
+			margin-right: 21px
+
+.shop-address
+	border: 1px solid var(--border-color)
+	padding: rem(35) rem(40)
+	width: 100%
+
+	&__title
+		font-weight: bold
+		text-transform: uppercase
+		margin-bottom: 25px
+
+	&__text
+		letter-spacing: .01em
+		font-size: rem(14)
+		line-height: 1.7
+
+		a
+			text-decoration: none
+
+	&__soc
+		margin: 20px 0 0
+
+		.soc
+
+			&__link
+				size: 38px
+
+.shop-contact
+	border: 1px solid var(--border-color)
+	padding: rem(35) rem(40)
+	letter-spacing: .01em
+	width: 100%
+
+	&__tel
+		font-size: rem(20)
+		margin-bottom: 20px
+
+		a
+			text-decoration: none
+
+	&__text
+		font-size: rem(14)
+		line-height: 1.7
+
+	&__msg
+		margin: 25px 0 0
+
+.msg
+
+	&__link
+
+		&:not(:last-child)
+			margin-right: 11px
+
+.contacts__form
+	margin: 2rem 0 0
+	
+	.cart__forms
+		padding: 0
+
+	.forms
+
+		&__file
+
+			&-formats
+				position: absolute
+				left: 0
+				top: 100%
+
+		&__title, &-wrap
+			padding: 30px 36px			
+
+		&__title
+			text-align: left
+			font-size: 1rem
+			background: #eff0f0
+			border-bottom: 1px solid var(--border-color)
+			margin-bottom: 0
+
+		&-wrap
+
+		&__bottom
+			display: flex
+			align-items: center
+			
+		&-input-cont
+			margin-right: 0 !important
+			width: 47.6% !important
+
+			textarea
+				padding: 15px 17px
+				max-width: 100%
+
+		&-submit-cont
+			margin: 0 40px 0 0
+
+		&__submit
+			border: 1px solid #139658
+			background: #2cad42
+			color: #fff
+			font-weight: 100
+			height: 56px
+
+		&__input
+			height: 41px
+
+		&__label
+			font-size: rem(14)
+			min-height: 16px
+
+.c-map
+	
+	img
+		display: block
+		width: 100%
+
+.page-search
+
+	.search
+
+		form
+			display: flex
+			justify-content: center
+
+		&__wrap
+			// text-align: center	
+			max-width: 100%
+			width: 500px
+			border: 1px solid var(--border-color)
+
+			input[type="text"]
+				border: none
+				height: 42px
+				width: 100%
+				padding: 0 40px 0 18px
+
+.serach-header
+	margin: 0 0 2rem
+
+.cat2__one-buy
+	display: flex
+	flex-direction: column
+	align-items: center
+
+
+.bonus
+	.title-block__cont
+		min-height: 300px
+		color: #fff
+		margin-bottom: 60px
+		background: url(/local/templates/main/img/photos/bonus-banner-1.png) no-repeat center !important
+	.bread-crumbs
+		color: #fff
+		a 
+			color: #fff
+
+	.title-block__btn
+		color: #000
+		text-decoration: none
+		padding: 20px 40px
+		background: #fff
+		display: inline-block
+		margin-top: 45px
+
+	.bread-crumbs__link
+		&:after
+			background: url("../img/ico-paginator-arrow-white.png")no-repeat center
+	&__advantage_block
+		padding-bottom: 60px
+	&__advantage_block_title
+		font-size: 35px
+		display: flex
+		justify-content: space-between
+		margin-bottom: 40px
+
+	&__advantage_block_title_btn
+		font-size: 16px
+		align-self: flex-end
+		padding-left: 10px
+		a 
+			text-decoration: none
+	&__advantage_block_items
+		display: flex
+		justify-content: space-between
+	&__advantage_block_item
+		display: flex
+		flex-direction: column
+		border: 1px solid #e1e1e1
+		padding: 50px 50px
+		padding-bottom: 40px
+		width: calc((100% - 50*3px)/4)
+		img 
+			max-height: 70px
+			width: auto
+			// align-self: flex-start
+			// margin-bottom: 40px
+	&__advantage_block_item_img
+		display: flex
+		align-items: center
+		height: 75px
+		margin-bottom: 50px
+	&__advantage_block_item_title
+		font-weight: bold
+		font-size: 18px
+		margin-bottom: 25px
+	
+	&__advantage_block_item_text
+		// font-weight: lighter
+		font-weight: 300
+
+	&__banner
+		background: #009d4a
+		// padding-top: 65px
+		// padding-bottom: 80px
+		padding: 65px 2rem 80px
+		.wrapper
+			display: flex
+			flex-wrap: wrap
+	&__banner_title
+		color: #fff
+		font-size: 35px
+		font-weight: 100
+		width: 100%
+		margin-bottom: 55px
+	&__banner_block_text
+		color: #fff
+		font-size: 22px
+		line-height: 30px
+		max-width: 310px
+		display: flex
+		align-items: center
+		padding-left: 60px
+	&__banner_block
+		display: flex
+		width: 50%
+		
+	&__banner_block_img
+		// overflow: hidden
+		border-radius: 15px
+		// border: 1px solid #058342
+		// padding: 15px
+		// background: url("../img/ico-bonus-logo.png") no-repeat
+		background-size: cover
+		width: 215px
+		height: 130px
+		position: relative
+		margin: 27px
+		min-width: 215px
+		img
+			object-fit: cover
+			width: 100%
+			height: 100%
+			position: relative
+			border-radius: 15px
+		// &:after
+		// 	content: ""
+		// 	position: absolute
+		// 	z-index: 2
+		// 	top: -26px
+		// 	left: -26px
+		// 	right: -26px
+		// 	bottom: -26px
+		// 	border: 15px solid #009d4a
+		// 	border-radius: 30px
+		&:before
+			content: ""
+			position: absolute
+			z-index: 2
+			top: -27px
+			left: -27px
+			right: -27px
+			bottom: -27px
+			border: 1px solid #058342
+			border-radius: 30px
+	&__banner_block_img.plus
+		&:after
+			content: "+"
+			width: 40px
+			height: 40px
+			border-radius: 20px
+			background: #ff0042
+			position: absolute
+			right: 30px
+			top: -20px
+			display: flex
+			align-items: center
+			justify-content: center
+			color: #fff
+			font-size: 25px
+			z-index: 3
+
+	&__use_block
+		padding-bottom: 60px
+		padding-top: 60px
+	&__use_block_title
+		font-size: 35px
+		display: flex
+		justify-content: space-between
+		margin-bottom: 10px
+	&__use_block_text
+		display: flex
+		justify-content: space-between
+		align-items: flex-end
+		margin-bottom: 60px
+		div 
+			width: 50%
+		a 
+			font-size: 16px
+			color: #fff
+			padding: 21px 38px
+			background: #009d4a
+			text-decoration: none
+	&__use_block_title_btn
+		font-size: 16px
+		align-self: flex-end
+
+	&__use_block_items
+		display: flex
+		justify-content: space-between
+	&__use_block_item
+		display: flex
+		flex-direction: column
+		border: 1px solid #e1e1e1
+		padding: 60px 50px
+		padding-bottom: 40px
+		width: calc((100% - 50*3px)/4)
+		img 
+			max-height: 80px
+			width: auto
+			// align-self: flex-start
+			// margin-bottom: 40px
+	&__use_block_item_img
+		display: flex
+		align-items: center
+		justify-content: center
+		height: 80px
+		margin-bottom: 60px
+	&__use_block_item_title
+		font-weight: bold
+		font-size: 18px
+		margin-bottom: 25px
+	
+	&__use_block_item_text
+		font-weight: lighter
+		line-height: 24px
+	&__use_block_item_text.text-al-c
+		text-align: center
+	// form style-----------------
+	&__form_title
+		text-align: center
+		font-size: 26px
+		margin-bottom: 50px
+	&__form_text
+		margin-bottom: 40px
+		margin-top: 10px
+		max-width: 295px
+		a 
+			color: #009d4a
+	&__form_btn
+		input
+			background: #009d4a
+			color: #fff
+			border: 0
+			padding: 18px 28px
+	
+	&__form
+		width: 100%
+		max-width: 540px
+		// background-color: #fafafa
+		padding: 60px 75px
+		.forms-wrap
+			flex-direction: column
+		#smsauth_timer
+			margin-top: 20px
+		.forms-input-cont
+			width: 100%
+		
+		.forms-input-cont.sms_code
+			flex-direction: row
+			margin-top: 10px
+			margin-bottom: 45px
+			flex-wrap: wrap
+			justify-content: space-between
+
+			input 
+				width: 50%
+
+			a 
+				background: #f2f3f5
+				color: #000
+				margin-right: 30px
+				text-decoration: none
+				padding: 12px 25px
+				white-space: nowrap
+				width: calc(50% - 30px)
+
+		.forms-input-cont.ico_date
+			position: relative
+
+			&:before
+				content: ""
+				background: url("../img/ico-bonus-form.png")
+				position: absolute
+				right: 18px
+				bottom: 13px
+				size: 16px
+				z-index: 4
+
+		.forms__input
+			height: 42px
+			&::placeholder
+				color: #e6e6e6
+
+.ui-widget.ui-widget-content
+	width: auto
+	height: auto
+	background: #fff
+.ui-widget-header
+	background: #e6e6e6 
+.ui-widget-header .ui-icon
+	background: url("../img/ico-check.png")no-repeat center
+.ui-icon-circle-triangle-w
+	transform: rotate(90deg)
+.ui-icon-circle-triangle-e
+	transform: rotate(-90deg)
+
+
+.auth
+	form[name="regform"]
+		.forms__error-message
+			bottom: 53px
+		#smsauth_timer
+			margin-top: 20px
+		.sms_code
+			a
+				position: absolute
+				bottom: -23px
+				right: 0
+		.forms__input_error:focus
+			border-color: #ebebeb
+			~ .forms__error-message
+				display: none !important
+
+
+.lk
+	&__block
+		border: 1px solid #eff0f0
+		display: flex
+		padding: 20px 340px 20px 115px
+		justify-content: space-between
+	
+	&__block_p1
+		font-size: 20px
+		line-height: 30px
+
+	&__block_bonus
+		font-size: 40px
+		margin-bottom: 20px
+
+	&__block_info
+		display: flex
+		flex-direction: column
+		justify-content: center
+		min-width: 245px
+		margin-right: 20px
+
+#auth
+	img.calendar-icon
+		position: absolute
+		bottom: 18px
+		right: 16px
+	.forms__submit
+		cursor: default
+	.forms-submit-cont
+		input[type=submit]
+			background: var(--main-color)
+
+.head-links__link--bonus
+	text-decoration: none
+	font-size: rem(16)
+	padding: 20px 54px
+	border: 1px solid var(--main-color)
+	color: #000
+	margin-right: 15px
+	text-align: center
+	&:hover
+		background: var(--main-color)
+		color: #fff
+.head__menu
+	.head-links__link--bonus
+		display: none
+
+
+
+
+#header-cart
+	display: block
+	
+.tovar-smallslider
+	opacity: 0
+
+	.slick-slide
+		margin: 0 10px
+
+	&.slick-initialized
+		opacity: 1
+
+@import "_grid"

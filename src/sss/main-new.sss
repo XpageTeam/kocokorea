@@ -3,10 +3,16 @@
 
 @import "_vars.sss"
 @import "_base.sss"
-@import "_title-block.sss"
-@import "_text-styles.sss"
+// @import "_title-block.sss"
+// @import "_text-styles.sss"
 
-@import "_standart-page.sss"
+// @import "_standart-page.sss"
+
+
+@import "main.sss"
+@import "main-old.sss"
+@import "temp-style.sss"
+
 
 @import "mobile-menu.sss"
 @import "header.sss"
@@ -20,6 +26,9 @@
 @import "main-soc.sss"
 @import "footer.sss"
 
+@import "catalog.sss"
+@import "about.sss"
+
 
 
 .btn
@@ -31,6 +40,12 @@
 	font-weight: 500
 	color: #fff
 	padding: 17px 35px
+	border: 1px solid transparent
+	transition: background .3s ease, color .3s ease
+
+	&:hover
+		background-color: #fff
+		border: 1px solid var(--main-color)
 
 
 
@@ -63,7 +78,8 @@
 
 
 
-
-.main
-	#page-wr
-		max-width: 100%
+#page-wr
+	max-width: 100%
+	width: 100%
+	padding: 0
+	margin: 0 0 auto 0

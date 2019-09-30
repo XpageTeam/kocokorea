@@ -1,0 +1,2046 @@
+button, input, select
+	font-family: inherit
+
+
+@media screen and (min-width: 1200px)
+	.head__lefttop-links
+		display: block !important
+		
+.cart-gift
+	.rub
+		display: inline-block
+		margin-left: 5px
+		
+.head
+	position: relative
+	
+.head__lefttop-links
+	display: flex
+	position: absolute
+	top: 30px
+	left: 0
+
+	a 
+		font-size: rem(14)
+		font-weight: normal
+		text-transform: none
+		border-bottom: 1px solid #ccc
+
+		&:not(:first-child)
+			margin-left: 20px
+
+		&:hover 
+			border-bottom-color: $main-color
+
+			
+.soc__widget
+	position: absolute
+	bottom: 42px
+	width: auto
+.soc
+	position: relative
+	display: flex
+
+	> div
+		&:hover
+			> a + div
+				display: block !important
+
+	iframe + iframe 
+		display: none !important
+.footer
+	.footer__soc
+		.soc__widget
+			display: none !important
+
+.notice
+	position: sticky
+	top: 0
+	z-index: 10
+	background: #eff0f0
+	padding: 15px 0
+	text-align: center
+	font-weight: 100
+	letter-spacing: .01em
+
+	a
+		text-decoration: none
+
+.rating
+	
+	&__list
+		display: inline-flex
+		margin-right: 16px
+
+	&__start
+		size: 8px 16px
+		background: url("../img/ico-star.png") right top no-repeat
+
+		&:nth-child(odd)
+			background-position: left top
+
+		&:nth-child(odd):not(:first-child)
+			padding-left: 4px
+			width: 12px
+			background-position: left 4px top
+
+		&.active
+			background: url("../img/ico-star-active.png") top right no-repeat
+
+			&:nth-child(odd)
+				background-position: left top
+
+			&:nth-child(odd):not(:first-child)
+				
+				
+				background-position: left 4px top
+
+	&__count
+		display: inline-block
+		vertical-align: top
+
+.rub
+	font-style: normal
+	font-size: 100%
+	font-weight: inherit
+	font-family: "Roboto"
+
+.slick
+	
+	&-slide
+		height: auto
+
+	&-arrow
+		border: none
+		padding: 0
+		display: block
+
+	&-list, &-track
+		min-width: 100%
+
+.head
+	display: flex
+	align-items: center
+	justify-content: space-between
+	padding: 40px 0 0
+
+	&__left, &__right
+		width: persent(770, 1800)
+
+	&__left
+		display: flex
+		align-items: center
+
+	&__logo
+		flex: none
+
+	&-search
+		width: 237px
+		margin-right: 28px
+
+	&-phone
+		font-weight: 100
+		margin-right: rem(39)
+
+		
+		
+
+.head-contacts
+	
+	&__link
+		color: #000
+		text-decoration: none
+
+#header-cart
+	display: none
+
+.head-links
+	display: flex
+	justify-content: flex-end
+	align-items: center
+	&__link
+		size: 32px
+
+		&:not(:first-child)
+			margin-left: 28px
+
+		&--favorite
+
+		&--favorite
+			background: url("../img/ico-mobile-favorite.png") center bottom no-repeat !important
+			background-size: 25px !important
+
+		&--cart
+			position: relative
+			background: url("../img/ico-cart.png") center bottom no-repeat
+
+			&:after
+				content: attr(data-count)
+				border-radius: 50%
+				position: absolute
+				color: #fff
+				text-decoration: none
+				background: #1dbadd
+				size: 18px
+				text-align: center
+				font-size: 11px
+				line-height: 20px
+				top: 1px
+				right: -2px
+
+		&--lc
+			background: url("../img/ico-lc.png") center bottom no-repeat
+			display: none
+			
+
+
+.search
+	
+	&__wrap
+		position: relative
+		width: 237px
+
+	&__submit
+		border: none
+		position: absolute
+		right: 1px
+		top: 1px
+		bottom: 1px
+		width: 45px
+		background: url("../img/ico-search.png") center no-repeat, #fff
+
+	&__input
+		size: 100% 42px
+		padding: 0 40px 0 18px
+		border: 1px solid $border-color
+
+.head__menu
+	margin-top: 87px
+
+.sub--vertical
+	position: relative
+	
+	.submenu
+		width: auto
+		left: 50%
+		padding: 35px 40px
+		transform: translateX(-50%)
+		flex-direction: column
+
+		&__col
+			width: 100%
+			margin-right: 0
+
+			&:not(:last-child)
+				margin-bottom: 30px
+
+			&:last-child
+
+				.submenu__title
+					margin-bottom: 0
+
+.menu
+	display: flex
+	justify-content: center
+	position: relative
+	z-index: 7
+
+	&__link
+		font-weight: bold
+		text-transform: uppercase
+		color: #000
+		text-decoration: none
+		white-space: nowrap
+
+	&__el
+		padding-bottom: 55px
+
+		&:not(:last-child)
+			margin-right: 30px
+
+		&.sub
+
+			div a
+				font-weight: 300
+
+			.menu__link
+				display: block
+				padding-right: 21px
+				position: relative
+				z-index: 1
+				
+
+				&:after, &:before
+					content: ""
+					position: absolute
+
+				&:after
+					right: 0
+					size: 7px 4px
+					background: url("../img/ico-sub-arrow.png") no-repeat
+					top: 7px
+
+				&:before
+					size: 23px 12px
+					background: url("../img/ico-triangle.png") no-repeat
+					left: calc(50% - 12px)
+					bottom: -55px
+					transition: opacity .4s ease
+					opacity: 0
+
+			&:hover
+
+				.submenu
+					opacity: 1
+					pointer-events: all
+
+				.menu__link
+
+					&:before
+						opacity: 1
+
+.submenu
+	position: absolute
+	left: 0
+	top: calc(100% - 1px)
+	width: 100%
+	transition: opacity .4s ease
+	pointer-events: none
+	opacity: 0
+	background: #fff
+	display: flex
+	box-shadow: 13px 13px 15px 0px rgba(#000, .1)
+	border-top: 1px solid $border-color
+	padding: 50px 65px
+	justify-content: space-between
+
+
+	&__title
+		text-transform: uppercase
+		font-size: rem(18)
+		margin-bottom: 30px
+		white-space: nowrap
+
+		&:first-child:last-child
+			margin-bottom: 0
+
+		a
+			color: #000
+			text-decoration: none
+
+	&__list
+		font-size: rem(14)
+
+		&-link
+			color: #000
+			text-decoration: none
+
+		&-el
+
+			&:not(:first-child)
+				margin-top: 15px
+
+.footer
+	background: $second-color
+	padding: 64px
+	margin-top: 88px
+
+	&__copy
+		font-size: rem(14)
+
+		a
+			text-decoration: none
+			display: inline-block
+			margin-top: 6px
+	
+	&-line
+		display: flex
+		justify-content: space-between
+
+		&--bot
+			align-items: center
+			margin-top: 35px
+
+	&__menu
+		display: flex
+		justify-content: space-between
+		
+		width: 50%
+
+	&__phone
+		margin-left: auto
+		width: persent(325)
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+
+		a
+			text-decoration: none
+
+	.submenu__list
+
+		&-el
+
+			&:not(:first-child)
+				margin-top: 11px
+
+		&-link
+			font-size: rem(16)
+
+.footer-phone
+
+	a
+		color: #000
+		font-size: rem(20)
+
+.footer-call
+	margin-top: 10px
+
+.f-auth
+	
+	&__link
+		display: inline-block
+		border: 1px solid #d2d0d0
+		color: #000
+		text-decoration: none
+		padding: 20px 37px
+
+.dev
+	display: flex
+	align-items: center
+	color: #000
+	text-decoration: none
+
+	&__text
+		margin-right: 10px
+		font-size: rem(14)
+
+.bread-crumbs
+	color: var(--text-second-color)
+
+	&__link
+		color: inherit
+		text-decoration: none
+		display: inline-block
+		margin-right: 15px
+		font-size: rem(14)
+		line-height: rem(20)
+
+		&:after
+			content: ""
+			position: relative
+			display: inline-block
+			color: inherit
+			top: 3px
+			margin-left: 15px
+			size: 1px 16px
+			background-color: var(--text-second-color)
+
+
+	&__this
+		color: var(--main-color)
+
+		
+.title-block
+	&__cont
+		background-repeat: no-repeat
+		background-position: right
+		margin-bottom: 80px
+
+	&__title 
+		font-size: rem(30)
+		font-weight: 600
+
+	&__crumbs
+		margin: 0 0 14px 0 
+
+
+.inner-content
+
+	.wrapper
+		padding: 0
+
+.cart
+
+	&-header 
+		padding: 30px 42px
+		display: flex
+		justify-content: space-between
+		font-size: rem(14)
+		letter-spacing: 0.01rem
+		border-bottom: 1px solid #dedede
+
+		&__name
+			width: 51%
+
+		&__price 
+			width: 17.4%
+
+		&__quantity
+			width: 20%
+
+		&__price-total
+			width: 17.3%
+
+	&-item
+		display: flex 
+		justify-content: space-between
+		align-items: center
+		padding: 68px 12px 60px 12px
+
+		&:not(:first-child)
+			padding-top: 0
+
+		&__title 
+			font-size: rem(18)
+			line-height: rem(22)
+			font-weight: 300
+			text-transform: uppercase
+			letter-spacing: 0.01rem
+
+			a
+				color: #000
+				text-decoration: none
+
+		&__text 
+			font-size: rem(14)
+			line-height: rem(16)
+			font-weight: 100
+			letter-spacing: 0.01rem
+			color: #aaaaa8
+			margin-top: 10px
+
+		&__name
+			display: flex 
+			width: persent(710, 1400)
+			align-items: center
+
+			&-foto 
+				position: relative
+
+		&__info 
+			width: persent(525, 1400)
+			margin-left: 53px
+	
+			.cart-item__quantity
+				width: 100%
+
+		&__price 
+			width: persent(230, 1400)
+			font-size: rem(24)
+			font-weight: 300
+			white-space: nowrap
+
+		&__quantity
+			width: persent(265, 1400)
+
+		&__price-total
+			width: persent(240, 1400)
+			font-size: rem(24)
+			font-weight: 300
+
+		&__close
+			width: persent(50, 1400)
+
+
+	&-counter
+
+		&-wrapper
+			max-width: 115px
+			height: 46px
+			border: 1px solid $border-color
+			display: flex 
+			align-items: center
+			justify-content: center
+
+		&__input
+			max-width: 50px
+			border: 0
+			text-align: center
+			font-size: rem(20)
+			color: #000
+
+		&__link
+
+			&--minus
+				position: relative
+				display: flex
+				align-items: center
+				justify-content: center
+				cursor: pointer
+				size: 20px
+
+				&:before
+					content: ""
+					display: inline-block
+					width: 13px
+					height: 1px
+					background: #000
+
+			&--plus 
+				position: relative
+				display: flex
+				align-items: center
+				justify-content: center
+				cursor: pointer
+				size: 20px
+
+				&:before
+					content: ""
+					display: inline-block
+					width: 13px
+					height: 1px
+					background: #000
+
+				&:after 
+					content: ""
+					position: absolute
+					width: 1px
+					height: 13px
+					background: #000
+
+
+	&-footer
+		background: #eff0f0
+		padding: 35px 30px
+		display: flex
+		justify-content: flex-end
+		margin-bottom: 42px
+		margin-top: 15px
+		font-size: rem(24)
+		font-weight: 300
+
+	.favorites
+
+		&:before 
+			content: ""
+			position: absolute
+			top: 5px
+			left: 7px
+			width: 20px
+			height: 15px
+			background: url(../img/ico-favorits.png) no-repeat center	
+	
+	.close 
+		display: inline-block
+		background: url(../img/ico-close.png) no-repeat center
+		size: 20px
+		margin-right: 10px
+
+	&__forms
+		border: 1px solid var(--border-color)
+		padding: 53px 69px
+
+		&-wrap 
+			display: flex
+			flex-wrap: wrap
+
+		.forms
+
+			&__input
+
+				&-wrap
+					display: flex 
+					flex-wrap: wrap
+
+			&__text-bottom
+				text-align: left
+				font-size: rem(16)
+
+			&-wrap
+
+				&:after
+					content: ""
+					width: 30.35714%
+
+				textarea
+					border: 1px solid $border-color
+
+		.forms-input-cont
+			width: persent(425, 1400)
+			&:not(:nth-child(3n))
+				margin-right: persent(60, 1400)
+
+		.forms-textarea-cont
+			width: persent(910, 1400)
+			display: flex 
+			flex-direction: column-reverse
+			margin-right: persent(65, 1400)
+
+		.textarea 
+			width: 100%
+			height: 137px
+			resize: none
+			padding: 10px 17px
+			border: 1px solid $border-color
+
+		.recaptcha
+			margin-top: 27px
+
+			&-wrap
+				width: persent(425, 1400)
+				margin: 30px 0 0
+
+		.btn__forms
+			font-size: rem(16)
+			letter-spacing: 0.01rem
+			margin-top: 58px
+
+			.btn
+				padding: 21px 54px 23px
+				font-size: rem(16)
+
+.blog
+	
+	&__list 
+		display: flex 
+		flex-wrap: wrap
+		margin-bottom: -68px
+
+	&__item
+		width: persent(424, 1400)
+		margin-bottom: 68px
+
+		&:not(:nth-child(3n))
+			margin-right: 64px
+		
+		&-img
+
+			img
+				display: block
+
+		&-info 
+			border-left: 1px solid var(--border-color)
+			border-bottom: 1px solid var(--border-color)
+			border-right: 1px solid var(--border-color)
+			border-offset: -1px
+			padding: 30px 39px 35px 34px
+
+			&--top 
+				display: flex 
+				justify-content: space-between
+				padding-bottom: 20px
+
+		&--link 
+			color: #000
+			text-decoration: none
+
+		&-data 
+			font-size: rem(14)
+			color: #aaaaa8
+			font-weight: 100
+
+		&-see 
+			font-size: rem(14)
+			color: #aaaaa8
+			font-weight: 100
+
+		&-title 
+			font-size: rem(18)
+			line-height: rem(22)
+			text-transform: uppercase
+			font-weight: 300
+			letter-spacing: 0.01rem
+
+.paginator
+	display: flex
+	justify-content: center
+	align-items: center
+	
+	&__cont
+		margin: 100px 0
+
+	&__el
+
+		+ .paginator__el
+			
+
+		&--arrow
+
+			&:first-child
+				margin-right: 16px
+
+			&:last-child
+				margin-left: 16px
+
+	&__link
+		color: #000
+		text-decoration: none
+		display: block
+		size: 30px
+		
+		display: flex
+		justify-content: center
+		align-items: center
+
+		&.active
+			color: $main-color
+
+	&__arrow
+		size: 4px 7px
+		background: url("../img/ico-paginator-arrow.png") no-repeat
+		display: block
+
+		&--left
+			transform: rotate(180deg)
+
+.catalog
+	display: flex
+	justify-content: space-between
+
+	&__cat2
+		width: calc(100% - 240px - 78px)
+
+		.paginator__cont
+			margin: 50px 0 0
+
+
+
+
+
+
+.tovar__tags
+	position: absolute
+	top: 0
+	left: 0
+	margin: 0 !important
+
+
+
+.to-cart, .to-favorite
+
+	&:not(:last-child)
+		margin-left: rem(22)
+
+.to-cart
+	background: url("../img/ico-to-cart.png") no-repeat
+	size: 19px 21px
+	order: 1
+
+.to-favorite
+	background: url("../img/ico-cat-favorite.png") no-repeat
+	background-size: contain !important
+	size: 19px 17px
+	border-radius: 0
+	border: none
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+
+
+.footer__soc
+	margin-left: 93px
+
+
+
+
+
+
+.tovar
+	
+	&-top
+		display: flex
+		justify-content: space-between
+
+	&__sliders
+		
+		max-width: 570px
+		width: 100%
+		
+
+	&__info
+		
+		flex: 1 1 auto
+		margin-left: 27px
+
+	&-smallslider
+
+		&__slide
+			display: flex 
+			justify-content: center
+			align-items: center
+			border: 1px solid #ebebeb
+			padding: 10px
+
+			img 
+				max-height: 100px
+
+.tovar-sliders
+	display: flex
+	justify-content: space-between
+
+	flex-direction: column-reverse
+
+	&__small
+		flex: none
+		display: flex
+	
+
+	&__big
+		
+		margin-bottom: 20px
+		flex: 1 1 auto
+		position: relative
+		display: flex
+		flex-direction: column
+		
+
+.tovar-big-slider
+	overflow: hidden
+	
+	width: 100%
+	flex: 1 1 auto
+	display: flex
+	flex-direction: column
+
+	.slick
+
+		&-list, &-track
+			
+
+		&-track, &-list
+			display: flex
+			flex: 1 1 auto
+
+		&-list
+			flex-direction: column
+			width: 100%
+
+		&-track
+
+		&-arrow
+			size: 9px 17px
+			top: rem(52)
+			z-index: 2
+			position: absolute
+			background: url("../img/ico-tovar-slider-arrow.png") center no-repeat
+			
+
+			&:hover
+				
+
+		&-prev
+			left: rem(36)
+			transform: rotate(180deg)
+
+		&-next
+			left: rem(67)
+
+	> .tovar-big-slider__slide:not(:first-child)
+		display: none !important
+
+	&__slide
+		display: flex !important
+		align-items: center
+		justify-content: center
+		overflow: hidden
+		flex: none
+		
+
+		img:not([src*="no-image"])
+			
+			
+			
+			
+			
+
+			
+			
+			
+			max-width: 100%
+			
+			max-height: 600px
+			height: auto
+			display: block !important
+
+.tovar-smallslider
+	display: flex
+	flex-direction: column
+	width: 100%
+
+	.slick
+
+		&-track	
+			display: flex
+			justify-content: center
+			
+			
+
+		&-slide
+			flex: none
+
+		&-list
+			
+			
+	
+	&__slide
+		
+		display: flex !important
+		align-items: center
+		justify-content: center
+		
+		cursor: pointer
+		flex: none
+
+		img
+			
+
+		&:not(:first-child)
+			
+
+.tovar__share
+	position: absolute
+	width: 100%
+	left: 0
+	bottom: 0
+	z-index: 999
+
+	&-yashare
+		background: #fff
+		padding: 10px
+		border: 1px solid $border-color
+		position: absolute
+		bottom: calc(100% + 15px)
+		left: 0
+		border-radius: 2px
+		transition: opacity .3s ease
+		pointer-events: none
+		opacity: 0
+
+		&.js__visible
+			opacity: 1
+			pointer-events: all
+
+.ya-share2
+	
+	&__icon
+		width: 44px !important
+		height: 44px !important
+		border-radius: 50%
+
+	&__list
+		display: flex !important
+		justify-content: space-around
+		flex-wrap: wrap
+		margin-bottom: -12px !important
+
+		&:after
+			content: ""
+			width: 44px
+
+	&__item
+		margin-right: 0 !important
+		margin-bottom: 12px !important
+
+	&__badge
+		border-radius: 50% !important
+
+	&__item
+
+		&_service
+
+			&_vkontakte
+	
+				.ya-share2
+
+					&__icon
+						background: url("../img/ico-vk.png") center no-repeat !important
+
+			&_facebook
+
+				.ya-share2
+
+					&__icon
+						background: url("../img/ico-fb.png") center no-repeat !important
+
+.share
+	font-weight: bold
+	display: flex
+	flex-direction: column
+	align-items: center
+	text-align: center
+	color: #000
+	text-decoration: none
+
+	&__img
+		margin-bottom: 15px
+
+.tovar-fav-add__cont
+	position: absolute
+	top: 28px
+	right: 28px
+	z-index: 4
+
+
+	
+
+.tovar
+	
+	&__subtitle
+		color: #949494
+		margin-bottom: 20px
+
+	&__title
+		font-weight: 300
+		font-size: rem(26)
+		line-height: rem(39)
+		letter-spacing: .01em
+		
+
+	&__rating
+		margin-top: 18px
+		display: flex
+		align-items: center
+
+		.rating
+
+			&:not(:last-child)
+				margin-right: 3rem
+
+		&-review
+			flex: none
+
+	&__buy
+		
+
+	&__desc
+		margin-top: 36px
+
+	&__tabs
+		margin-top: 37px
+
+
+	&__advantages
+		margin: rem(46) 0 0
+		
+		display: none
+		
+
+	&-top
+		position: relative
+		
+
+.tovar-advantages
+	padding: rem(40) 0
+	display: flex
+	align-items: center
+
+	&__item
+		flex: 1 1 auto
+
+		&:not(:last-child)
+			margin-right: 1rem
+
+.advant
+	display: flex
+	align-items: center
+
+	&__img
+		flex: none
+		margin-right: rem(23)
+
+.review-link
+	border: 1px solid $border-color
+	color: #9b9b9b
+	border-radius: 6px
+	display: block
+	padding: 10px 16px 11px
+	text-decoration: none
+	transition: background .3s ease, coilor .3s ease, border-color .3s ease
+
+	&:hover
+		color: #fff
+		border-color: $main-color
+		background: $main-color
+
+.tovar-buy
+	
+		
+		
+	padding: 32px 0
+	display: flex
+	align-items: center
+
+	&__description
+		margin-bottom: 0px
+		font-size: rem(20)
+
+body:not(.show-buttons)
+	.tovar-buy
+
+		&__counter, &__add-to-cart
+			display: none
+
+.tovar-buy
+
+	
+		
+	
+	&__counter
+		margin: 0 19px 0 auto
+		width: 117px
+		flex: none
+
+	&__add-to-cart,
+	&__one-click
+		padding: 12px 20px 13px 52px
+		text-decoration: none
+		white-space: nowrap
+		
+	&__add-to-cart
+		background: url("../img/ico-cat-cart-added.svg") center left 18px no-repeat, $main-color
+		background-size: 18px auto !important
+		border: 1px solid #139658
+		color: #fff
+
+		&:not(:last-child)
+			margin-right: 19px
+
+	&__one-click
+		color: $main-color
+		border: 1px solid currentColor
+		background: url("../img/ico-click.svg") left 20px center no-repeat
+		background-size: 20px !important
+
+.status
+	
+	&:before
+		content: ""
+		border-radius: 50%
+		display: inline-block
+		vertical-align: baseline
+		size: 7px
+		margin: 0 11px 2px 0
+
+	&--instock
+
+		&:before
+			background: $main-color
+
+.tovar-price
+	font-weight: bold
+	font-size: rem(38)
+	letter-spacing: .01em
+	white-space: nowrap
+
+	span
+		font-size: 70%
+
+	.rub
+		
+		
+
+.tovar-desc
+	font-size: rem(14)
+	font-weight: 300
+	display: table
+	
+	&__row
+		display: table-row
+
+		&:not(:first-child)
+			margin-top: 20px
+
+		&-title
+			color: #9a9a9a
+			display: inline-block
+			padding-right: 18px
+			position: relative
+
+			&:before
+				content: ""
+				position: absolute
+				left: 0
+				bottom: 2px
+				width: 100%
+				border-bottom: 2px dotted $border-color
+
+			span
+				background: #fff
+				position: relative
+				z-index: 2
+				padding-right: 10px
+
+		&-text
+			padding-left: 10px
+		
+		&-title, &-text
+			display: table-cell
+			padding-top: 8px
+			vertical-align: bottom
+
+
+
+.forms__label--file
+	&:before
+		top: 28px !important
+		background-size: 20px !important
+		padding-right: 18px !important
+
+
+@media screen and (min-width: 1000px)
+	div.title-search-result
+		width: 400px !important
+
+table.title-search-result
+	width: 100% !important
+
+.title-search
+	
+	&-all
+		padding-top: 20px !important
+		padding-left: 8px !important
+
+	&-selected
+
+		td, a
+			background: $second-color !important
+
+		.title-search-all, .title-search-all a
+			background: none !important
+
+.recaptcha
+	
+	img
+		max-width: none
+		width: 302px
+
+@media screen and (min-width: 660px)
+	.js__moved-head-link
+		display: none
+
+#item_add_to_cart
+	
+	.forms-submit-cont
+
+		> div
+			display: flex
+			justify-content: space-between
+			width: 100%
+
+	.forms
+
+		&__submit
+			width: 48%
+			padding: 15px
+			text-align: center
+
+			&:first-child
+				background: $main-color
+				color: #fff
+
+.forms-input-cont
+	
+	.rating
+
+		&__list
+			margin: 0 0 3px 20px
+
+		&__list:not(.js__voted)
+
+			&:hover
+
+				.rating
+
+					&__start
+						cursor: pointer
+						background: url("../img/ico-star-active.png") top right no-repeat
+
+						&:nth-child(odd)
+							background-position: left top
+
+						&:nth-child(odd):not(:first-child)
+							background-position: left 4px top
+
+						&:hover
+
+							~ .rating__start
+								background: url("../img/ico-star.png") top right no-repeat
+
+								&:nth-child(odd)
+									background-position: left top
+
+								&:nth-child(odd):not(:first-child)
+									background-position: left 4px top
+
+
+#product-review
+	padding: 35px 45px
+
+.reviews
+	
+	&__title
+		text-transform: uppercase
+		font-weight: bold
+		font-size: rem(18)
+		margin-bottom: 30px
+	
+	&__cont
+		max-width: 965px
+
+	&__one
+
+		.rating
+
+			&__list
+				margin-right: 0
+
+		&-date
+			line-height: rem(14)
+			margin-right: 23px
+			padding-right: 23px
+			border-right: 1px solid $border-color
+
+		&-top
+			display: flex
+			align-items: center
+			justify-content: space-between
+			border: 1px solid $border-color
+			padding: 12px 20px
+
+		&-user, &-date-rating
+			display: flex
+			align-items: center
+
+		&-username
+			
+
+		&-text
+			padding: 20px
+			font-size: rem(15)
+			line-height: rem(20)
+			max-width: 900px
+
+.tovar__reviews-btn
+	margin: 25px 0 0
+
+.base-page
+	display: flex
+	flex-wrap: wrap
+	flex-direction: row-reverse
+	justify-content: space-between
+	max-width: none
+
+	&__news-list
+		width: 304px
+		
+		
+
+		+ .text-page
+			width: calc(100% - 360px)
+
+.news-backurl
+	
+	margin: 15px 0 0
+	width: 100%
+	
+
+.news-navbar
+	
+	margin: 15px 0 0
+	width: 100%
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	
+
+.news-list
+	border: 1px solid $border-color
+
+	&__btn
+		margin: rem(35) 0 0
+
+		.default-btn
+			width: 100%
+
+	&__one
+		padding: 2rem
+
+		&:not(:first-child)
+			border-top: inherit
+
+		&-date
+			font-weight: 100
+			color: #6e6e6e
+			font-size: rem(14)
+			margin: 0 0 rem(30)
+
+		&-title
+			text-transform: uppercase
+			font-size: rem(18)
+			line-height: 1.22
+			margin: 0 0 rem(25)
+
+		&-link
+			text-decoration: none
+			display: inline-block
+
+			&:after
+				content: ""
+				display: inline-block
+				size: 4px 7px
+				background: url("../img/ico-green-arrow.png") no-repeat
+				margin: 0 0 0 10px
+
+
+
+
+
+
+.contacts__form
+	margin: 2rem 0 0
+	
+	.cart__forms
+		padding: 0
+
+	.forms
+
+		&__file
+
+			&-formats
+				position: absolute
+				left: 0
+				top: 100%
+
+		&__title, &-wrap
+			padding: 30px 36px			
+
+		&__title
+			text-align: left
+			font-size: 1rem
+			background: #eff0f0
+			border-bottom: 1px solid $border-color
+			margin-bottom: 0
+
+		&-wrap
+
+		&__bottom
+			display: flex
+			align-items: center
+			
+		&-input-cont
+			margin-right: 0 !important
+			width: 47.6% !important
+
+			textarea
+				padding: 15px 17px
+				max-width: 100%
+
+		&-submit-cont
+			margin: 0 40px 0 0
+
+		&__submit
+			border: 1px solid #139658
+			background: #2cad42
+			color: #fff
+			font-weight: 100
+			height: 56px
+
+		&__input
+			height: 41px
+
+		&__label
+			font-size: rem(14)
+			min-height: 16px
+
+.c-map
+	
+	img
+		display: block
+		width: 100%
+
+.page-search
+
+	.search
+
+		form
+			display: flex
+			justify-content: center
+
+		&__wrap
+			
+			max-width: 100%
+			width: 500px
+			border: 1px solid $border-color
+
+			input[type="text"]
+				border: none
+				height: 42px
+				width: 100%
+				padding: 0 40px 0 18px
+
+.serach-header
+	margin: 0 0 2rem
+
+.brands
+
+	.blog
+
+		&__list
+			grid-gap: 20px
+			grid-template-columns: repeat(4, 1fr)
+
+		&__item
+			display: flex
+			flex-direction: column
+
+			&-info
+				flex: none
+				text-align: center
+				display: none
+
+			&-img
+				flex: 1 1 auto
+				display: flex
+				align-items: center
+				justify-content: center
+
+.admin
+
+.cat2__one
+	overflow: visible
+
+	&:not(:hover)
+
+		.large
+			display: none !important
+
+	&-wrap
+
+		&:nth-child(3n):not(:first-child)
+
+			.cat2__one
+
+				&-img-big
+					right: 100%
+					left: auto
+
+	&-img-cont
+		overflow: visible
+		height: auto
+		position: relative
+
+		&:hover
+
+			.cat2__one
+
+				&-img-big
+					opacity: 1
+
+	&-img-big
+		
+
+		img
+			max-width: 100%
+
+.large
+	size: 220px
+	position: absolute
+	border: 10px solid #fff
+	box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.85), 0 0 7px 7px rgba(0, 0, 0, 0.25), inset 0 0 40px 2px rgba(0, 0, 0, 0.25)
+	border-radius: 50%
+	display: none
+	pointer-events: none
+	background-color: #fff !important
+
+
+.bonus
+	.title-block__cont
+		min-height: 300px
+		color: #fff
+		margin-bottom: 60px
+		background: url(/local/templates/main/img/photos/bonus-banner-1.png) no-repeat center !important
+	.bread-crumbs
+		color: #fff
+		a 
+			color: #fff
+
+	.title-block__btn
+		color: #000
+		text-decoration: none
+		padding: 20px 40px
+		background: #fff
+		display: inline-block
+		margin-top: 45px
+
+	.bread-crumbs__link
+		&:after
+			background: url("../img/ico-paginator-arrow-white.png")no-repeat center
+	&__advantage_block
+		padding-bottom: 60px
+	&__advantage_block_title
+		font-size: 35px
+		display: flex
+		justify-content: space-between
+		margin-bottom: 40px
+
+	&__advantage_block_title_btn
+		font-size: 16px
+		align-self: flex-end
+		padding-left: 10px
+		a 
+			text-decoration: none
+	&__advantage_block_items
+		display: flex
+		justify-content: space-between
+	&__advantage_block_item
+		display: flex
+		flex-direction: column
+		border: 1px solid #e1e1e1
+		padding: 50px 50px
+		padding-bottom: 40px
+		width: calc((100% - 50*3px)/4)
+		img 
+			max-height: 70px
+			width: auto
+			
+			
+	&__advantage_block_item_img
+		display: flex
+		align-items: center
+		height: 75px
+		margin-bottom: 50px
+	&__advantage_block_item_title
+		font-weight: bold
+		font-size: 18px
+		margin-bottom: 25px
+	
+	&__advantage_block_item_text
+		
+		font-weight: 300
+
+	&__banner
+		background: #009d4a
+		
+		
+		padding: 65px 2rem 80px
+		.wrapper
+			display: flex
+			flex-wrap: wrap
+	&__banner_title
+		color: #fff
+		font-size: 35px
+		font-weight: 100
+		width: 100%
+		margin-bottom: 55px
+	&__banner_block_text
+		color: #fff
+		font-size: 22px
+		line-height: 30px
+		max-width: 310px
+		display: flex
+		align-items: center
+		padding-left: 60px
+	&__banner_block
+		display: flex
+		width: 50%
+		
+	&__banner_block_img
+		
+		border-radius: 15px
+		
+		
+		
+		background-size: cover
+		width: 215px
+		height: 130px
+		position: relative
+		margin: 27px
+		min-width: 215px
+		img
+			object-fit: cover
+			width: 100%
+			height: 100%
+			position: relative
+			border-radius: 15px
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		&:before
+			content: ""
+			position: absolute
+			z-index: 2
+			top: -27px
+			left: -27px
+			right: -27px
+			bottom: -27px
+			border: 1px solid #058342
+			border-radius: 30px
+	&__banner_block_img.plus
+		&:after
+			content: "+"
+			width: 40px
+			height: 40px
+			border-radius: 20px
+			background: #ff0042
+			position: absolute
+			right: 30px
+			top: -20px
+			display: flex
+			align-items: center
+			justify-content: center
+			color: #fff
+			font-size: 25px
+			z-index: 3
+
+	&__use_block
+		padding-bottom: 60px
+		padding-top: 60px
+	&__use_block_title
+		font-size: 35px
+		display: flex
+		justify-content: space-between
+		margin-bottom: 10px
+	&__use_block_text
+		display: flex
+		justify-content: space-between
+		align-items: flex-end
+		margin-bottom: 60px
+		div 
+			width: 50%
+		a 
+			font-size: 16px
+			color: #fff
+			padding: 21px 38px
+			background: #009d4a
+			text-decoration: none
+	&__use_block_title_btn
+		font-size: 16px
+		align-self: flex-end
+
+	&__use_block_items
+		display: flex
+		justify-content: space-between
+	&__use_block_item
+		display: flex
+		flex-direction: column
+		border: 1px solid #e1e1e1
+		padding: 60px 50px
+		padding-bottom: 40px
+		width: calc((100% - 50*3px)/4)
+		img 
+			max-height: 80px
+			width: auto
+
+	&__use_block_item_img
+		display: flex
+		align-items: center
+		justify-content: center
+		height: 80px
+		margin-bottom: 60px
+	&__use_block_item_title
+		font-weight: bold
+		font-size: 18px
+		margin-bottom: 25px
+	
+	&__use_block_item_text
+		font-weight: lighter
+		line-height: 24px
+	&__use_block_item_text.text-al-c
+		text-align: center
+
+	&__form_title
+		text-align: center
+		font-size: 26px
+		margin-bottom: 50px
+	&__form_text
+		margin-bottom: 40px
+		margin-top: 10px
+		max-width: 295px
+		a 
+			color: #009d4a
+	&__form_btn
+		input
+			background: #009d4a
+			color: #fff
+			border: 0
+			padding: 18px 28px
+	
+	&__form
+		width: 100%
+		max-width: 540px
+		padding: 60px 75px
+
+		.forms-wrap
+			flex-direction: column
+		#smsauth_timer
+			margin-top: 20px
+		.forms-input-cont
+			width: 100%
+		
+		.forms-input-cont.sms_code
+			flex-direction: row
+			margin-top: 10px
+			margin-bottom: 45px
+			flex-wrap: wrap
+			justify-content: space-between
+			input 
+				width: 50%
+			a 
+				
+				background: #f2f3f5
+				color: #000
+				margin-right: 30px
+				text-decoration: none
+				padding: 12px 25px
+				white-space: nowrap
+				width: calc(50% - 30px)
+				
+				
+				
+		.forms-input-cont.ico_date
+			position: relative
+			&:before
+				content: ""
+				background: url("../img/ico-bonus-form.png")
+				position: absolute
+				right: 18px
+				bottom: 13px
+				size: 16px
+				z-index: 4
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		.forms__input
+			height: 42px
+			&::placeholder
+				color: #e6e6e6
+
+.ui-widget.ui-widget-content
+	width: auto
+	height: auto
+	background: #fff
+.ui-widget-header
+	background: #e6e6e6 
+.ui-widget-header .ui-icon
+	background: url("../img/ico-check.png")no-repeat center
+.ui-icon-circle-triangle-w
+	transform: rotate(90deg)
+.ui-icon-circle-triangle-e
+	transform: rotate(-90deg)
+
+
+.auth
+	form[name="regform"]
+		.forms__error-message
+			bottom: 53px
+		#smsauth_timer
+			margin-top: 20px
+		.sms_code
+			a
+				position: absolute
+				bottom: -23px
+				right: 0
+		.forms__input_error:focus
+			border-color: #ebebeb
+			~ .forms__error-message
+				display: none !important
+
+
+.lk
+	&__block
+		border: 1px solid #eff0f0
+		display: flex
+		padding: 20px 340px 20px 115px
+		justify-content: space-between
+	
+	&__block_p1
+		font-size: 20px
+		line-height: 30px
+
+	&__block_bonus
+		font-size: 40px
+		margin-bottom: 20px
+
+	&__block_info
+		display: flex
+		flex-direction: column
+		justify-content: center
+		min-width: 245px
+		margin-right: 20px
+
+#auth
+	img.calendar-icon
+		position: absolute
+		bottom: 18px
+		right: 16px
+	.forms__submit
+		cursor: default
+	.forms-submit-cont
+		input[type=submit]
+			background: $main-color
+
+.head-links__link--bonus
+	text-decoration: none
+	font-size: rem(16)
+	padding: 20px 54px
+	border: 1px solid $main-color
+	color: #000
+	margin-right: 15px
+	text-align: center
+	&:hover
+		background: $main-color
+		color: #fff
+.head__menu
+	.head-links__link--bonus
+		display: none
+
+
+
+
+#header-cart
+	display: block
+	
+.tovar-smallslider
+	opacity: 0
+
+	.slick-slide
+		margin: 0 10px
+
+	&.slick-initialized
+		opacity: 1
+
+

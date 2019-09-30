@@ -2,7 +2,8 @@ import $ from "jquery"
 
 // import "./faq.js"
 // import "./contacts.js"
-import "./mobile-menu.js"
+// import "./common-old.js"
+// import "./mobile-menu.js"
 
 
 import { TimelineLite, TweenLite, Linear } from 'gsap';
@@ -22,7 +23,7 @@ Swiper.use([Navigation, EffectFade, Pagination])
 window.$ = $;
 window.jQuery = $;
 
-require("./countTo.js");
+// require("./countTo.js");
 // window.is = is
 
 window.get$ = (element) => {
