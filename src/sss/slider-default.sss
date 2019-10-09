@@ -34,7 +34,7 @@
 		height: auto !important
 
 	.swiper-slide
-		display: flex !important
+		// display: flex !important
 		height: auto !important
 
 	.swiper-list
@@ -124,10 +124,13 @@
 		margin-top: auto
 		text-align: center
 		display: flex
+		flex-direction: column
 		justify-content: center
 		opacity: 0
 		pointer-events: none
 		transition: opacity .3s ease
+
+
 
 		.btn
 			display: flex
@@ -145,6 +148,9 @@
 				margin-right: 15px
 				filter: invert(1)
 				margin-left: -15px
+
+			&:hover
+				color: var(--main-color)
 
 	&-label
 		position: absolute
