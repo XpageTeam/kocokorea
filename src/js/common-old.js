@@ -80,7 +80,7 @@ let loadScripts = () =>{
 
 	window.menu = new mobileMenu({
 		burger: ".burger",
-		menu: ".head__menu",
+		menu: ".main-nav",
 		submenu: false,
 		menuActiveClass: "js__opened",
 		bodyActiveClass: "js-menu-opened",
@@ -106,17 +106,17 @@ let loadScripts = () =>{
 		}
 
 		open(el){
-			$(el).find(".submenu").addClass("js__opened");
+			$(el).find(".submenu-cont").addClass("js__opened");
 		}
 
 		close(){
-			$(".submenu").removeClass("js__opened");
+			$(".submenu-cont").removeClass("js__opened");
 		}
 	}
 
-	let menu = new Menu(".head__menu .menu");
+	let menu = new Menu(".head-bot .main-nav__list");
 
-	$(".head__menu .menu").menuAim({
+	$(".head-bot .main-nav__list").menuAim({
 		// submenuSelector: ".submenu",
 		activate: menu.open,
    		deactivate: menu.close,
@@ -125,43 +125,48 @@ let loadScripts = () =>{
 	})
 
 
+	if($( "#datepicker").length){
+		/**Адаптив*/
+
+			// $(".submenu__list").each((i, el) => {
+			// 	var $this = $(el);
+
+			// 	$this.closest(".submenu__col").addClass("js__have-sub");
+			// });
+
+			// календарь в форме на стр. бонусной карты
+			$( function() {
+				$( "#datepicker").datepicker();
+				 $.datepicker.regional['ru'] = {
+	                closeText: 'Закрыть',
+	                prevText: '&#x3c;Пред',
+	                nextText: 'След&#x3e;',
+	                currentText: 'Сегодня',
+	                monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь',
+	                'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+	                monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн',
+	                'Июл','Авг','Сен','Окт','Ноя','Дек'],
+	                dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+	                dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+	                dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+	                weekHeader: 'Не',
+	                dateFormat: 'dd.mm.yy',
+	                firstDay: 1,
+	                isRTL: false,
+	                showMonthAfterYear: false,
+	                changeMonth: true,
+	                changeYear: true,
+
+	                yearSuffix: ''};
+	        $.datepicker.setDefaults($.datepicker.regional['ru']);
+			} );
+
+			$("#datepicker").datepicker({ yearRange:'1940:' });
+
+	}
 
 
-	/**Адаптив*/
 
-		// $(".submenu__list").each((i, el) => {
-		// 	var $this = $(el);
-
-		// 	$this.closest(".submenu__col").addClass("js__have-sub");
-		// });
-
-		// календарь в форме на стр. бонусной карты
-		$( function() {
-			$( "#datepicker" ).datepicker();
-			 $.datepicker.regional['ru'] = {
-                closeText: 'Закрыть',
-                prevText: '&#x3c;Пред',
-                nextText: 'След&#x3e;',
-                currentText: 'Сегодня',
-                monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь',
-                'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
-                monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн',
-                'Июл','Авг','Сен','Окт','Ноя','Дек'],
-                dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
-                dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
-                dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
-                weekHeader: 'Не',
-                dateFormat: 'dd.mm.yy',
-                firstDay: 1,
-                isRTL: false,
-                showMonthAfterYear: false,
-                changeMonth: true,
-                changeYear: true,
-
-                yearSuffix: ''};
-        $.datepicker.setDefaults($.datepicker.regional['ru']);
-		} );
-		$("#datepicker").datepicker({ yearRange:'1940:' });
 
 
 		$(".head__menu").append("<div class='head__menu-footer js__moved-phone'><div class='head__menu-footer js__moved-msg'></div></div><div class='head__menu-footer js__moved-soc'></div>");
@@ -322,96 +327,107 @@ let loadScripts = () =>{
 		$this.wrap("<div class='table-wrap'></div>")
 	});
 
-	$(".new-slider").each((i, el) => {
-		let $this = $(el);
+	if($(".new-slider").length){
 
-		$this.slick({
+		$(".new-slider").each((i, el) => {
+			let $this = $(el);
+
+			$this.slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				slide: ".new-slider__slide",
+				fade: true,
+				appendArrows: $this.closest(".new").find(".new__title-cont"),
+				responsive: [
+					{
+						breakpoint: 660,
+						settings: {
+							fade: false
+						}
+					}
+				]
+			})
+		});
+
+	}
+
+	if($(".shop-slider").length){
+		$(".shop-slider").slick({
 			slidesToShow: 1,
 			slidesToScroll: 1,
-			slide: ".new-slider__slide",
 			fade: true,
-			appendArrows: $this.closest(".new").find(".new__title-cont"),
+			slide: ".shop-slider__slide"
+		});
+	}
+
+	if($(".shops-new__item-slider").lenght){
+
+		$(".shops-new__item-slider").slick({
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			slide: ".shops-new__item-slide",
 			responsive: [
 				{
-					breakpoint: 660,
+					breakpoint: 1500,
 					settings: {
-						fade: false
+						arrows: false,
+						centerMode: true,
 					}
+				},
+				{
+					breakpoint: 1300,
+					settings: {
+						slidesToShow: 3,
+						arrows: false,
+						centerMode: true,
+					}
+				},
+				{
+					breakpoint: 1000,
+					settings: {
+						slidesToShow: 2,
+						arrows: false,
+						centerMode: true,
+					},
+				},
+				{
+					breakpoint: 667,
+					settings: {
+						slidesToShow: 1,
+						centerMode: true,
+						arrows: false,
+					},
+				}
+			]
+		});
+	}
+
+	if($(".shops-new__item-personals").lenght){
+		$(".shops-new__item-personals").slick({
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			arrows: false,
+			dots: false,
+			slide: ".shops-new__item-personal",
+			responsive: [
+				{
+					breakpoint: 1000,
+					settings: {
+						slidesToShow: 2,
+						arrows: true,
+					},
+				},
+				{
+					breakpoint: 667,
+					settings: {
+						slidesToShow: 1,
+						arrows: true,
+					},
 				}
 			]
 		})
-	});
 
-	$(".shop-slider").slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		fade: true,
-		slide: ".shop-slider__slide"
-	});
-
-	$(".shops-new__item-slider").slick({
-		slidesToShow: 4,
-		slidesToScroll: 1,
-		slide: ".shops-new__item-slide",
-		responsive: [
-			{
-				breakpoint: 1500,
-				settings: {
-					arrows: false,
-					centerMode: true,
-				}
-			},
-			{
-				breakpoint: 1300,
-				settings: {
-					slidesToShow: 3,
-					arrows: false,
-					centerMode: true,
-				}
-			},
-			{
-				breakpoint: 1000,
-				settings: {
-					slidesToShow: 2,
-					arrows: false,
-					centerMode: true,
-				},
-			},
-			{
-				breakpoint: 667,
-				settings: {
-					slidesToShow: 1,
-					centerMode: true,
-					arrows: false,
-				},
-			}
-		]
-	});
-
-
-	$(".shops-new__item-personals").slick({
-		slidesToShow: 4,
-		slidesToScroll: 1,
-		arrows: false,
-		dots: false,
-		slide: ".shops-new__item-personal",
-		responsive: [
-			{
-				breakpoint: 1000,
-				settings: {
-					slidesToShow: 2,
-					arrows: true,
-				},
-			},
-			{
-				breakpoint: 667,
-				settings: {
-					slidesToShow: 1,
-					arrows: true,
-				},
-			}
-		]
-	})
+	}
 
 
 	$("body").on("change", ".forms__input--file", function(){
@@ -534,154 +550,171 @@ let loadScripts = () =>{
 		});
 	});
 
-	$(".main-slider").slick({
-		slidesToScroll: 1,
-		slidesToShow: 1,
-		slide: ".main-slider__slide",
-		autoplay: true,
-		fade: true,
-		accessibility: false,
-		autoplaySpeed: 4000,
-		responsive: [
-			{
-				breakpoint: 1000,
-				settings: {
-					arrows: false,
-					dots: true,
-				}
-			},
-			{
-				breakpoint: 660,
-				settings: {
-					arrows: false,
-					dots: true,
-					// autoplay: false,
-					// initialSlide: 2,
-				}
-			}
-		]
-	});
+	if($(".main-slider").lenght){
 
-	$(".bestseller--slider").each((i, el) => {
-		let $this = $(el);
+		$(".main-slider").slick({
+			slidesToScroll: 1,
+			slidesToShow: 1,
+			slide: ".main-slider__slide",
+			autoplay: true,
+			fade: true,
+			accessibility: false,
+			autoplaySpeed: 4000,
+			responsive: [
+				{
+					breakpoint: 1000,
+					settings: {
+						arrows: false,
+						dots: true,
+					}
+				},
+				{
+					breakpoint: 660,
+					settings: {
+						arrows: false,
+						dots: true,
+						// autoplay: false,
+						// initialSlide: 2,
+					}
+				}
+			]
+		});
+	}
 
-		$this.slick({
+	if($(".bestseller--slider").lenght){
+		$(".bestseller--slider").each((i, el) => {
+			let $this = $(el);
+
+			$this.slick({
+				slidesToShow: 4,
+				slidesToScroll: 1,
+				appendArrows: $this.closest(".bestsellers__cont").find(".new__title-cont"),
+				responsive: [
+					{
+						breakpoint: 1000,
+						settings: {
+							slidesToShow: 2
+						}
+					},
+					{	
+						breakpoint: 660,
+						settings: {
+							slidesToShow: 1
+						}
+					}
+				]
+			})
+		});
+
+	}
+
+	if($(".customers-slider").length){
+		$(".customers-slider").each(function(){
+			let $this = $(this);
+
+			$this.slick({
+				slidesToShow: 5,
+				slidesToScroll: 1,
+				appendArrows: $this.closest(".bestsellers__cont").find(".new__title-cont"),
+				responsive: [
+					{
+						breakpoint: 1100,
+						settings: {
+							slidesToShow: 4,
+						}
+					},
+					{
+						breakpoint: 1000,
+						settings: {
+							slidesToShow: 3
+						}
+					},
+					{	
+						breakpoint: 660,
+						settings: {
+							slidesToShow: 2
+						}
+					}
+				]
+			})
+		})
+
+	}
+
+	if($(".partners").length){
+		$(".partners").slick({
+			slidesToShow: 6,
+			slidesToScroll: 1,
+			slide: ".partners__slide",
+			responsive: [
+					{
+						breakpoint: 1500,
+						settings: {
+							slidesToShow: 4
+						}
+					},
+					{
+						breakpoint: 1000,
+						settings: {
+							slidesToShow: 3
+						}
+					}
+				]
+		});
+
+	}
+
+	if($(".tovar-big-slider").length){
+		$(".tovar-big-slider").slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			slide: ".tovar-big-slider__slide",
+			asNavFor: ".tovar-smallslider",
+			fade: true,
+			arrows: false,
+			responsive: [
+				{
+					breakpoint: 660,
+					settings: {
+						dots: true,
+					}
+				}
+			]
+		});
+
+	}
+
+	if($(".tovar-smallslider").lenght){
+		$(".tovar-smallslider").slick({
+			slidesToScroll: 1,
 			slidesToShow: 4,
-			slidesToScroll: 1,
-			appendArrows: $this.closest(".bestsellers__cont").find(".new__title-cont"),
+			// vertical: true,
+			// verticalSwiping: true,
+			slide: ".tovar-smallslider__slide",
+			arrows: false,
+			asNavFor: ".tovar-big-slider",
+			focusOnSelect: true,
 			responsive: [
 				{
-					breakpoint: 1000,
+					breakpoint: 1200,
 					settings: {
-						slidesToShow: 2
-					}
-				},
-				{	
-					breakpoint: 660,
-					settings: {
-						slidesToShow: 1
-					}
-				}
-			]
-		})
-	});
-
-	$(".customers-slider").each(function(){
-		let $this = $(this);
-
-		$this.slick({
-			slidesToShow: 5,
-			slidesToScroll: 1,
-			appendArrows: $this.closest(".bestsellers__cont").find(".new__title-cont"),
-			responsive: [
-				{
-					breakpoint: 1100,
-					settings: {
-						slidesToShow: 4,
+						vertical: false,
+						verticalSwiping: false,
+						slidesToShow: 2,
 					}
 				},
 				{
 					breakpoint: 1000,
 					settings: {
-						slidesToShow: 3
-					}
-				},
-				{	
-					breakpoint: 660,
-					settings: {
-						slidesToShow: 2
+						vertical: false,
+						verticalSwiping: false,
+						slidesToShow: 3,
 					}
 				}
 			]
-		})
-	})
+		});
 
-	$(".partners").slick({
-		slidesToShow: 6,
-		slidesToScroll: 1,
-		slide: ".partners__slide",
-		responsive: [
-				{
-					breakpoint: 1500,
-					settings: {
-						slidesToShow: 4
-					}
-				},
-				{
-					breakpoint: 1000,
-					settings: {
-						slidesToShow: 3
-					}
-				}
-			]
-	});
-
-	$(".tovar-big-slider").slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		slide: ".tovar-big-slider__slide",
-		asNavFor: ".tovar-smallslider",
-		fade: true,
-		arrows: false,
-		responsive: [
-			{
-				breakpoint: 660,
-				settings: {
-					dots: true,
-				}
-			}
-		]
-	});
-
-
-	$(".tovar-smallslider").slick({
-		slidesToScroll: 1,
-		slidesToShow: 4,
-		// vertical: true,
-		// verticalSwiping: true,
-		slide: ".tovar-smallslider__slide",
-		arrows: false,
-		asNavFor: ".tovar-big-slider",
-		focusOnSelect: true,
-		responsive: [
-			{
-				breakpoint: 1200,
-				settings: {
-					vertical: false,
-					verticalSwiping: false,
-					slidesToShow: 2,
-				}
-			},
-			{
-				breakpoint: 1000,
-				settings: {
-					vertical: false,
-					verticalSwiping: false,
-					slidesToShow: 3,
-				}
-			}
-		]
-	});
+	}
 
 	$(".tabs-btn").click(function(){
 		let parentId = $(this).closest(".tabs-content").attr("data-id");

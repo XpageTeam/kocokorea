@@ -4,7 +4,7 @@
 @import "_vars.sss"
 @import "_base.sss"
 // @import "_title-block.sss"
-// @import "_text-styles.sss"
+@import "_text-styles.sss"
 
 // @import "_standart-page.sss"
 
@@ -43,6 +43,7 @@
 	border: 1px solid transparent
 	transition: background .3s ease, color .3s ease
 	text-align: center
+	cursor: pointer
 
 	&:hover
 		background-color: #fff
@@ -95,3 +96,16 @@
 	width: 100%
 	padding: 0
 	margin: 0 0 auto 0
+
+@media (max-width: 1300px)
+	
+	.swiper-button
+		&-prev
+			left: -20px
+
+		&-next
+			right: -20px
+
+@media (max-width: 1200px)
+	.swiper-button
+		display: none

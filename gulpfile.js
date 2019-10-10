@@ -127,7 +127,7 @@ gulp.task("deploy:css", () =>
 );
 
 gulp.task("deploy:js", () => 
-	gulp.src("docs/js/*.js", {since: gulp.lastRun("deploy:js")})
+	gulp.src("docs/js/*.*", {since: gulp.lastRun("deploy:js")})
 		.pipe(server_conn.dest(remotePathJs))
 );
 

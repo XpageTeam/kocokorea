@@ -1,8 +1,8 @@
-import $ from "jquery"
+// import $ from "jquery"
 
 // import "./faq.js"
 // import "./contacts.js"
-// import "./common-old.js"
+import "./common-old.js"
 // import "./mobile-menu.js"
 
 
@@ -15,20 +15,20 @@ import ScrollMagic from 'scrollmagic';
 import 'imports-loader?define=>false!scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators'
 import 'imports-loader?define=>false!scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap'
 
-import {Swiper, Navigation, EffectFade, Pagination} from "swiper/dist/js/swiper.esm.js";
+import {Swiper, Navigation, EffectFade, Pagination, Autoplay} from "swiper/dist/js/swiper.esm.js";
 
-Swiper.use([Navigation, EffectFade, Pagination])
+Swiper.use([Navigation, EffectFade, Pagination, Autoplay])
 
 
-window.$ = $;
-window.jQuery = $;
+// window.$ = $;
+// window.jQuery = $;
 
 // require("./countTo.js");
 // window.is = is
 
-window.get$ = (element) => {
-	return $(element)
-}
+// window.get$ = (element) => {
+// 	return $(element)
+// }
 
 
 require("./jquery.fancybox.js")
@@ -46,6 +46,10 @@ document.addEventListener("DOMContentLoaded", function(){
 		loop: true,
 		roundLengths: true,
 		a11y: false,
+		autoplay: {
+	        delay: 2500,
+	        disableOnInteraction: false,
+	    },
 		navigation: {
 			nextEl: '.main-banner .swiper-button-next',
 			prevEl: '.main-banner .swiper-button-prev',
@@ -58,6 +62,11 @@ document.addEventListener("DOMContentLoaded", function(){
 		fadeEffect: {
 			crossFade: true
 		},
+		breakpoints: {
+			// 1200: {
+				
+			// },
+		}
 
 	});
 
@@ -68,6 +77,10 @@ document.addEventListener("DOMContentLoaded", function(){
 		roundLengths: true,
 		a11y: false,
 		spaceBetween: 20,
+		autoplay: {
+	        delay: 2500,
+	        disableOnInteraction: false,
+	    },
 		navigation: {
 			nextEl: '.slider-default .swiper-button-next',
 			prevEl: '.slider-default .swiper-button-prev',
@@ -83,6 +96,10 @@ document.addEventListener("DOMContentLoaded", function(){
 		roundLengths: true,
 		a11y: false,
 		spaceBetween: 10,
+		autoplay: {
+	        delay: 2500,
+	        disableOnInteraction: false,
+	    },
 		navigation: {
 			nextEl: '.brands .swiper-button-next',
 			prevEl: '.brands .swiper-button-prev',
@@ -97,6 +114,10 @@ document.addEventListener("DOMContentLoaded", function(){
 		roundLengths: true,
 		a11y: false,
 		spaceBetween: 20,
+		autoplay: {
+	        delay: 2500,
+	        disableOnInteraction: false,
+	    },
 		navigation: {
 			nextEl: '.testemonials .swiper-button-next',
 			prevEl: '.testemonials .swiper-button-prev',

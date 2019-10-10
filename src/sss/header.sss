@@ -113,7 +113,7 @@
 
 	&-bot-cont
 		background-color: #FFF4F8
-		padding: 20px 0
+		
 
 
 .main-nav
@@ -122,14 +122,13 @@
 		margin: 0
 
 	&__item
-		// position: relative
 		display: flex
+		align-items: center
 
 		&:hover
-			.submenu
+			.submenu-cont
 				opacity: 1
 				pointer-events: all
-
 
 		&:first-child
 
@@ -141,6 +140,7 @@
 				content: ''
 				display: inline-block
 				margin-right: 13px
+				margin-top: -2px
 				size: 10px
 				background-image: url('../img/ico-burger.svg')
 				background-repeat: no-repeat
@@ -154,6 +154,7 @@
 		font-size: em(14)
 		font-weight: 500
 		transition: color .3s ease
+		padding: 20px 0
 
 		&:hover
 			color: var(--main-color)
@@ -173,13 +174,121 @@
 				background-size: contain
 
 
+.submenu
+	column-count: 5
+	column-gap: 60px
+
+	> li
+		margin-bottom: 50px
+
+		> a
+			font-weight: bold
+			margin-bottom: 14px
+			display: block
+			
 
 
 
+	&-cont
+		position: absolute
+		left: 0
+		top: calc(100% - 1px)
+		width: 100%
+		transition: opacity .4s ease
+		pointer-events: none
+		opacity: 0
+		background: #fff
+		display: flex
+		box-shadow: 13px 13px 15px 0px rgba(#000, .1)
+		border-top: 1px solid var(--border-color)
+		padding: 45px 0
+		justify-content: space-between
+		z-index: 100
+
+		a
+			line-height: 20px
+
+		ul
+			margin: 0
 
 
+		> .wrapper
+			width: 100%
+
+		&.js__opened
+			opacity: 1
+			pointer-events: all
 
 
+	&__title
+		text-transform: uppercase
+		font-size: rem(18)
+		margin-bottom: 30px
+		white-space: nowrap
 
+		&:first-child:last-child
+			margin-bottom: 0
+
+		a
+			color: #000
+			text-decoration: none
+
+	&__list
+		font-size: rem(14)
+
+		&-link
+			color: #000
+			text-decoration: none
+
+		&-el
+
+			&:not(:first-child)
+				margin-top: 15px
+
+
+.submenu-2
+	margin-top: 14px
+	li
+		margin-bottom: 10px
+
+
+@media (max-width: 1000px)
+	
+	.burger
+		display: flex
+		flex-direction: column
+		size: 26px 18px
+		justify-content: space-between
+		cursor: pointer
+
+		&:before, &:after
+			display: block
+			content: ""
+			transform-origin: left
+			transition: transform .3s ease, width .3s ease
+
+		span, &:before, &:after
+			background: #000
+			height: 2px
+			width: 100%
+
+		span
+			transition: opacity .3s ease
+
+		&.js-active
+
+			$angle: 42deg
+
+			&:before, &:after
+				width: 94%
+
+			&:before
+				transform: rotate($angle)
+
+			&:after
+				transform: rotate(-$angle)
+
+			span
+				opacity: 0
 
 

@@ -34,11 +34,10 @@
 		height: auto !important
 
 	.swiper-slide
-		// display: flex !important
 		height: auto !important
 
 	.swiper-list
-		padding: 0 20px
+		padding: 0 18px
 		margin: 0 -20px
 
 
@@ -66,15 +65,18 @@
 	&-img
 		position: relative
 		display: flex
-		justify-content: center
-		align-items: center
-		padding: 20px
-		width: 100%
 		min-height: 295px
 		border: 1px solid var(--border-color)
 		border-radius: 6px
 		margin-bottom: 15px
 		transition: border-color .5s ease
+
+		a
+			display: flex
+			justify-content: center
+			align-items: center
+			padding: 20px
+			width: 100%
 
 
 
@@ -164,6 +166,7 @@
 		position: absolute
 		right: 0
 		top: 0
+		cursor: pointer
 
 
 		span
@@ -205,3 +208,12 @@
 		font-size: em(16)
 		font-weight: bold
 
+@media (max-width: 1200px)
+	
+	.slider-default
+		margin: 45px 0 20px
+
+	.slider__slide
+
+		&-info
+			padding: 0 20px 20px
