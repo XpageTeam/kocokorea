@@ -581,7 +581,7 @@ let loadScripts = () =>{
 		});
 	}
 
-	if($(".bestseller--slider").lenght){
+
 		$(".bestseller--slider").each((i, el) => {
 			let $this = $(el);
 
@@ -606,9 +606,8 @@ let loadScripts = () =>{
 			})
 		});
 
-	}
+	
 
-	if($(".customers-slider").length){
 		$(".customers-slider").each(function(){
 			let $this = $(this);
 
@@ -639,7 +638,7 @@ let loadScripts = () =>{
 			})
 		})
 
-	}
+	
 
 	if($(".partners").length){
 		$(".partners").slick({
@@ -664,7 +663,7 @@ let loadScripts = () =>{
 
 	}
 
-	if($(".tovar-big-slider").length){
+
 		$(".tovar-big-slider").slick({
 			slidesToShow: 1,
 			slidesToScroll: 1,
@@ -682,9 +681,9 @@ let loadScripts = () =>{
 			]
 		});
 
-	}
+	
 
-	if($(".tovar-smallslider").lenght){
+
 		$(".tovar-smallslider").slick({
 			slidesToScroll: 1,
 			slidesToShow: 4,
@@ -714,7 +713,7 @@ let loadScripts = () =>{
 			]
 		});
 
-	}
+	
 
 	$(".tabs-btn").click(function(){
 		let parentId = $(this).closest(".tabs-content").attr("data-id");

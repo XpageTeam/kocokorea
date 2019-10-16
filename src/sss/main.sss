@@ -7,9 +7,6 @@ a
 .block-paysystem_list-title
 	margin-bottom: 10px
 
-
-
-
 .soc__widget
 	position: absolute
 	bottom: 42px
@@ -26,9 +23,6 @@ a
 
 	iframe + iframe 
 		display: none !important
-
-
-
 
 @keyframes progress_bar 
 	0% 
@@ -1211,7 +1205,6 @@ a
 
 .new
 	border: 1px solid var(--border-color)
-	// padding: 53px 83px
 	padding: rem(35) rem(60)
 
 	&-slider
@@ -1222,11 +1215,7 @@ a
 				padding-bottom: 0
 
 				&-img
-					// max-height: none
 					max-height: 100%
-
-					&-cont
-						// height: auto
 
 				&-quantity
 					margin-bottom: 0
@@ -1416,26 +1405,40 @@ a
 	display: flex
 	justify-content: space-between
 	height: 790px
+	display: flex
+	justify-content: space-between
+	flex-direction: column-reverse
 
 	&__small
-		width: 144px
+		// width: 144px
 		flex: none
-		padding-bottom: 130px
+		// padding-bottom: 130px
 		display: flex
 		position: relative
+		flex: none
+		display: flex
 
 	&__big
 		width: calc(100% - 178px)
-		height: 100%
-		border: 1px solid var(--border-color)
 		position: relative
 		display: flex
 		flex-direction: column
 		justify-content: center
+		margin: 0 auto 20px
+
 
 .tovar-big-slider
 	overflow: hidden
 	height: 100%
+	width: 100%
+	flex: 1 1 auto
+	display: flex
+	flex-direction: column
+	opacity: 0
+	transition: opacity .3s ease
+
+	&.slick-initialized
+		opacity: 1
 
 	.slick
 
@@ -1469,26 +1472,26 @@ a
 		overflow: hidden
 		height: 100%
 
-		img:not([src*="no-image"])
-			filter: brightness(108%)
-			width: 100%
-			height: 100%
-			object-fit: cover
-			object-position: center
 
 .tovar-smallslider
 	display: flex
 	flex-direction: column
+	display: flex
+	flex-direction: column
+	width: 100%
 
 	.slick
 
 		&-track	
-			//display: flex
-			//flex-direction: column
+			display: flex
+			justify-content: center
 
 		&-list
 			height: auto !important
 	
+		&-slide
+			flex: none
+
 	&__slide
 		border: 1px solid var(--border-color) !important
 		display: flex !important
@@ -1496,12 +1499,14 @@ a
 		justify-content: center
 		height: 145px !important
 		cursor: pointer
+		flex: none
 
-		img
-			// filter: brightness(108%)
 
 		&:not(:first-child)
 			margin-top: 26px
+
+
+
 
 .tovar__share
 	position: absolute
@@ -1586,7 +1591,6 @@ a
 	right: 28px
 	z-index: 4
 
-.tovar-info
 
 .tovar
 	
@@ -1598,11 +1602,45 @@ a
 		font-weight: 300
 		font-size: rem(26)
 		line-height: rem(39)
-		letter-spacing: .01em
-		// text-transform: uppercase
 
 	&__rating
+		display: flex
 		margin-top: 18px
+		margin-bottom: 0
+		justify-content: space-between
+		align-items: center
+		margin-bottom: 60px
+
+		.rating
+
+			&:not(:last-child)
+				margin-right: 3rem
+
+		&-review
+			flex: none
+
+
+		&-review
+			position: relative
+
+			a
+				display: flex
+				align-items: center
+				line-height: 1
+
+
+				&:before
+					content: ''
+					display: inline-block
+					size: 14px
+					background-image: url('../img/ico-talk.svg')
+					background-position: center
+					background-repeat: no-repeat
+					background-size: contain
+					margin-right: 12px
+
+	&__brand
+		margin-bottom: 20px
 
 	&__buy
 		margin-top: 42px
@@ -1613,30 +1651,78 @@ a
 	&__tabs
 		margin-top: 37px
 
+	&__advantages
+		margin: rem(46) 0 0
+		display: none
+		
+	&-top
+		position: relative
+
 .tovar-buy
-	border-top: 1px solid var(--border-color)
-	border-bottom: 1px solid var(--border-color)
-	padding: 32px 0
 	display: flex
 	align-items: center
-	
-.tovar-buy
+	flex-wrap: wrap
+
+	&__counter
+		margin: 0 19px 0 0
+		width: 117px
+		flex: none
+
+	&__add-to-cart
+		padding: 12px 20px 13px
+		text-decoration: none
+		white-space: nowrap
+		color: #fff
+		border-radius: 49px
+		background-color: var(--main-color)
+
+		&:not(:last-child)
+			margin-right: 19px
+
+		&:before
+			content: ''
+			display: inline-block
+			size: 16px 20px
+			background-image: url('../img/ico-cart.svg')
+			background-repeat: no-repeat
+			background-size: contain
+			filter: invert(1)
+			margin-right: 18px
+
+
+	&__one-click
+		padding: 12px 20px 13px 52px
+		text-decoration: none
+		white-space: nowrap
+
+
+	&__one-click
+		color: var(--main-color)
+		border: 1px solid currentColor
+		background: url("../img/ico-click.svg") left 20px center no-repeat
+		background-size: 20px !important
+		border-radius: 49px
+		border: 1px solid var(--main-color)
 
 	&__counter, &__add-to-cart
 		display: none
 	
 	&__counter
-		margin: 0 23px 0 auto
+		margin: 0 23px 0 0
 		width: 117px
 		flex: none
 
-	&__add-to-cart
-		background: url("../img/ico-cat-cart-added.png") center left 26px no-repeat, var(--main-color)
-		border: 1px solid #139658
-		color: #fff
-		padding: 20px 35px 21px 66px
-		text-decoration: none
-		white-space: nowrap
+	&__description
+		margin-bottom: 0px
+		font-size: rem(20)
+
+.store_amount_title
+	font-size:  20px
+	font-weight: normal
+	margin-bottom: 10px
+	padding-bottom: 10px
+
+
 
 .tovar-price
 	font-weight: bold
@@ -1818,9 +1904,6 @@ table.title-search-result
 	.rating
 
 		&__list
-			// flex: 1 1 auto
-			// align-items: center
-			// align-self: center
 			margin: 0 0 3px 20px
 
 		&__list:not(.js__voted)
@@ -1850,26 +1933,6 @@ table.title-search-result
 								&:nth-child(odd):not(:first-child)
 									background-position: left 4px top
 
-// &:nth-child(odd)
-// 	background-position: left top
-
-// &:nth-child(odd):not(:first-child)
-// 	padding-left: 4px
-// 	width: 12px
-// 	background-position: left 4px top
-
-// &.active
-// 	background: url("../img/ico-star-active.png") top right no-repeat
-
-// 	&:nth-child(odd)
-// 		background-position: left top
-
-// 	&:nth-child(odd):not(:first-child)
-// 		background-position: left 4px top
-
-// .div-recaptcha + label
-// 	// display: none
-// 	height: 19px
 
 #product-review
 	padding: 35px 45px
@@ -1909,8 +1972,6 @@ table.title-search-result
 			display: flex
 			align-items: center
 
-		&-username
-			// margin-left: 22px
 
 		&-text
 			padding: 20px
@@ -1921,6 +1982,9 @@ table.title-search-result
 .tovar__reviews-btn
 	margin: 25px 0 0
 
+	a
+		color: #fff
+
 .base-page
 	display: flex
 	flex-wrap: wrap
@@ -1930,26 +1994,20 @@ table.title-search-result
 
 	&__news-list
 		width: 304px
-		// position: sticky
-		// top: 20px
 
 		+ .text-page
 			width: calc(100% - 360px)
 
 .news-backurl
-	// order: 2
 	margin: 15px 0 0
 	width: 100%
-	// display: none
 
 .news-navbar
-	// order: 1
 	margin: 15px 0 0
 	width: 100%
 	display: flex
 	justify-content: space-between
 	flex-wrap: wrap
-	// display: none
 
 .news-list
 	border: 1px solid var(--border-color)
@@ -1994,7 +2052,6 @@ table.title-search-result
 	color: #000
 	text-decoration: none
 	text-align: center
-	padding: 20px 25px
 	font-size: rem(18)
 	transition: color .3s ease, background .3s ease
 	border: 1px solid var(--main-color)
@@ -2176,11 +2233,11 @@ table.title-search-result
 			border-bottom: 1px solid var(--border-color)
 			margin-bottom: 0
 
-		&-wrap
 
 		&__bottom
 			display: flex
 			align-items: center
+
 			
 		&-input-cont
 			margin-right: 0 !important
@@ -2194,8 +2251,8 @@ table.title-search-result
 			margin: 0 40px 0 0
 
 		&__submit
-			border: 1px solid #139658
-			background: #2cad42
+			border: 0
+			background-color: #2cad42
 			color: #fff
 			font-weight: 100
 			height: 56px
@@ -2206,6 +2263,11 @@ table.title-search-result
 		&__label
 			font-size: rem(14)
 			min-height: 16px
+
+.contacts__form
+	.forms__bottom
+		display: flex
+
 
 .c-map
 	
@@ -2221,8 +2283,7 @@ table.title-search-result
 			display: flex
 			justify-content: center
 
-		&__wrap
-			// text-align: center	
+		&__wrap	
 			max-width: 100%
 			width: 500px
 			border: 1px solid var(--border-color)
@@ -2291,26 +2352,23 @@ table.title-search-result
 		img 
 			max-height: 70px
 			width: auto
-			// align-self: flex-start
-			// margin-bottom: 40px
+
 	&__advantage_block_item_img
 		display: flex
 		align-items: center
 		height: 75px
 		margin-bottom: 50px
+
 	&__advantage_block_item_title
 		font-weight: bold
 		font-size: 18px
 		margin-bottom: 25px
 	
 	&__advantage_block_item_text
-		// font-weight: lighter
 		font-weight: 300
 
 	&__banner
 		background: #009d4a
-		// padding-top: 65px
-		// padding-bottom: 80px
 		padding: 65px 2rem 80px
 		.wrapper
 			display: flex
@@ -2334,11 +2392,7 @@ table.title-search-result
 		width: 50%
 		
 	&__banner_block_img
-		// overflow: hidden
 		border-radius: 15px
-		// border: 1px solid #058342
-		// padding: 15px
-		// background: url("../img/ico-bonus-logo.png") no-repeat
 		background-size: cover
 		width: 215px
 		height: 130px
@@ -2351,16 +2405,7 @@ table.title-search-result
 			height: 100%
 			position: relative
 			border-radius: 15px
-		// &:after
-		// 	content: ""
-		// 	position: absolute
-		// 	z-index: 2
-		// 	top: -26px
-		// 	left: -26px
-		// 	right: -26px
-		// 	bottom: -26px
-		// 	border: 15px solid #009d4a
-		// 	border-radius: 30px
+
 		&:before
 			content: ""
 			position: absolute
@@ -2371,6 +2416,7 @@ table.title-search-result
 			bottom: -27px
 			border: 1px solid #058342
 			border-radius: 30px
+
 	&__banner_block_img.plus
 		&:after
 			content: "+"
@@ -2426,8 +2472,6 @@ table.title-search-result
 		img 
 			max-height: 80px
 			width: auto
-			// align-self: flex-start
-			// margin-bottom: 40px
 	&__use_block_item_img
 		display: flex
 		align-items: center
@@ -2444,7 +2488,7 @@ table.title-search-result
 		line-height: 24px
 	&__use_block_item_text.text-al-c
 		text-align: center
-	// form style-----------------
+
 	&__form_title
 		text-align: center
 		font-size: 26px
@@ -2465,7 +2509,6 @@ table.title-search-result
 	&__form
 		width: 100%
 		max-width: 540px
-		// background-color: #fafafa
 		padding: 60px 75px
 		.forms-wrap
 			flex-direction: column
@@ -2604,4 +2647,11 @@ table.title-search-result
 	&.slick-initialized
 		opacity: 1
 
-@import "_grid"
+
+
+.tovar-buy__price
+	margin: 0 0 20px 0
+	width: 100%
+	display: flex
+	flex-direction: column
+	align-items: flex-start

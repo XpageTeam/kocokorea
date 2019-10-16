@@ -71,6 +71,7 @@ button, input, select
 	&__list
 		display: inline-flex
 		margin-right: 16px
+		margin-bottom: 0
 
 	&__start
 		size: 8px 16px
@@ -208,11 +209,6 @@ button, input, select
 	&__crumbs
 		margin: 0 0 14px 0 
 
-
-.inner-content
-
-	.wrapper
-		padding: 0
 
 .cart
 
@@ -549,17 +545,11 @@ button, input, select
 			margin: 50px 0 0
 
 
-
-
-
-
 .tovar__tags
 	position: absolute
 	top: 0
 	left: 0
 	margin: 0 !important
-
-
 
 .to-cart, .to-favorite
 
@@ -579,14 +569,8 @@ button, input, select
 	border: none
 
 
-
-
-
 .footer__soc
 	margin-left: 93px
-
-
-
 
 
 
@@ -601,7 +585,6 @@ button, input, select
 		max-width: 570px
 		width: 100%
 		
-
 	&__info
 		
 		flex: 1 1 auto
@@ -619,33 +602,10 @@ button, input, select
 			img 
 				max-height: 100px
 
-.tovar-sliders
-	display: flex
-	justify-content: space-between
 
-	flex-direction: column-reverse
-
-	&__small
-		flex: none
-		display: flex
 	
-
-	&__big
-		
-		margin-bottom: 20px
-		flex: 1 1 auto
-		position: relative
-		display: flex
-		flex-direction: column
-		
-
 .tovar-big-slider
-	overflow: hidden
-	
-	width: 100%
-	flex: 1 1 auto
-	display: flex
-	flex-direction: column
+
 
 	.slick
 
@@ -660,7 +620,6 @@ button, input, select
 			flex-direction: column
 			width: 100%
 
-		&-track
 
 		&-arrow
 			size: 9px 17px
@@ -669,8 +628,6 @@ button, input, select
 			position: absolute
 			background: url("../img/ico-tovar-slider-arrow.png") center no-repeat
 			
-
-			&:hover
 				
 
 		&-prev
@@ -691,188 +648,11 @@ button, input, select
 		flex: none
 		
 
-		img:not([src*="no-image"])
-			
-			
-			
-			
-			
+
+
+
 
 			
-			
-			
-			max-width: 100%
-			
-			max-height: 600px
-			height: auto
-			display: block !important
-
-.tovar-smallslider
-	display: flex
-	flex-direction: column
-	width: 100%
-
-	.slick
-
-		&-track	
-			display: flex
-			justify-content: center
-			
-			
-
-		&-slide
-			flex: none
-
-		&-list
-			
-			
-	
-	&__slide
-		
-		display: flex !important
-		align-items: center
-		justify-content: center
-		
-		cursor: pointer
-		flex: none
-
-		img
-			
-
-		&:not(:first-child)
-			
-
-.tovar__share
-	position: absolute
-	width: 100%
-	left: 0
-	bottom: 0
-	z-index: 999
-
-	&-yashare
-		background: #fff
-		padding: 10px
-		border: 1px solid $border-color
-		position: absolute
-		bottom: calc(100% + 15px)
-		left: 0
-		border-radius: 2px
-		transition: opacity .3s ease
-		pointer-events: none
-		opacity: 0
-
-		&.js__visible
-			opacity: 1
-			pointer-events: all
-
-.ya-share2
-	
-	&__icon
-		width: 44px !important
-		height: 44px !important
-		border-radius: 50%
-
-	&__list
-		display: flex !important
-		justify-content: space-around
-		flex-wrap: wrap
-		margin-bottom: -12px !important
-
-		&:after
-			content: ""
-			width: 44px
-
-	&__item
-		margin-right: 0 !important
-		margin-bottom: 12px !important
-
-	&__badge
-		border-radius: 50% !important
-
-	&__item
-
-		&_service
-
-			&_vkontakte
-	
-				.ya-share2
-
-					&__icon
-						background: url("../img/ico-vk.png") center no-repeat !important
-
-			&_facebook
-
-				.ya-share2
-
-					&__icon
-						background: url("../img/ico-fb.png") center no-repeat !important
-
-.share
-	font-weight: bold
-	display: flex
-	flex-direction: column
-	align-items: center
-	text-align: center
-	color: #000
-	text-decoration: none
-
-	&__img
-		margin-bottom: 15px
-
-.tovar-fav-add__cont
-	position: absolute
-	top: 28px
-	right: 28px
-	z-index: 4
-
-
-	
-
-.tovar
-	
-	&__subtitle
-		color: #949494
-		margin-bottom: 20px
-
-	&__title
-		font-weight: 300
-		font-size: rem(26)
-		line-height: rem(39)
-		letter-spacing: .01em
-		
-
-	&__rating
-		margin-top: 18px
-		display: flex
-		align-items: center
-
-		.rating
-
-			&:not(:last-child)
-				margin-right: 3rem
-
-		&-review
-			flex: none
-
-	&__buy
-		
-
-	&__desc
-		margin-top: 36px
-
-	&__tabs
-		margin-top: 37px
-
-
-	&__advantages
-		margin: rem(46) 0 0
-		
-		display: none
-		
-
-	&-top
-		position: relative
-		
 
 .tovar-advantages
 	padding: rem(40) 0
@@ -907,54 +687,14 @@ button, input, select
 		border-color: $main-color
 		background: $main-color
 
-.tovar-buy
-	
-		
-		
-	padding: 32px 0
-	display: flex
-	align-items: center
-
-	&__description
-		margin-bottom: 0px
-		font-size: rem(20)
-
 body:not(.show-buttons)
+
 	.tovar-buy
 
 		&__counter, &__add-to-cart
 			display: none
 
-.tovar-buy
 
-	
-		
-	
-	&__counter
-		margin: 0 19px 0 auto
-		width: 117px
-		flex: none
-
-	&__add-to-cart,
-	&__one-click
-		padding: 12px 20px 13px 52px
-		text-decoration: none
-		white-space: nowrap
-		
-	&__add-to-cart
-		background: url("../img/ico-cat-cart-added.svg") center left 18px no-repeat, $main-color
-		background-size: 18px auto !important
-		border: 1px solid #139658
-		color: #fff
-
-		&:not(:last-child)
-			margin-right: 19px
-
-	&__one-click
-		color: $main-color
-		border: 1px solid currentColor
-		background: url("../img/ico-click.svg") left 20px center no-repeat
-		background-size: 20px !important
 
 .status
 	
@@ -980,10 +720,9 @@ body:not(.show-buttons)
 	span
 		font-size: 70%
 
-	.rub
-		
-		
 
+		
+	
 .tovar-desc
 	font-size: rem(14)
 	font-weight: 300
@@ -1023,13 +762,6 @@ body:not(.show-buttons)
 			padding-top: 8px
 			vertical-align: bottom
 
-
-
-.forms__label--file
-	&:before
-		top: 28px !important
-		background-size: 20px !important
-		padding-right: 18px !important
 
 
 @media screen and (min-width: 1000px)
@@ -1237,95 +969,6 @@ table.title-search-result
 				margin: 0 0 0 10px
 
 
-
-
-
-
-.contacts__form
-	margin: 2rem 0 0
-	
-	.cart__forms
-		padding: 0
-
-	.forms
-
-		&__file
-
-			&-formats
-				position: absolute
-				left: 0
-				top: 100%
-
-		&__title, &-wrap
-			padding: 30px 36px			
-
-		&__title
-			text-align: left
-			font-size: 1rem
-			background: #eff0f0
-			border-bottom: 1px solid $border-color
-			margin-bottom: 0
-
-		&-wrap
-
-		&__bottom
-			display: flex
-			align-items: center
-			
-		&-input-cont
-			margin-right: 0 !important
-			width: 47.6% !important
-
-			textarea
-				padding: 15px 17px
-				max-width: 100%
-
-		&-submit-cont
-			margin: 0 40px 0 0
-
-		&__submit
-			border: 1px solid #139658
-			background: #2cad42
-			color: #fff
-			font-weight: 100
-			height: 56px
-
-		&__input
-			height: 41px
-
-		&__label
-			font-size: rem(14)
-			min-height: 16px
-
-.c-map
-	
-	img
-		display: block
-		width: 100%
-
-.page-search
-
-	.search
-
-		form
-			display: flex
-			justify-content: center
-
-		&__wrap
-			
-			max-width: 100%
-			width: 500px
-			border: 1px solid $border-color
-
-			input[type="text"]
-				border: none
-				height: 42px
-				width: 100%
-				padding: 0 40px 0 18px
-
-.serach-header
-	margin: 0 0 2rem
-
 .brands
 
 	.blog
@@ -1349,7 +992,6 @@ table.title-search-result
 				align-items: center
 				justify-content: center
 
-.admin
 
 .cat2__one
 	overflow: visible
@@ -1383,7 +1025,6 @@ table.title-search-result
 
 	&-img-big
 		
-
 		img
 			max-width: 100%
 
@@ -1396,384 +1037,4 @@ table.title-search-result
 	display: none
 	pointer-events: none
 	background-color: #fff !important
-
-
-.bonus
-	.title-block__cont
-		min-height: 300px
-		color: #fff
-		margin-bottom: 60px
-		background: url(/local/templates/main/img/photos/bonus-banner-1.png) no-repeat center !important
-	.bread-crumbs
-		color: #fff
-		a 
-			color: #fff
-
-	.title-block__btn
-		color: #000
-		text-decoration: none
-		padding: 20px 40px
-		background: #fff
-		display: inline-block
-		margin-top: 45px
-
-	.bread-crumbs__link
-		&:after
-			background: url("../img/ico-paginator-arrow-white.png")no-repeat center
-	&__advantage_block
-		padding-bottom: 60px
-	&__advantage_block_title
-		font-size: 35px
-		display: flex
-		justify-content: space-between
-		margin-bottom: 40px
-
-	&__advantage_block_title_btn
-		font-size: 16px
-		align-self: flex-end
-		padding-left: 10px
-		a 
-			text-decoration: none
-	&__advantage_block_items
-		display: flex
-		justify-content: space-between
-	&__advantage_block_item
-		display: flex
-		flex-direction: column
-		border: 1px solid #e1e1e1
-		padding: 50px 50px
-		padding-bottom: 40px
-		width: calc((100% - 50*3px)/4)
-		img 
-			max-height: 70px
-			width: auto
-			
-			
-	&__advantage_block_item_img
-		display: flex
-		align-items: center
-		height: 75px
-		margin-bottom: 50px
-	&__advantage_block_item_title
-		font-weight: bold
-		font-size: 18px
-		margin-bottom: 25px
-	
-	&__advantage_block_item_text
-		
-		font-weight: 300
-
-	&__banner
-		background: #009d4a
-		
-		
-		padding: 65px 2rem 80px
-		.wrapper
-			display: flex
-			flex-wrap: wrap
-	&__banner_title
-		color: #fff
-		font-size: 35px
-		font-weight: 100
-		width: 100%
-		margin-bottom: 55px
-	&__banner_block_text
-		color: #fff
-		font-size: 22px
-		line-height: 30px
-		max-width: 310px
-		display: flex
-		align-items: center
-		padding-left: 60px
-	&__banner_block
-		display: flex
-		width: 50%
-		
-	&__banner_block_img
-		
-		border-radius: 15px
-		
-		
-		
-		background-size: cover
-		width: 215px
-		height: 130px
-		position: relative
-		margin: 27px
-		min-width: 215px
-		img
-			object-fit: cover
-			width: 100%
-			height: 100%
-			position: relative
-			border-radius: 15px
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		&:before
-			content: ""
-			position: absolute
-			z-index: 2
-			top: -27px
-			left: -27px
-			right: -27px
-			bottom: -27px
-			border: 1px solid #058342
-			border-radius: 30px
-	&__banner_block_img.plus
-		&:after
-			content: "+"
-			width: 40px
-			height: 40px
-			border-radius: 20px
-			background: #ff0042
-			position: absolute
-			right: 30px
-			top: -20px
-			display: flex
-			align-items: center
-			justify-content: center
-			color: #fff
-			font-size: 25px
-			z-index: 3
-
-	&__use_block
-		padding-bottom: 60px
-		padding-top: 60px
-	&__use_block_title
-		font-size: 35px
-		display: flex
-		justify-content: space-between
-		margin-bottom: 10px
-	&__use_block_text
-		display: flex
-		justify-content: space-between
-		align-items: flex-end
-		margin-bottom: 60px
-		div 
-			width: 50%
-		a 
-			font-size: 16px
-			color: #fff
-			padding: 21px 38px
-			background: #009d4a
-			text-decoration: none
-	&__use_block_title_btn
-		font-size: 16px
-		align-self: flex-end
-
-	&__use_block_items
-		display: flex
-		justify-content: space-between
-	&__use_block_item
-		display: flex
-		flex-direction: column
-		border: 1px solid #e1e1e1
-		padding: 60px 50px
-		padding-bottom: 40px
-		width: calc((100% - 50*3px)/4)
-		img 
-			max-height: 80px
-			width: auto
-
-	&__use_block_item_img
-		display: flex
-		align-items: center
-		justify-content: center
-		height: 80px
-		margin-bottom: 60px
-	&__use_block_item_title
-		font-weight: bold
-		font-size: 18px
-		margin-bottom: 25px
-	
-	&__use_block_item_text
-		font-weight: lighter
-		line-height: 24px
-	&__use_block_item_text.text-al-c
-		text-align: center
-
-	&__form_title
-		text-align: center
-		font-size: 26px
-		margin-bottom: 50px
-	&__form_text
-		margin-bottom: 40px
-		margin-top: 10px
-		max-width: 295px
-		a 
-			color: #009d4a
-	&__form_btn
-		input
-			background: #009d4a
-			color: #fff
-			border: 0
-			padding: 18px 28px
-	
-	&__form
-		width: 100%
-		max-width: 540px
-		padding: 60px 75px
-
-		.forms-wrap
-			flex-direction: column
-		#smsauth_timer
-			margin-top: 20px
-		.forms-input-cont
-			width: 100%
-		
-		.forms-input-cont.sms_code
-			flex-direction: row
-			margin-top: 10px
-			margin-bottom: 45px
-			flex-wrap: wrap
-			justify-content: space-between
-			input 
-				width: 50%
-			a 
-				
-				background: #f2f3f5
-				color: #000
-				margin-right: 30px
-				text-decoration: none
-				padding: 12px 25px
-				white-space: nowrap
-				width: calc(50% - 30px)
-				
-				
-				
-		.forms-input-cont.ico_date
-			position: relative
-			&:before
-				content: ""
-				background: url("../img/ico-bonus-form.png")
-				position: absolute
-				right: 18px
-				bottom: 13px
-				size: 16px
-				z-index: 4
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-		.forms__input
-			height: 42px
-			&::placeholder
-				color: #e6e6e6
-
-.ui-widget.ui-widget-content
-	width: auto
-	height: auto
-	background: #fff
-.ui-widget-header
-	background: #e6e6e6 
-.ui-widget-header .ui-icon
-	background: url("../img/ico-check.png")no-repeat center
-.ui-icon-circle-triangle-w
-	transform: rotate(90deg)
-.ui-icon-circle-triangle-e
-	transform: rotate(-90deg)
-
-
-.auth
-	form[name="regform"]
-		.forms__error-message
-			bottom: 53px
-		#smsauth_timer
-			margin-top: 20px
-		.sms_code
-			a
-				position: absolute
-				bottom: -23px
-				right: 0
-		.forms__input_error:focus
-			border-color: #ebebeb
-			~ .forms__error-message
-				display: none !important
-
-
-.lk
-	&__block
-		border: 1px solid #eff0f0
-		display: flex
-		padding: 20px 340px 20px 115px
-		justify-content: space-between
-	
-	&__block_p1
-		font-size: 20px
-		line-height: 30px
-
-	&__block_bonus
-		font-size: 40px
-		margin-bottom: 20px
-
-	&__block_info
-		display: flex
-		flex-direction: column
-		justify-content: center
-		min-width: 245px
-		margin-right: 20px
-
-#auth
-	img.calendar-icon
-		position: absolute
-		bottom: 18px
-		right: 16px
-	.forms__submit
-		cursor: default
-	.forms-submit-cont
-		input[type=submit]
-			background: $main-color
-
-.head-links__link--bonus
-	text-decoration: none
-	font-size: rem(16)
-	padding: 20px 54px
-	border: 1px solid $main-color
-	color: #000
-	margin-right: 15px
-	text-align: center
-	&:hover
-		background: $main-color
-		color: #fff
-.head__menu
-	.head-links__link--bonus
-		display: none
-
-
-
-
-#header-cart
-	display: block
-	
-.tovar-smallslider
-	opacity: 0
-
-	.slick-slide
-		margin: 0 10px
-
-	&.slick-initialized
-		opacity: 1
-
 
