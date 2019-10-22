@@ -466,6 +466,7 @@ let loadScripts = () =>{
 		$this.next(".filter__one-block").slideToggle(300)
 	});
 
+
 	$(".fancybox").fancybox({
 		beforeShow: () =>{
 			$("body").addClass("fancy-active")
@@ -485,6 +486,7 @@ let loadScripts = () =>{
 		},
 		
 	});
+	
 
 	$(".price-filter").each((i, el) => {
 		let $this = $(el);

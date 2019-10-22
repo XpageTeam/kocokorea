@@ -31,8 +31,8 @@ Swiper.use([Navigation, EffectFade, Pagination, Autoplay])
 // }
 
 
-require("./jquery.fancybox.js")
-require("../css/jquery.fancybox.css")
+// require("./jquery.fancybox.js")
+// require("../css/jquery.fancybox.css")
 
 
 
@@ -77,14 +77,19 @@ document.addEventListener("DOMContentLoaded", function(){
 		roundLengths: true,
 		a11y: false,
 		spaceBetween: 20,
-		autoplay: {
-	        delay: 2500,
-	        disableOnInteraction: false,
-	    },
+		// autoplay: {
+	 //        delay: 2500,
+	 //        disableOnInteraction: false,
+	 //    },
 		navigation: {
 			nextEl: '.slider-default .swiper-button-next',
 			prevEl: '.slider-default .swiper-button-prev',
 		},
+		breakpoints: {
+			1200: {
+				slidesPerView: 3,
+			},
+		}
 
 
 	});
