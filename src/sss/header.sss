@@ -12,6 +12,9 @@
 	&-logo
 		margin-right: 55px	
 
+		svg
+			display: flex
+
 	&-phone
 		margin-right: 10px
 
@@ -256,6 +259,14 @@
 		margin-bottom: 10px
 
 
+@media (max-width: 1500px)
+
+	.head
+		margin-bottom: 30px
+	
+	.head-top-cont
+		padding: 25px 0
+
 @media (max-width: 1200px)
 	
 	.main-nav__item:not(:last-child)
@@ -314,6 +325,8 @@
 				opacity: 0
 
 	.head
+		border-bottom: 1px solid var(--border-color)
+
 		&-city, &-callback, &-phone
 			display: none
 
@@ -323,4 +336,33 @@
 	.head-search-cont
 		max-width: 350px
 
+@media (max-width: 660px)
+	
+	.head-search-cont
+		display: none
 
+	.head-top-cont
+		position: relative
+		padding: 10px 0
+
+
+	.head
+		&-logo
+			width: 100px
+			order: 3
+			position: absolute
+			left: 50%
+			transform: translate3d(-50%,0,0)
+
+		&-cart
+			order: 1
+			margin-left: 0
+			margin-right: 15px
+
+		&-favorite
+			order: 2
+			margin-left: 0
+
+	.burger
+		order: 4
+		margin-left: auto

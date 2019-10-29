@@ -407,32 +407,7 @@
 .hidden-item__btn
 	max-width: 123px
 
-.footer
-	&-app
-		margin: 0 auto
 
-		.shops__aside-app
-			margin: 0
-
-		.app__title
-			display: none
-
-	&__copy
-		display: flex
-		align-items: center
-
-	&__dev
-		display: flex
-		justify-content: flex-end
-
-	&__soc
-		margin: 0
-
-
-
-	&__copy, &__dev
-		max-width: 700px
-		width: 100%
 
 #item_add_to_cart
 	width: 640px
@@ -926,16 +901,7 @@ footer
 		display: flex
 		flex-direction: column
 
-// .tovar__bestsellers
-// 	.cat2__one-buy
-// 		align-items: center
-// 		display: flex
-// 		flex-direction: row
-// 		flex-wrap: wrap
 
-// 		.cat2__one-add-to-cart--subscribe
-// 			margin: 10px 0 0
-// 			padding: 13px 30px 12px 68px!important
 
 .head-links
 	display: flex
@@ -3328,8 +3294,6 @@ body.js__fixed
 				margin-bottom: 5px
 
 
-	.footer-app
-		display: none
 
 	.head__menu-app
 		display: block
@@ -3375,8 +3339,7 @@ body.js__fixed
 				padding-right: 16px
 	.promo-list__link-desc
 		padding: 20px 2rem
-	.footer
-		padding: 2rem
+
 
 	.head
 
@@ -3458,9 +3421,6 @@ body.js__fixed
 
 
 
-	.footer
-		margin-top: 50px
-
 	.partners__cont
 		margin-top: 30px
 
@@ -3521,7 +3481,7 @@ body.js__fixed
 		position: relative
 		background: #fff
 
-	.head, .content, .footer
+	.head, .content
 		transition: transform .3s ease
 		position: relative
 		background: #fff
@@ -3529,7 +3489,7 @@ body.js__fixed
 
 	.js-menu-opened
 
-		.head, .content, .footer, .mobile-catalog
+		.head, .content, .mobile-catalog
 			transform: translate3d(-280px, 0, 0)
 
 		.head__menu
@@ -3561,6 +3521,7 @@ body.js__fixed
 				left: -.1rem
 				width: .1rem
 				z-index: 10
+
 			.footer-call
 				border: 1px solid #139658
 				padding: 10px
@@ -3806,11 +3767,6 @@ body.js__fixed
 		&__img
 			margin-right: 30px
 
-@media screen and (min-width: 1000px)
-	.footer
-
-		.submenu__list
-			position: static
 
 @media screen and (max-width: 1000px)
 
@@ -4095,18 +4051,6 @@ body.js__fixed
 		&__cont
 			margin: 2rem 0 0
 
-	.footer
-		padding: 2rem
-		margin: 2rem 0 0
-		border-top: 1px solid var(--border-color)
-
-		&-line
-
-			&--top
-				display: none
-
-			&--bot
-				margin-top: 0
 
 	.title-block
 
@@ -4534,27 +4478,7 @@ body.js__fixed
 			&.js__callback
 				display: block !important
 
-	.head__menu-footer 
-		&.js__moved-phone
-			display: flex
-			flex-direction: column
-			align-items: flex-start
-
-		&.js__moved-msg
-			padding: 0
-			order: 2
-
-		.footer-phone
-			order: 1
-
-		.footer-call
-			order: 5
-
-		.head-links__link--bonus
-			order: 3
-
-			&.js__callback
-				order: 4
+	
 
 
 
@@ -4990,8 +4914,6 @@ body.js__fixed
 		&__item
 			width: calc(100% - 16px)
 
-	.forms__text
-		margin-top: 0 !important
 
 	.menu__el
 		padding-bottom: 0
@@ -5022,8 +4944,6 @@ body.js__fixed
 		.submenu__title a
 			padding: 15px 20px 15px 15px
 
-	.head
-		align-items: center
 
 	#apiship_info
 		display: none
@@ -5060,10 +4980,6 @@ body.js__fixed
 		&__title
 			display: none
 
-	.head
-
-		&__left
-			margin: 0
 
 	body
 		width: 100%
@@ -5081,20 +4997,11 @@ body.js__fixed
 			.head
 				top: 57px
 
-	.head-search
-		margin: 15px 0 0
-		padding: 15px 25px 0 !important
-		background: #fff
-		position: absolute
-		top: 0
-		transform: translate3d(0, -100%, 0)
-		left: 0
-		opacity: 0
-		transition: opacity .3s ease
+
 
 	.js-menu-opened
 
-		.mobile-catalog, .head, .footer, .content
+		.mobile-catalog, .head, .content
 			transform: translate3d(280px,0,0)
 
 	.mobile-search
@@ -5114,86 +5021,7 @@ body.js__fixed
 	#content
 		width: 100%
 
-	.head
-		top: 0
-		left: 0
-		width: 100%
-		z-index: 11
-		padding: 25px
-		position: fixed
 
-		&__mobile-search
-			order: -2
-			margin: 0 auto 0 rem(27)
-
-		&__menu
-			right: auto
-			left: 0
-			position: fixed
-			bottom: 0
-			height: auto
-			overflow-y: auto
-			-webkit-overflow-scrolling: touch
-
-			&:before
-				left: auto
-				right: -.1rem
-
-			&:before
-				display: none
-
-			> *
-				position: relative
-
-				&:before
-					left: auto
-					pointer-events: none
-					right: -.1rem
-					content: ""
-					position: absolute
-					box-shadow: 0 0 10px rgba(0,0,0,.7)
-					top: 0
-					width: .1rem
-					z-index: 10
-					bottom: 0
-
-			&-footer
-				padding-top: 0 !important
-
-		&__burger
-			order: -3
-
-		&-links
-
-			&__link
-
-				&--lc
-					display: none
-
-				&--favorite
-					margin: 0 28px 0 0 !important
-					background: url("../img/ico-mobile-favorite.png") no-repeat
-					background-size: contain !important
-					size: 23px 20px
-
-				&--cart
-					background: url("../img/ico-mobile-cart.png") no-repeat
-					background-size: contain !important
-					size: 20px 23px
-
-					svg
-						display: none
-
-					&:after
-						top: -5px
-						right: -10px
-
-		&__right
-			margin: 0
-
-		&__logo
-			width: 99px
-			margin-right: auto
 
 	#header-cart
 		margin-left: 0 !important
@@ -5216,14 +5044,14 @@ body.js__fixed
 			.to-cart
 				order: 0
 
-			&-add-to-cart, .to-cart, &-add-to-cart.added, .to-cart.added
-				border-radius: 50%
-				padding: 0 !important
-				size: 34px
-				text-indent: -9999px
-				overflow: hidden
-				background: url("../img/ico-mobile-cart-white.png") center no-repeat, var(--main-color) !important
-				background-size: 14px auto !important
+			// &-add-to-cart, .to-cart, &-add-to-cart.added, .to-cart.added
+			// 	border-radius: 50%
+			// 	padding: 0 !important
+			// 	size: 34px
+			// 	text-indent: -9999px
+			// 	overflow: hidden
+			// 	background: url("../img/ico-mobile-cart-white.png") center no-repeat, var(--main-color) !important
+			// 	background-size: 14px auto !important
 
 			&-fav-add, .to-favorite, &-fav-add.added, .to-favorite.added
 				size: 17px 15px
@@ -5428,23 +5256,8 @@ body.js__fixed
 			position: absolute
 			background: url("../img/ico-filter.png") center no-repeat !important
 
-	.footer
-		padding: rem(41) rem(26) rem(45)
-		background: #eff0f0
 
-		&__soc
-			display: none
-
-		&__dev
-
-		&-line--bot
-			flex-direction: row !important
-
-	.dev
-
-		&__text
-			display: none
-
+	
 	.body
 
 		&-element
@@ -5788,11 +5601,7 @@ body.js__fixed
 						line-height: calc(20 / 16)
 						letter-spacing: .01em
 
-	.main
 
-		.footer
-			margin: 0
-			background: #fff
 
 	.tovar-bot
 
@@ -6612,7 +6421,7 @@ body.js__fixed
 
 	.js-menu-opened
 
-		.head, .content, .footer
+		.head, .content
 			transform: translate3d(260px, 0, 0)
 
 	.tovar-buy__counter

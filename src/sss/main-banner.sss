@@ -70,6 +70,12 @@
 
 
 	
+@media (max-width: 1500px)
+	
+	.main-banner-cont
+		margin-bottom: 40px
+
+
 @media (max-width: 1200px)
 	
 	.main-banner-cont
@@ -80,9 +86,23 @@
 	
 	.main-banner 
 		img
-			height: 330px
-			object-fit: cover
-			object-position: center
+			width: 100%
 
 		&__info
 			padding: 20px
+			align-items: center
+
+			&-cont>.wrapper
+				justify-content: flex-start
+
+			&-title
+				text-align: center
+				font-size: em(26)
+
+			&-btn
+				.btn
+					padding: 0
+					background-color: transparent
+					color: var(--main-color)
+					border-bottom: 1px solid var(--main-color)
+					border-radius: 0

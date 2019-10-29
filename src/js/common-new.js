@@ -38,6 +38,8 @@ Swiper.use([Navigation, EffectFade, Pagination, Autoplay])
 
 document.addEventListener("DOMContentLoaded", function(){
 
+
+
 	
 
 	var mainSlaiderSwiper = new Swiper('.main-banner', {
@@ -89,10 +91,21 @@ document.addEventListener("DOMContentLoaded", function(){
 			1200: {
 				slidesPerView: 3,
 			},
+			667: {
+				slidesPerView: 1,
+			},
 		}
 
 
 	});
+
+	$('.slider__slide-img').height(Math.max.apply(null, $('.slider__slide-img').map(function(){
+		return $(this).height();
+	})))
+
+	$('.slider__slide-title').height(Math.max.apply(null, $('.slider__slide-title').map(function(){
+		return $(this).height();
+	})))
 
 
 	var brandSwiper = new Swiper('.brands .swiper-list', {
@@ -109,6 +122,14 @@ document.addEventListener("DOMContentLoaded", function(){
 			nextEl: '.brands .swiper-button-next',
 			prevEl: '.brands .swiper-button-prev',
 		},
+		breakpoints: {
+			1000: {
+				slidesPerView: 4,
+			},
+			667: {
+				slidesPerView: 1,
+			},
+		}
 
 
 	});
@@ -127,6 +148,14 @@ document.addEventListener("DOMContentLoaded", function(){
 			nextEl: '.testemonials .swiper-button-next',
 			prevEl: '.testemonials .swiper-button-prev',
 		},
+		breakpoints: {
+			1000: {
+				slidesPerView: 3,
+			},
+			667: {
+				slidesPerView: 1,
+			},
+		}
 
 
 	});

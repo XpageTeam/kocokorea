@@ -77,3 +77,29 @@
 	.main-youtube__title
 		br
 			display: none
+
+@media (max-width: 1000px)
+	
+	.main-youtube
+		align-items: flex-start
+
+		&__video
+			margin-left: 20px
+			max-width: 380px
+
+		&__text
+			br
+				display: none
+
+
+@media (max-width: 667px)
+	
+	.main-youtube
+		flex-direction: column
+
+		&__title
+			font-size: 1.3em
+			margin-bottom: 20px
+
+		&__video
+			margin: 20px 0 0 0
