@@ -363,7 +363,7 @@
 		font-size: 15px
 		padding: 13px 26px
 		font-weight: 100
-		background: #2cad42
+		background: var(--main-color)
 		color: #fff
 		border: 0
 		height: 46px
@@ -384,7 +384,7 @@
 			font-size: 15px
 			padding: 13px 26px
 			font-weight: 100
-			background: #2cad42
+			background: var(--main-color)
 			color: #fff
 			border: 0
 			height: 46px
@@ -890,7 +890,7 @@ footer
 	text-decoration: none
 	font-size: 1rem
 	padding: 20px 54px
-	border: 1px solid #2cad42
+	border: 1px solid var(--main-color)
 	color: #000
 	margin-right: 15px
 	text-align: center
@@ -1222,9 +1222,25 @@ div.delivery
 .block-paysystem_list
 	margin-bottom: 0 !important
 
+
+input[type=radio]+label::before
+	content: ""
+	position: absolute
+	top: 0
+	left: 0
+	display: block
+	width: 30px
+	height: 30px
+	border-radius: 50px
+	background-color: #fff
+	border: 1px solid #ebebeb
+
+
+
 .block-paysystem_item
 
 	label
+		position: relative
 		border: 1px solid var(--border-color)
 		margin: 0 !important
 		display: block !important
@@ -1354,6 +1370,7 @@ div.delivery
 		white-space: nowrap
 
 	&__label
+		position: relative
 		border: 1px solid var(--border-color)
 		margin: 0 !important
 		display: block !important
@@ -1432,6 +1449,7 @@ div.delivery
 .pickup-radio
 
 	label
+		position: relative
 		padding-left: 50px !important
 		font-size: 14px
 
@@ -1974,7 +1992,7 @@ div.instagram
 	left: 0
 	top: 0
 	bottom: 0
-	background: url("../img/steps-counter-bg.png") repeat-x, #2cad42
+	background: url("../img/steps-counter-bg.png") repeat-x, var(--main-color)
 	animation: progress_bar 0.8s linear infinite
 	transition: width .3s ease
 
@@ -2072,7 +2090,7 @@ div.instagram
 		color: #fff
 
 		&:hover
-			background: lighten(#2cad42, 5)
+			background: var(--main-color)
 
 .delivery-selector
 
@@ -2086,7 +2104,7 @@ div.instagram
 			width: 100%
 
 			&:hover
-				background: lighten(#2cad42, 5)
+				background: var(--main-color)
 
 .sale-paysystem-button-container 
 
@@ -2098,7 +2116,7 @@ div.instagram
 		background: var(--main-color)
 
 	50%
-		background: lighten(#2cad42, 5)
+		background: var(--main-color)
 
 @media screen and (min-width: 660px)
 	.delivery-selector
@@ -2194,7 +2212,7 @@ div.instagram
 
 
 		&::-webkit-scrollbar-thumb
-			background-color: #2cad42
+			background-color: var(--main-color)
 			border-left: 16px solid #fff
 
 
@@ -2374,7 +2392,7 @@ div.instagram
 
 		.forms__submit
 			border: 1px solid #139658
-			background: #2cad42
+			background: var(--main-color)
 			color: #fff
 			font-weight: 100
 			height: 56px
@@ -3145,10 +3163,7 @@ body.js__fixed
 	html
 		font-size: 98%
 
-	.title-block
 
-		&__cont
-			margin-bottom: 50px
 
 	.submenu
 
@@ -3451,18 +3466,17 @@ body.js__fixed
 							bottom: -41px
 
 	.cat2
-		grid-template-columns: repeat(2, 1fr)
+		margin: 0 0 -20px -20px
 
 		&__one
+			padding-bottom: 0
 
 			&-wrap
-				width: 50%
+				width: calc((100% - 20px * 2) / 2)
+				margin: 0 0 20px 20px
 
 				&:nth-child(even)
 					border-right: 0
-
-				&:nth-child(3n)
-					border-right: 1px solid var(--border-color)
 
 	.blog
 
@@ -4320,6 +4334,7 @@ body.js__fixed
 			width: calc((100% - 16px * 3) / 3)
 
 @media screen and (max-width: 800px)
+	
 
 	.brands
 
@@ -4347,16 +4362,14 @@ body.js__fixed
 					width: 100%
 
 	.cat2
-		flex-direction: column
-		grid-template-columns: 1fr
-
 		&__one
-
 			&-wrap
 				border-right: 0 !important
+
 	.head-links
 		.head-links__link--bonus
 			display: none
+
 	.head__menu
 		.head-links__link--bonus
 			display: inline-block
@@ -4543,7 +4556,7 @@ body.js__fixed
 			margin: 0
 
 		&__price
-			margin: 10px 0 0 !important
+			margin: 10px !important
 
 	.bonus-text
 		display: flex
@@ -4816,7 +4829,7 @@ body.js__fixed
 		padding: 0 !important
 
 	#step_2, #step_3
-		margin-bottom: -100px !important
+		margin-bottom: -118px !important
 
 	.js__moved-soc
 		margin: 10px 0 0
@@ -5044,14 +5057,7 @@ body.js__fixed
 			.to-cart
 				order: 0
 
-			// &-add-to-cart, .to-cart, &-add-to-cart.added, .to-cart.added
-			// 	border-radius: 50%
-			// 	padding: 0 !important
-			// 	size: 34px
-			// 	text-indent: -9999px
-			// 	overflow: hidden
-			// 	background: url("../img/ico-mobile-cart-white.png") center no-repeat, var(--main-color) !important
-			// 	background-size: 14px auto !important
+			
 
 			&-fav-add, .to-favorite, &-fav-add.added, .to-favorite.added
 				size: 17px 15px
@@ -5157,46 +5163,7 @@ body.js__fixed
 		.cat2__one-tag-cont
 			left: 10px
 
-	.title-block
-
-		&__cont
-			margin: 0 -18px 2rem
-
-		&__title
-			display: none
-
-		&__crumbs
-			margin: 0
-
-	.bread-crumbs
-		position: relative
-
-		&__this
-			background: #eff0f0 !important
-			padding: 20px 25px 20px 44px
-			display: block
-			text-align: center
-			letter-spacing: .01em
-			margin-right: 0
-			font-size: 16px
-
-		&__link
-
-			&:not(:nth-last-child(2))
-				display: none
-
-			&:nth-last-child(2)
-				background: none
-				border-top: 1px solid #000
-				border-left: 1px solid #000
-				size: 8px
-				transform: rotateZ(-45deg)
-				position: absolute
-				top: calc(50% - 4px)
-				left: 30px
-				margin: 0
-				text-indent: -9999px
-				overflow: hidden
+	
 
 	.sort
 		border: none
@@ -5923,7 +5890,7 @@ body.js__fixed
 					background-size: contain !important
 
 					&:not(.added)
-						background: url(/local/templates/main/css/../img/ico-cat-favorite.png) center no-repeat,#fff
+						background: url('../img/ico-favorite.svg') center no-repeat, #fff
 
 	.countItemInCart
 		margin-top: auto !important
@@ -5977,6 +5944,9 @@ body.js__fixed
 
 @media screen and (max-width: 595px)
 
+	html
+		font-size: 93%
+
 	.bx-ios
 		.boxberry_content
 			iframe
@@ -5985,8 +5955,6 @@ body.js__fixed
 	.boxberry_overlay
 		display: none !important
 		
-
-
 
 	.main 
 		.promo__list
@@ -6020,10 +5988,6 @@ body.js__fixed
 	.title-block__title
 		font-size: 1.6rem
 
-	.tovar-buy
-		&__add-to-cart, &__one-click
-			padding: 12px 9px 13px 40px
-
 	.tabs-tab
 		width: 100%
 
@@ -6047,16 +6011,8 @@ body.js__fixed
 	.cart-item__price-total, .cart-item__price
 		align-items: flex-end
 
-			
-
-	.tovar-buy__one-click
-		background: url(https://aloesmart.ru/local/templates/main/img/ico-click.svg) left 9px center no-repeat
-
-	.tovar-buy__add-to-cart
-		background: url(https://aloesmart.ru/local/templates/main/img/ico-cat-cart-added.svg) center left 12px no-repeat , #2cad42
 
 
-		
 	.lk
 		&__block
 			flex-direction: column
@@ -6074,27 +6030,34 @@ body.js__fixed
 		&__advantage_block_item, &__use_block_item
 			width: 100%
 			margin-bottom: 2rem
+
 		&__banner_block
 			flex-direction: column
+
 		&__banner_block_text
 			padding-left: 0
 			padding-top: 30px
+
 		&__advantage_block_title
 			flex-wrap: wrap
+
 		&__advantage_block_title_btn
 			padding-left: 0
 			padding-top: 20px
+
 		&__use_block_text
 			flex-direction: column
 			align-items: flex-start
+
 			div 
 				width: 100%
 			a 
 				margin-top: 30px
+
 		&__use_block_title
 			margin-bottom: 30px
-	html
-		font-size: 93%
+
+
 
 	.brands
 
@@ -6103,28 +6066,7 @@ body.js__fixed
 			&__list
 				grid-template-columns: 1fr
 
-	.contacts__form
 
-		.forms
-
-			&__title, &-wrap
-				padding: 1.4rem
-
-			&-wrap
-				flex-direction: column
-
-			&-input-cont
-				width: auto !important
-
-			&__bottom
-				flex-direction: column-reverse
-
-			&-submit-cont
-				margin: 2rem 0 0
-				width: 100%
-
-			&__submit
-				width: 100%
 
 	.shop-slider
 
@@ -6227,7 +6169,7 @@ body.js__fixed
 		&--favorite
 
 			&:after
-				background: url("../img/ico-favorite.png") center no-repeat
+				background: url("../img/ico-favorite.svg") center no-repeat
 
 
 	.recaptcha

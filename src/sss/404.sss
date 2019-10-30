@@ -1,0 +1,50 @@
+.page-404
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+	&__img
+		&-cont
+			flex: none
+			margin-right: 150px
+
+
+	&__cont
+		margin: 40px 0 0
+
+	&__title
+		margin: 0 0 30px 0
+		font-weight: 600
+		color: var(--main-color)
+		font-size: em(24)
+
+	&__subtitle
+		font-size: em(14)
+
+
+@media (max-width: 1400px)
+
+	.page-404__img-cont
+		margin-right: 55px
+
+@media (max-width: 1200px)
+	
+	.page-404__img-cont
+		max-width: 470px
+
+@media (max-width: 1000px)
+	
+	.page-404
+		flex-direction: column
+
+
+		&__img
+			&-cont
+				margin-right: 0
+
+
+@media (max-width: 667px)
+	
+	.page-404__subtitle
+		br
+			display: none

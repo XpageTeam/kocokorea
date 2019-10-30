@@ -1,97 +1,50 @@
 .title-block
-	display: flex
-	flex-direction: column
+	&__cont
+		background-repeat: no-repeat
+		background-position: right
+		margin-bottom: 80px
 
+	&__title 
+		font-size: rem(30)
+		font-weight: 600
 
-	&__btn
-		margin-left: 20px
-		flex: none
-
-	&__title
-
-		h1
-			font-weight: 300
-			font-size: em(30)
-			line-height: calc(37 / 24)
-			color: #000
-
-	&-cont
-		background-color: #E5EAF0
-		color: #000
-		
 	&__crumbs
-		margin-bottom: 5px
-
-.bread-crumbs
-	color: currentColor
-	font-size: em(14)
-	line-height: 1.4
-	display: flex
-	margin: 0
+		margin: 0 0 14px 0 
 
 
-	&__this
-		font-family: var(--geometria-font)
-		font-weight: 400
-		color: #8F9EB0 
-
-	&__link
-		transition: color .3s ease
-
-		a
-			font-family: var(--geometria-font)
-			font-weight: 400
-			color: var(--second-color)
-
-		&:hover, &:focus
-
-			a
-				border-bottom-color: var(--second-color)
-
-		&:nth-last-child(2)
-			&:after
-				border-color: #8F9EB0
-
-		&:after
-			content: ""
-			display: inline-block
-			margin: 0 13px 3px
-			size: 4px
-			border-top: 1px solid #000
-			border-right: 1px solid #000
-			transform: rotate(45deg)
 
 
-@media (max-width: 1200px)
+
+@media (max-width: 1500px)
 	
-	.title-block-cont
-		margin-bottom: 35px
-
+	.title-block__cont
+		margin-bottom: 30px
 
 
 @media (max-width: 660px)
-
-
+	
 	.title-block
 
-		&__text
-			display: flex
-			flex-direction: row-reverse
+		&__cont
+			margin: 0 -18px 2rem
 
 		&__title
-			margin: 10px 0 0 0
+			display: none
 
-			h1
-				font-size: 1.2em
-
-		&-cont
-			margin-bottom: 30px
-
+		&__crumbs
+			margin: 0
 
 	.bread-crumbs
+		position: relative
 
 		&__this
-			display: none
+			background: #eff0f0 !important
+			padding: 20px 25px 20px 44px
+			display: block
+			text-align: center
+			letter-spacing: .01em
+			margin-right: 0
+			font-size: 16px
 
 		&__link
 
@@ -99,24 +52,14 @@
 				display: none
 
 			&:nth-last-child(2)
-				display: block
-				position: relative
-
-				&:before
-					content: ""
-					display: inline-block
-					size: 10px
-					border-top: 1px solid #fff
-					border-left: 1px solid #fff
-					transform: rotateZ(-45deg)
-					margin-right: 10px
-
-				&:after
-					display: none
-
-	body:not([class*="page-calc__body"])
-
-		.bread-crumbs__link:nth-last-child(2):before
-
-			border-top: 1px solid var(--main-color)
-			border-left: 1px solid var(--main-color)
+				background: none
+				border-top: 1px solid #000
+				border-left: 1px solid #000
+				size: 8px
+				transform: rotateZ(-45deg)
+				position: absolute
+				top: calc(50% - 4px)
+				left: 30px
+				margin: 0
+				text-indent: -9999px
+				overflow: hidden

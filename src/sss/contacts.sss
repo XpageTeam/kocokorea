@@ -1,0 +1,85 @@
+.contacts__form
+	margin: 2rem 0 0
+	
+	.cart__forms
+		padding: 0
+
+	.forms
+
+		&__file
+
+			&-formats
+				position: absolute
+				left: 0
+				top: 100%
+
+		&__title, &-wrap
+			padding: 30px 36px			
+
+		&__title
+			text-align: left
+			font-size: 1rem
+			background: #eff0f0
+			border-bottom: 1px solid var(--border-color)
+			margin-bottom: 0
+
+
+		&__bottom
+			display: flex
+			align-items: center
+
+			
+		&-input-cont
+			margin-right: 0 !important
+			width: 47.6% !important
+
+			textarea
+				padding: 15px 17px
+				max-width: 100%
+
+		&-submit-cont
+			margin: 0 40px 0 0
+
+		&__submit
+			border: 0
+			background-color: var(--main-color)
+			color: #fff
+			font-weight: 100
+			height: 56px
+
+		&__input
+			height: 41px
+
+		&__label
+			font-size: rem(14)
+			min-height: 16px
+
+.contacts__form
+	.forms__bottom
+		display: flex
+
+
+@media (max-width: 595px)
+	
+	.contacts__form
+
+		.forms
+
+			&__title, &-wrap
+				padding: 1.4rem
+
+			&-wrap
+				flex-direction: column
+
+			&-input-cont
+				width: auto !important
+
+			&__bottom
+				flex-direction: column-reverse
+
+			&-submit-cont
+				margin: 2rem 0 0
+				width: 100%
+
+			&__submit
+				width: 100%

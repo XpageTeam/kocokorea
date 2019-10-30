@@ -12,7 +12,7 @@
 		display: flex
 		align-items: center
 		justify-content: center
-		background: $main-color
+		background: var(--main-color)
 		overflow: hidden
 
 		&:after
@@ -32,7 +32,7 @@
 	display: none
 	max-width: 813px
 	box-sizing: border-box
-	padding: 50px 87px 75px
+	padding: 50px 55px 50px
 	background: #fff
 
 	&__text
@@ -49,7 +49,7 @@
 				display: block
 
 			a
-				color: #2cad42
+				color: var(--main-color)
 				text-decoration: none
 
 	&__title
@@ -100,7 +100,7 @@
 		&--rating
 			flex-direction: row-reverse
 			align-items: center
-			border: 1px solid $border-color
+			border: 1px solid var(--border-color)
 			margin-top: calc(19px + 1.33745vh)
 			padding: 5px 24px
 
@@ -202,7 +202,7 @@
 			top: 0
 			left: 0
 			size: 30px
-			border: 1px solid $border-color
+			border: 1px solid var(--border-color)
 			border-radius: 1px
 
 	&__checkbox
@@ -231,7 +231,7 @@
 			&:before, &:after
 				content: ""
 				position: absolute
-				background: $base-color
+				background: var(--main-color)
 				transition: opacity .5s ease
 				opacity: 0
 
@@ -266,7 +266,7 @@
 
 	&__submit
 		color: #000
-		border: 2px solid $base-color
+		border: 2px solid var(--main-color)
 		cursor: pointer
 		background: #fff
 		font-size: rem(18)
@@ -306,7 +306,7 @@
 				display: block
 				border-radius: 50%
 				position: absolute
-				border: 1px solid $error-color
+				border: 1px solid var(--main-color)
 				size: 19px
 				background: #fff
 				bottom: -32px
@@ -316,7 +316,7 @@
 					content: ""
 					position: absolute
 					width: 1px
-					background: $error-color
+					background: var(--main-color)
 					left: calc(50% - 1px)
 
 				&:before
@@ -326,6 +326,220 @@
 				&:after
 					bottom: 4px
 					height: 2px
+
+
+
+
+#personal-header_menu
+	display: none
+
+.doc-panel
+
+	&__header
+		display: flex
+		justify-content: space-between
+
+	.btn-panel
+		text-decoration: none
+		cursor: pointer
+		background-color: #ecf0f2
+		padding: 32px 0
+		text-align: center
+		color: #000
+		flex: 1 1 auto
+
+
+		&:not(:last-child)
+			margin-right: 15px
+
+		&.active
+			background-color: var(--main-color)
+			color: #fff
+
+	&__info:not(:last-child)
+		margin-bottom: 40px
+
+	&__text 
+		&-img
+			width: persent(270)
+
+		&.active
+			display: block
+
+	&__text-item
+		display: flex
+		border-bottom: 1px solid #ecf0f2
+		padding: 45px 0
+
+
+	&__info-dop
+		display: flex
+
+	&__info-discription
+		display: flex
+		flex-direction: column
+		margin-left: 45px
+		align-self: center
+
+		a
+			display: flex
+			flex-direction: column
+			text-decoration: none
+
+.formoneclick
+	max-width: 1060px
+
+	.forms-text-cont
+		text-align: left
+		margin-bottom: 30px
+		justify-content: flex-start
+
+	input:read-only 
+		background: #ecf0f2
+
+	.forms
+		&-checkbox-wrap
+			display: flex 
+			flex-direction: column
+			justify-content: center
+
+		&__title
+			text-transform: none
+			display: none
+
+		&-wrap 
+			display: flex
+			flex-direction: column
+
+		&__input-wrap
+			flex-wrap: wrap
+
+		&__radio
+		
+			&-wrap
+				display: flex
+				justify-content: flex-start
+				margin-bottom: 20px
+
+			&-cont
+				&:not(:last-child)
+					margin-right: 60px
+		&__input
+			height: 57px
+
+			&-wrap
+				display: flex
+
+			&--file-support
+				width: 75%
+				font-size: rem(14)
+				line-height: rem(18)
+				margin-top: 5px
+
+		&__file-formats
+			order: 1
+			a 
+				text-decoration: none
+
+		&-input
+
+			&-cont
+
+				flex-direction: column-reverse
+				width: 25%
+
+				&:not(:last-child)
+					margin-right: 35px
+
+				&--file 
+					width: 100%!important
+					justify-content: flex-end
+
+					.forms__label--file
+						&:before
+							top: 17px
+
+					&:first-child
+
+						.forms__label--file
+							&:before
+								top: 35px
+
+				&--files
+					flex-direction: column
+					width: 53%
+
+			&__textarea
+				width: 280px
+				max-width: 265px
+				height: 155px
+				max-height: 155px
+				margin-top: 15px
+				padding: 10px
+
+				&-cont 
+					margin-right: 50px
+
+		&__textarea-cont
+			position: relative
+
+			.forms__error-message
+				top: 0
+				bottom: initial
+				right: 35px
+			.forms__error-message-icon
+				top: 50px
+				
+
+		&__textarea-wrap
+			display: flex
+			margin-bottom: 17px
+
+		
+		&__recaptcha
+			margin-right: 65px
+
+			&-wrap
+				display: flex
+				flex-direction: flex-start
+
+		&__submit
+			display: flex
+			justify-content: flex-start
+			border: 0
+			padding: 0
+
+		&__label
+
+			&--file:before
+				background: #f4f4f4
+				right: 0
+				cursor: pointer
+				height: 57px
+				width: 20%
+				text-align: center
+				line-height: 57px
+				box-sizing: border-box
+
+		&__textarea-cont
+			display: flex
+			flex-direction: column-reverse
+			justify-content: flex-end
+
+	.forms-submit-cont 
+		margin-top: 35px
+
+	.file--add_input
+		text-decoration: none
+		color: #000
+		background: $second-color
+		width: 30%
+		padding: 5px 10px
+		margin-top: 20px
+
+.forms-textarea-cont
+	display: flex
+	flex-direction: column-reverse
 
 
 @media screen and (max-width: 1000px)
@@ -426,7 +640,7 @@
 				&:before
 					content: ""
 					width: 50px
-					top: 32px
+					top: 34px
 
 		&-wrap
 
@@ -436,7 +650,7 @@
 					width: 100%
 
 					&:not(:first-child)
-						margin-top: vh(15)
+						margin-top: 15px
 
 
 		&__checkbox
@@ -444,188 +658,3 @@
 
 		&__req-text
 			text-align: center
-
-#personal-header_menu
-	display: none
-
-.doc-panel
-
-	&__header
-		display: flex
-		justify-content: space-between
-
-	.btn-panel
-		text-decoration: none
-		cursor: pointer
-		background-color: #ecf0f2
-		padding: 32px 0
-		text-align: center
-		color: #000
-		flex: 1 1 auto
-
-
-		&:not(:last-child)
-			margin-right: 15px
-
-		&.active
-			background-color: $main-color
-			color: #fff
-
-	&__info:not(:last-child)
-		margin-bottom: 40px
-
-	&__text 
-		&-img
-			width: persent(270)
-
-		&.active
-			display: block
-	&__text-list
-
-	&__text-item
-		display: flex
-		border-bottom: 1px solid #ecf0f2
-		padding: 45px 0
-
-
-	&__info-dop
-		display: flex
-
-	&__info-discription
-		display: flex
-		flex-direction: column
-		margin-left: 45px
-		align-self: center
-
-		a
-			display: flex
-			flex-direction: column
-			text-decoration: none
-
-.formoneclick
-	max-width: 1060px
-
-	.forms-text-cont
-		text-align: left
-		margin-bottom: 30px
-		justify-content: flex-start
-
-	input:read-only 
-		background: #ecf0f2
-	.forms
-		&-checkbox-wrap
-			display: flex 
-			flex-direction: column
-			justify-content: center
-		&__title
-			text-transform: none
-			display: none
-		&-wrap 
-			display: flex
-			flex-direction: column
-		&__input-wrap
-			flex-wrap: wrap
-		&__radio
-			&-wrap
-				display: flex
-				justify-content: flex-start
-				margin-bottom: 20px
-			&-cont
-				&:not(:last-child)
-					margin-right: 60px
-		&__input
-			height: 57px
-			&-wrap
-				display: flex
-			&--file-support
-				width: 75%
-				font-size: rem(14)
-				line-height: rem(18)
-				margin-top: vh(5)
-
-		&__file-formats
-			order: 1
-			a 
-				text-decoration: none
-		&-input
-			&-cont
-				flex-direction: column-reverse
-				width: 25%
-				&:not(:last-child)
-					margin-right: 35px
-				&--file 
-					width: 100%!important
-					justify-content: flex-end
-
-					.forms__label--file
-						&:before
-							top: 17px
-
-					&:first-child
-						.forms__label--file
-							&:before
-								top: 35px
-				&--files
-					flex-direction: column
-					width: 53%
-			&__textarea
-				width: 280px
-				max-width: 265px
-				height: 155px
-				max-height: 155px
-				margin-top: 15px
-				padding: 10px
-				&-cont 
-					margin-right: 50px
-		&__textarea-cont
-			position: relative
-			.forms__error-message
-				top: 0
-				bottom: initial
-				right: 35px
-			.forms__error-message-icon
-				top: 50px
-				
-
-		&__textarea-wrap
-			display: flex
-			margin-bottom: 17px
-
-		
-		&__recaptcha
-			margin-right: 65px
-			&-wrap
-				display: flex
-				flex-direction: flex-start
-		&__submit
-			display: flex
-			justify-content: flex-start
-			border: 0
-			padding: 0
-		&__label
-			&--file:before
-				background: #f4f4f4
-				right: 0
-				cursor: pointer
-				height: 57px
-				width: 20%
-				text-align: center
-				line-height: 57px
-				box-sizing: border-box
-		&__textarea-cont
-			display: flex
-			flex-direction: column-reverse
-			justify-content: flex-end
-	.forms-submit-cont 
-		margin-top: vh(35)
-	.file--add_input
-		text-decoration: none
-		color: #000
-		background: $second-color
-		width: 30%
-		padding: 5px 10px
-		margin-top: 20px
-
-.forms-textarea-cont
-	display: flex
-	flex-direction: column-reverse

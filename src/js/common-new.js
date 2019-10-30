@@ -64,12 +64,28 @@ document.addEventListener("DOMContentLoaded", function(){
 		fadeEffect: {
 			crossFade: true
 		},
-		breakpoints: {
-			// 1200: {
-				
-			// },
-		}
+		
+	});	
 
+	var aboutSlaiderSwiper = new Swiper('.about-slider .swiper-list', {
+		effect: "fade",
+		slidesPerView: 1,
+		loop: true,
+		roundLengths: true,
+		a11y: false,
+		autoplay: {
+	        delay: 2500,
+	        disableOnInteraction: false,
+	    },
+		navigation: {
+			nextEl: '.about-slider .swiper-button-next',
+			prevEl: '.about-slider .swiper-button-prev',
+		},
+	
+		fadeEffect: {
+			crossFade: true
+		},
+		
 	});
 
 
@@ -99,13 +115,18 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	});
 
-	$('.slider__slide-img').height(Math.max.apply(null, $('.slider__slide-img').map(function(){
-		return $(this).height();
-	})))
+	if($(window).width() > 667){
 
-	$('.slider__slide-title').height(Math.max.apply(null, $('.slider__slide-title').map(function(){
-		return $(this).height();
-	})))
+		$('.slider__slide-img').height(Math.max.apply(null, $('.slider__slide-img').map(function(){
+			return $(this).height();
+		})))
+
+		$('.slider__slide-title').height(Math.max.apply(null, $('.slider__slide-title').map(function(){
+			return $(this).height();
+		})))
+		
+	}
+
 
 
 	var brandSwiper = new Swiper('.brands .swiper-list', {

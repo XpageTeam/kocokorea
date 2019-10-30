@@ -3,7 +3,7 @@
 
 @import "_vars.sss"
 @import "_base.sss"
-// @import "_title-block.sss"
+@import "_title-block.sss"
 @import "_text-styles.sss"
 @import "forms.sss"
 
@@ -29,6 +29,24 @@
 
 @import "catalog.sss"
 @import "about.sss"
+@import "404.sss"
+@import "contacts.sss"
+
+
+.cat2__one-add-to-cart
+	&:before
+		content: ''
+		display: inline-block
+		size: 17px 20px
+		background-image: url('../img/ico-cart.svg')
+		background-repeat: no-repeat
+		background-position: center
+		background-size: contain
+		margin-right: 15px
+		filter: invert(1)
+
+	&:hover
+		color: var(--main-color)
 
 @supports (display: grid)
 
@@ -56,10 +74,16 @@
 	transition: background .3s ease, color .3s ease
 	text-align: center
 	cursor: pointer
+	display: flex
+	align-items: center
+	line-height: 1
+	justify-content: center
+
 
 	&:hover
 		background-color: #fff
 		border: 1px solid var(--main-color)
+		color: var(--main-color)
 
 	&--subscribe
 		text-indent: 0 !important
@@ -150,13 +174,97 @@
 		padding: 15px
 
 
+	.tovar-big-slider__slide
+		height: auto
+
+	.tovar__sliders
+		max-width: 100%
+
+
 @media (max-width: 1000px)
 	
 	.blog__list
 		grid-template-columns: repeat(2,1fr)
+
+	.tovar__rating
+		margin-bottom: 25px
+
+	.sort-select
+		flex-direction: column
+
+		&__select
+			padding: 0 22px 0 0
+			margin-top: 10px
 
 
 @media (max-width: 660px)
 	
 	.blog__list
 		grid-template-columns: repeat(1,1fr)
+
+	.mobile-catalog
+		.main-nav__item--highlighted
+			display: none
+
+		.main-nav__item--submenu
+			display: block !important
+
+			> a
+				display: none
+
+		li
+			width: 100%
+			margin: 0 !important
+
+
+		a
+			display: block
+			padding: 15px 20px
+
+		.main-nav
+
+
+			&__item
+				&:first-child:before
+					display: none
+
+		.submenu
+			display: block
+			column-count: 1
+			column-gap: 0
+
+			&-cont
+				position: static
+				opacity: 1
+				padding: 0
+				box-shadow: none
+
+				.wrapper
+					padding: 0
+
+			> li 
+				border-bottom: 1px solid var(--border-color)
+
+				> a
+					margin: 0
+
+				> div
+					display: none
+
+
+	.cat2__one-wrap
+		width: calc((100% - 40px)/1)
+
+	.catalog__sort
+		margin: 0
+
+	.cat2 .cat2__one
+		padding: 20px 0 20px 146px
+
+	.cat2__one-img-cont
+		min-height: auto
+
+	.cat2 .cat2__one-fav-add-cont
+		left: 15px
+		top: 15px
+

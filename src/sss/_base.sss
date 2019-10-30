@@ -114,6 +114,7 @@ a
 	color: #000
 	font-weight: inherit
 	text-decoration: none
+	transition: color .3s ease
 
 	&[href^="tel"], &[href^="mail"]
 		white-space: nowrap
@@ -122,7 +123,7 @@ a
 		color: var(--main-color)
 		transition: color .3s ease
 
-		&:hover, &:focus
+		&:hover
 			color: var(--main-color)
 
 .wrapper
@@ -192,25 +193,60 @@ li
 .default-btn
 	padding: 15px 25px
 
-.default-btn, .write-btn
-	display: inline-block
-	border: none
-	border-radius: 5px
-	color: #fff var(--main-color)
-	transition: background-color .3s ease
-	cursor: pointer
-	white-space: nowrap
+// .default-btn, .write-btn
+// 	display: inline-block
+// 	border: none
+// 	border-radius: 5px
+// 	color: #fff var(--main-color)
+// 	transition: background-color .3s ease
+// 	cursor: pointer
+// 	white-space: nowrap
 
-	&:hover, &:focus
-		background-color: var(--main-color-darken)
+// 	&:hover, &:focus
+// 		background-color: var(--main-color-darken)
 
-.write-btn
-	background-image: url("../img/ico-write.svg")
-	background-position: left 21px center
-	background-repeat: no-repeat
-	padding: 15px 20px 15px 60px
+// .write-btn
+// 	background-image: url("../img/ico-write.svg")
+// 	background-position: left 21px center
+// 	background-repeat: no-repeat
+// 	padding: 15px 20px 15px 60px
 
+input[type=radio] 
+	display: none
 
+	+ label
+		position: relative
+		display: inline-block
+		margin-bottom: 30px
+		padding-left: 53px
+		padding-top: 5px
+		vertical-align: top
+		cursor: pointer
+		margin-bottom: 32px
+
+		&:before 
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			display: block
+			width: 30px
+			height: 30px
+			border-radius: 50px
+			background-color: #fff
+			border: 1px solid #ebebeb
+
+	&:checked + label
+		&:after
+			content: ""
+			position: absolute
+			top: 11px
+			left: 11px
+			display: block
+			width: 9px
+			height: 9px
+			background-color: var(--amin-color)
+			border-radius: 50px
 
 @media (max-width: 1000px)
 	body
