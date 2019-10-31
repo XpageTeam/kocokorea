@@ -39,9 +39,6 @@ Swiper.use([Navigation, EffectFade, Pagination, Autoplay])
 document.addEventListener("DOMContentLoaded", function(){
 
 
-
-	
-
 	var mainSlaiderSwiper = new Swiper('.main-banner', {
 		effect: "fade",
 		slidesPerView: 1,
@@ -181,6 +178,65 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	});
 
+	// var menu = $('.head .main-nav__list').clone();
+	var menu = $('.head .submenu').clone();
+
+	$('.mobile-menu').prepend(menu);
+
+	$('.submenu > li').each(function(i,el){
+		var $this = $(el);
+
+		// var link = $this.closest('.submenu__link').clone();
+
+		// $this.prepend($this);
+
+	})
+
+	// var linkParent = $('.head .main-nav__item--submenu > a').clone();
+
+	// $('.main-nav__item--submenu').find('.submenu').prepend(linkParent);
+
+	
+	// $('.mobile-menu .main-nav__item--submenu > a').removeAttr('href');
+
+	// $('.mobile-menu .main-nav__item--submenu > a').click(function(){
+	// 	$(this).closest('li').addClass('js__submenu-open');
+	// });
+
+	// $('.mobile-menu .submenu').prepend('<a class="js__back">Назад</a>')
+
+	// $('.js__back').click(function(){
+	// 	$(this).closest('.main-nav__item--submenu').removeClass('js__submenu-open');
+	// })
+
+
+
+
+
+
+	// $(".main-nav__item--submenu >  .main-nav__link").click(function(e){
+
+	// 	if ($(window).width() <= 1200){
+	// 		let $this = $(this);
+
+	// 		$(".js-submenu-opened").each((i, el) => {
+	// 			let $this = $(el);
+
+	// 			if ($(e.target).is($this) || $this.has(e.target).length)
+	// 				return
+
+	// 			$this.find(".submenu").slideUp(300);
+
+	// 			$this.removeClass("js-submenu-opened");
+	// 		});
+
+	// 		$this.closest(".sub").toggleClass("js-submenu-opened");
+
+	// 		$this.next(".submenu").slideToggle(300)
+
+	// 		return false;
+	// 	}
+	// });
 
 
 })

@@ -747,11 +747,11 @@
 .tag
 	size: 45px
 	
-	&--new
-		background: url("../img/ico-new.png") no-repeat
+	// &--new
+	// 	background: url("../img/ico-new.png") no-repeat
 
-	&--hit
-		background: url("../img/ico-hit.png") no-repeat
+	// &--hit
+	// 	background: url("../img/ico-hit.png") no-repeat
 
 .tags
 
@@ -862,30 +862,10 @@
 			max-width: 257px
 
 		&-price
-			font-weight: 300
-			font-size: rem(24)
+			font-weight: 600
+			font-size: rem(16)
 			margin-bottom: 15px
 
-		&-add-to-cart
-			// transition: color .3s ease, background .3s ease
-			// border: 1px solid var(--main-color)
-			// padding: 20px 30px 20px 45px
-			// background: url("../img/ico-cat-cart.png") center left 25px no-repeat
-			// text-align: right
-			// text-decoration: none
-			// display: block
-			// color: #000
-			// white-space: nowrap
-			// display: none
-
-			// &.added
-			// 	color: #fff
-			// 	background: url("../img/ico-cat-cart-added.png") center left 25px no-repeat, var(--main-color)
-			
-			// &--subscribe
-			// 	background: #fff !important
-			// 	text-align: center
-			// 	padding: 20px 30px 
 		
 		&-subscribe-desc
 			margin-top: 10px
@@ -895,208 +875,9 @@
 	background: #fff
 
 
-.catalog-filter
-
-	&_btns
-		display: flex
-		flex-direction: column
-
-		.btn
-			margin-top: 25px
-
-	&__categories
-
-		&-title
-			text-transform: uppercase
-			font-weight: 300
-			font-size: rem(18)
-
-	&__cont
-		width: 240px
-
-
-.categories
-	
-	&__one
-
-		&-title
-			padding: 15px 25px 15px 0
-			border-bottom: 1px solid var(--border-color)
-			cursor: pointer
-			position: relative
-			font-weight: 500
-
-			&:after
-				content: ""
-				position: absolute
-				size: 7px 4px
-				background: url("../img/ico-select-arrow.png") no-repeat
-				right: 2px
-				top: calc(50% - 2px)
-				transition: transform .3s ease
-
-			a
-				color: #000
-				text-decoration: none
-
-			&.nosubsection
-
-				&:after
-					display: none
-
-		&.closed
-
-			.categories__one
-
-				&-title:after
-					transform: rotate(180deg)
-
-				&-main
-					display: none
-
-		&-main
-			padding: 30px 17px
-			border-bottom: 1px solid var(--border-color)
 
 
 
-		&-link
-			color: #000
-			text-decoration: none
-			font-size: rem(14)
-
-			&:after
-				display: inline-block
-				content: " / " attr(data-count)
-				color: #969696
-				margin-left: 5px
-
-.filter
-	
-	&__checks-group
-		display: flex
-		flex-wrap: wrap
-		border-bottom: 1px solid var(--border-color)
-		padding: 29px 0 14px
-
-		&:first-child
-			padding-top: 0
-
-		&--icons
-
-			.checkbox
-
-				&__label
-
-					&:before
-						top: calc(50% - 9px)
-
-					&:after
-						top: calc(50% - 3px)
-
-		.checkbox
-			width: 50%
-			margin-bottom: 15px
-			padding-right: 20px
-
-
-.filter__one
-
-	&:not(:first-child)
-		border-top: 1px solid var(--border-color)
-
-	&-title
-		font-size: rem(18)
-		text-transform: uppercase
-		letter-spacing: .01em
-		font-weight: 300
-
-		&-cont
-			padding: 35px 0 30px
-
-
-	&-block
-		padding-bottom: 35px
-
-.price-filter
-	
-	&__inputs
-		display: flex
-		justify-content: space-between
-		align-items: center
-
-		&:before
-			order: 1
-			content: "-"
-
-	&__input
-		width: persent(93, 210)
-		//flex: 1 1 auto
-		height: 51px
-		border: 1px solid var(--border-color)
-		padding: 0 15px
-		font-family: "Roboto"
-
-		&:first-child
-			order: 0
-
-		&:last-child
-			order: 2
-
-	&__range
-		margin: 28px 0 10px
-
-.ui-slider 
-	
-	.ui-slider
-
-		&-range
-			background: var(--main-color)
-
-		&-handle
-			border: 1px solid var(--border-color)
-			background: #fff
-			size: 22px
-			top: calc(50% - 11px)
-			margin-left: -11px
-
-			&:after
-				background: var(--main-color)
-				border-radius: 50%
-				size: 8px
-
-.ui-widget-content
-	background: var(--border-color)
-
-.filter-checks
-	
-	&__list
-		max-height: 215px
-		overflow-y: auto
-
-		&::-webkit-scrollbar
-			width: 2px
-
-			&-track
-				background: var(--border-color)
-
-			&-thumb
-				background: var(--main-color)
-
-		&-el
-
-			&:not(first-child)
-				margin-top: 17px
-
-			.checkbox
-
-				&__label
-					display: block
-
-					span
-						display: inline-block
-						margin-left: 8px
-						color: #b0b0b0
 
 .jsp
 	
@@ -1597,7 +1378,7 @@
 		margin-bottom: 0
 		justify-content: space-between
 		align-items: center
-		margin-bottom: 60px
+		margin-bottom: 40px
 
 		.rating
 
@@ -1633,6 +1414,9 @@
 	&__buy
 		margin-top: 42px
 
+		.countItemInCart
+			display: block
+
 	&__desc
 		margin-top: 36px
 
@@ -1645,6 +1429,9 @@
 		
 	&-top
 		position: relative
+
+	&__reviews-btn
+		display: flex
 
 .tovar-buy
 	display: flex
@@ -1666,6 +1453,7 @@
 		line-height: 1
 		display: flex
 		align-items: center
+		border: 1px solid var(--main-color)
 
 		&:not(:last-child)
 			margin-right: 19px
@@ -1677,21 +1465,23 @@
 			background-image: url('../img/ico-cart.svg')
 			background-repeat: no-repeat
 			background-size: contain
-			filter: invert(1)
 			margin-right: 18px
 
+		&:hover
+			background-color: #fff
+			color: var(--main-color)
+
+			&:before
+				background-image: url('../img/ico-cart-active.svg')
+
+
 
 	&__one-click
-		padding: 12px 20px 13px 52px
+		padding: 12px 20px 13px
 		text-decoration: none
 		white-space: nowrap
-
-
-	&__one-click
 		color: var(--main-color)
 		border: 1px solid currentColor
-		background: url("../img/ico-click.svg") left 20px center no-repeat
-		background-size: 20px !important
 		border-radius: 49px
 		border: 1px solid var(--main-color)
 

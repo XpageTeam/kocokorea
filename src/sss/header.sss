@@ -22,7 +22,7 @@
 			position: relative
 			padding-left: 20px
 			color: #373737
-			font-size: em(14)
+			font-size: em(18)
 			font-weight: 500
 
 
@@ -40,7 +40,7 @@
 
 	&-callback
 		a 
-			font-size: em(11)
+			font-size: em(14)
 			color: #E499B6
 
 	&-search
@@ -98,21 +98,27 @@
 		margin-left: 30px
 
 		span
+			display: flex
+
+			svg
+				size: 30px
+
+
 			&:after
 				content: attr(data-count)
 				display: block
 				position: absolute
 				top: -3px
 				right: -7px
-				size: 15px
+				size: 20px
 				border-radius: 50%
 				border: 1px solid #fff
 				background-color: var(--main-color)
 				color: #fff
-				font-size: 6px
+				font-size: 10px
 				font-weight: bold
 				text-align: center
-				line-height: 13px
+				line-height: 18px
 
 			&[data-count=""]
 				&:after
@@ -131,6 +137,19 @@
 	&__item
 		display: flex
 		align-items: center
+
+		&:first-child
+			a
+				&:after
+					background-color: transparent !important
+
+		&:not(:first-child)
+			position: relative
+
+		&.active
+			a
+				&:after
+					background-color: var(--main-color)
 
 		&:hover
 			.submenu-cont
@@ -165,6 +184,16 @@
 
 		&:hover
 			color: var(--main-color)
+
+		&:after
+			content: ''
+			display: block
+			height: 2px
+			width: 100%
+			position: absolute
+			bottom: 0
+			left: 0
+			background-color: transparent
 
 		&[href*="youtube"]
 			position: relative
@@ -213,7 +242,15 @@
 		z-index: 100
 
 		a
+			display: block
 			line-height: 20px
+
+			&:hover
+				color: var(--main-color)
+
+
+			&:first-letter
+				text-transform: uppercase
 
 		ul
 			margin: 0

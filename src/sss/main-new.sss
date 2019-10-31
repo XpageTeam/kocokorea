@@ -6,6 +6,7 @@
 @import "_title-block.sss"
 @import "_text-styles.sss"
 @import "forms.sss"
+@import "filter.sss"
 
 // @import "_standart-page.sss"
 
@@ -31,6 +32,7 @@
 @import "about.sss"
 @import "404.sss"
 @import "contacts.sss"
+@import "serach-result.sss"
 
 
 .cat2__one-add-to-cart
@@ -43,10 +45,15 @@
 		background-position: center
 		background-size: contain
 		margin-right: 15px
-		filter: invert(1)
 
 	&:hover
 		color: var(--main-color)
+
+		&:before
+			background-image: url('../img/ico-cart-active.svg')
+
+
+
 
 @supports (display: grid)
 
@@ -127,6 +134,9 @@
 	width: 100%
 	padding: 0
 	margin: 0 0 auto 0
+	min-height: 100vh
+	display: flex
+	flex-direction: column
 
 .price
 	font-weight: 600
@@ -264,7 +274,30 @@
 	.cat2__one-img-cont
 		min-height: auto
 
-	.cat2 .cat2__one-fav-add-cont
-		left: 15px
-		top: 15px
+	.cat2 
+		.cat2__one-fav-add-cont
+			left: 15px
+			top: 15px
+
+		.cat2__one-add-to-cart
+			right: 23px
+			size: 35px
+			font-size: 0
+			padding: 0
+
+			&:before
+				margin: 0
+
+	.doc-panel .btn-panel
+		padding: 15px 0
+
+	.sort-select
+		flex-direction: row
+		padding-left: 5px
+
+		&__select
+			padding: 0 22px 0 0px
+			margin-top: 0
+			background-position: center right 7px!important
+
 

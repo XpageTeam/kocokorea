@@ -1,0 +1,219 @@
+.catalog-filter
+
+	&_btns
+		display: flex
+		flex-direction: column
+
+		.btn
+			margin-top: 25px
+
+	&__categories
+
+		&-title
+			text-transform: uppercase
+			font-weight: 300
+			font-size: rem(18)
+
+	&__cont
+		width: 240px
+
+
+.categories
+	
+	&__one
+
+		&-title
+			padding: 15px 25px 15px 0
+			border-bottom: 1px solid var(--border-color)
+			cursor: pointer
+			position: relative
+			font-weight: 500
+
+			&:after
+				content: ""
+				position: absolute
+				display: block
+				size: 6px
+				right: 2px
+				top: calc(50% - 3px)
+				transition: transform .3s ease
+				border-right: 1px solid #000
+				border-top: 1px solid #000
+				transform: rotate(45deg)
+
+			a
+				color: #000
+				text-decoration: none
+
+			// &.nosubsection
+
+			// 	&:after
+			// 		display: none
+
+		// &.closed
+
+		// 	.categories__one
+
+		// 		&-title:after
+		// 			transform: rotate(180deg)
+
+		// 		&-main
+		// 			display: none
+
+		&-main
+			padding: 30px 17px
+			border-bottom: 1px solid var(--border-color)
+
+
+
+		&-link
+			color: #000
+			text-decoration: none
+			font-size: rem(14)
+
+			&:after
+				display: inline-block
+				content: " / " attr(data-count)
+				color: #969696
+				margin-left: 5px
+
+
+.filter
+	
+	&__checks-group
+		display: flex
+		flex-wrap: wrap
+		border-bottom: 1px solid var(--border-color)
+		padding: 29px 0 14px
+
+		&:first-child
+			padding-top: 0
+
+		&--icons
+
+			.checkbox
+
+				&__label
+
+					&:before
+						top: calc(50% - 9px)
+
+					&:after
+						top: calc(50% - 3px)
+
+		.checkbox
+			width: 50%
+			margin-bottom: 15px
+			padding-right: 20px
+
+
+.filter__one
+
+	&:not(:first-child)
+		border-top: 1px solid var(--border-color)
+
+	&-title
+		position: relative
+		font-size: rem(14)
+		letter-spacing: .02em
+		font-weight: 600
+		display: block
+
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			right: 0
+			top: 2px
+			size: 6px
+			border-right: 1px solid #393939
+			border-bottom: 1px solid #393939
+			transform: rotate(45deg)
+
+
+		&-cont
+			padding: 35px 0 30px
+
+
+	&-block
+		padding-bottom: 35px
+
+.price-filter
+	
+	&__inputs
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+		&:before
+			order: 1
+			content: "-"
+
+	&__input
+		width: persent(93, 210)
+		//flex: 1 1 auto
+		height: 51px
+		border: 1px solid var(--border-color)
+		padding: 0 15px
+		font-family: "Roboto"
+
+		&:first-child
+			order: 0
+
+		&:last-child
+			order: 2
+
+	&__range
+		margin: 28px 0 10px
+
+.ui-slider 
+	
+	.ui-slider
+
+		&-range
+			background: var(--main-color)
+
+		&-handle
+			border: 1px solid var(--border-color)
+			background: #fff
+			size: 22px
+			top: calc(50% - 11px)
+			margin-left: -11px
+
+			&:after
+				background: var(--main-color)
+				border-radius: 50%
+				size: 8px
+
+.ui-widget-content
+	background: var(--border-color)
+
+.filter-checks
+	
+	&__list
+		max-height: 215px
+		overflow-y: auto
+
+		&::-webkit-scrollbar
+			width: 2px
+
+			&-track
+				background: var(--border-color)
+
+			&-thumb
+				background: var(--main-color)
+
+		&-el
+
+			&:not(first-child)
+				margin-top: 17px
+
+			.checkbox
+
+				&__label
+					display: block
+
+					span
+						display: inline-block
+						margin-left: 8px
+						color: #b0b0b0

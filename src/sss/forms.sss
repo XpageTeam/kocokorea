@@ -35,6 +35,10 @@
 	padding: 50px 55px 50px
 	background: #fff
 
+	form
+		br
+			display: none
+
 	&__text
 
 		&-bottom
@@ -42,7 +46,6 @@
 			line-height: 1.571
 			font-weight: 100
 			letter-spacing: .01em
-			text-align: center
 			line-height: rem(22)
 
 			span
@@ -54,21 +57,20 @@
 
 	&__title
 		font-size: rem(30)
-		text-align: center
-		font-weight: bold
+		font-weight: 600
 		margin-bottom: 30px
 		color: #000
-		text-transform: uppercase
 
 	&-text-cont
 		display: flex
 		justify-content: center
 
 	&__text
-		text-align: center
 		font-size: rem(14)
 		line-height: rem(20)
-		margin-top: -15px
+		margin-bottom: 30px
+		margin-top: -20px
+
 
 	&-wrap
 		display: flex
@@ -92,10 +94,10 @@
 		flex-direction: column-reverse
 		justify-content: flex-end
 		box-sizing: border-box
-		width: 47.2%
+		width: 48.2%
 		min-width: 10px
 		position: relative
-		margin-bottom: vh(27)
+		margin-bottom: 20px
 
 		&--rating
 			flex-direction: row-reverse
@@ -121,19 +123,20 @@
 
 	&__input
 		box-sizing: border-box
-		size: 100% 60px
+		size: 100% 55px
 		border: 1px solid var(--border-color)
 		border-radius: 1px
 		padding: 0 17px
 		outline: none
 		appearance: none
+		border-radius: 5px
 
 		&_error
-			border-color: red
+			border-color: var(--main-color)
 
 		&[required] + .forms__label:after
 			content: "*"
-			color: red
+			color: var(--main-color)
 
 		&--select
 			-webkit-appearance: none
@@ -172,7 +175,7 @@
 		color: #777777
 
 	&__label
-		margin-bottom: 16px
+		margin-bottom: 10px
 
 		&--file
 			order: 1
@@ -261,12 +264,11 @@
 
 	&-submit-cont
 		display: flex
-		justify-content: center
-		margin-top: vh(40)
+		margin-top: 40px
 
 	&__submit
 		color: #000
-		border: 2px solid var(--main-color)
+		border: 1px solid var(--main-color)
 		cursor: pointer
 		background: #fff
 		font-size: rem(18)
@@ -274,6 +276,24 @@
 		padding: 10px 30px 12px
 		display: inline-block
 		appearance: none
+
+		display: inline-block
+		background-color: var(--main-color)
+		border: 0
+		border-radius: 54px
+		font-size: em(14)
+		font-weight: 500
+		color: #fff
+		padding: 17px 35px
+		border: 1px solid transparent
+		transition: background .3s ease, color .3s ease
+		text-align: center
+		cursor: pointer
+		display: flex
+		align-items: center
+		line-height: 1
+		justify-content: center
+
 
 	&__error
 

@@ -1740,6 +1740,13 @@ div.instagram
 	&__btn
 		padding: 20px 0 0
 		margin: auto 0 0
+		display: flex
+
+		.default-btn
+			white-space: nowrap
+
+			&:not(:first-child)
+				margin-left: 20px
 
 	&__right
 
@@ -1747,6 +1754,7 @@ div.instagram
 			margin: 0 0 15px 24px
 
 	&__left
+		margin-right: 20px
 
 		> ul
 
@@ -1754,6 +1762,7 @@ div.instagram
 				line-height: lh(28, 14)
 
 	&__list
+		margin-bottom: 0
 
 		&-title
 			font-weight: bold
@@ -1827,14 +1836,14 @@ div.instagram
 	font-weight: bold
 	padding-left: 31px
 	position: relative
-	margin-left: 24px
+	margin-right: 24px
 
 	&:before
 		content: ''
 		border-radius: 50%
 		size: 18px
 		position: absolute
-		top: 0
+		top: -2px
 		left: 0
 
 	&--received
@@ -3325,7 +3334,8 @@ body.js__fixed
 			a 
 				color: #000
 		.bread-crumbs__link:after
-			background: url(../img/ico-breadcrumbs-arrow.png) no-repeat
+			background: url('../img/ico-breadcrumbs-arrow.png') no-repeat
+			
 		.title-block__btn
 			background: #009d4a
 			color: #fff
@@ -3343,15 +3353,7 @@ body.js__fixed
 	html
 		font-size: 95%
 
-	.menu
-
-		&__link
-
-		&__el
-			margin-bottom: 0 !important
-
-			&:not(:last-child)
-				padding-right: 16px
+	
 	.promo-list__link-desc
 		padding: 20px 2rem
 
@@ -3451,19 +3453,7 @@ body.js__fixed
 			&-title, &-link-cont
 				margin-top: 1.5rem
 
-	.menu
-
-		&__el
-			padding-bottom: 40px
-
-			&.sub
-
-				.menu
-
-					&__link
-
-						&:before
-							bottom: -41px
+	
 
 	.cat2
 		margin: 0 0 -20px -20px
@@ -3501,136 +3491,7 @@ body.js__fixed
 		background: #fff
 		z-index: 10
 
-	.js-menu-opened
-
-		.head, .content, .mobile-catalog
-			transform: translate3d(-280px, 0, 0)
-
-		.head__menu
-			opacity: 1
-			pointer-events: all
-
-	.head
-
-		&__menu
-			position: absolute
-			top: 0
-			width: 280px
-			height: 100%
-			overflow: hidden
-			right: 0
-			margin: 0
-			background: #fff
-			z-index: 1
-			transition: opacity .3s ease
-			opacity: 0
-			pointer-events: none
-
-			&:before
-				content: ""
-				position: absolute
-				box-shadow: 0 0 10px rgba(0,0,0,0.7)
-				top: 0
-				height: 100%
-				left: -.1rem
-				width: .1rem
-				z-index: 10
-
-			.footer-call
-				border: 1px solid #139658
-				padding: 10px
-				text-decoration: none
-				color: #000
-				display: inline-block
-
-			&-app
-				border-top: 1px solid var(--border-color)
-				padding: 30px 20px 0
-
-				.app
-
-					&__title
-						margin: 0 0 10px
-
-				.shops__aside-app
-					margin: 0
-					padding: 0 0 15px
-
-	.js__moved-phone
-
-		.footer-phone
-			margin-bottom: 15px
-			width: 100%
-			display: block
-
-			a
-				font-size: rem(18)
-				text-decoration: none
 	
-	.submenu
-		pointer-events: all
-		opacity: 1
-		padding: 0 !important
-		position: static
-		display: none
-		box-shadow: none
-		transform: none !important
-
-		&__list
-			position: absolute
-			top: 0
-			left: 100%
-
-		&__col
-			width: 100%
-			margin-bottom: 0 !important
-
-			&:not(:last-child)
-				margin-right: auto
-				border-bottom: 1px solid var(--border-color)
-
-
-		&__title
-			margin-bottom: 0
-			font-size: 1rem
-
-			a
-				display: block
-				padding: 15px 20px 15px 30px
-				font-weight: 300
-
-	.menu
-		flex-direction: column
-		position: relative
-		overflow-x: hidden
-		overflow-y: auto
-
-		&__link
-			display: block
-			padding: 15px 20px
-			font-weight: 300
-
-			&:before
-				display: none
-
-			&:after
-				top: calc(50% - 2px) !important
-				right: 20px !important
-				transition: transform .3s ease
-
-		&__el
-			padding-bottom: 0
-			border-bottom: 1px solid var(--border-color)
-
-			&:not(:last-child)
-				padding-right: 0
-
-			&.js-submenu-opened
-
-				.menu__link
-
-					&:after
-						transform: rotate(180deg)
 
 	.city
 		top: 30px
@@ -3663,9 +3524,6 @@ body.js__fixed
 			width: 100%
 
 	
-
-	.content
-		margin: 2rem 0 0
 
 	.head
 
@@ -5140,7 +4998,7 @@ body.js__fixed
 				&-add-to-cart
 					position: absolute
 					right: 23px
-					bottom: 31px
+					bottom: 20px
 
 		.cat2__one-img-cont
 			max-height: 205px
@@ -6303,22 +6161,7 @@ body.js__fixed
 			margin-left: 0
 			margin-right: auto
 
-	.catalog
-		flex-direction: column
 
-		&-filter
-			padding: 1.4rem
-			display: none
-
-		&-filter__cont, &__cat2
-			width: auto
-
-		&__cat2
-
-			.paginator
-
-				&__cont
-					margin: 2rem 0 0
 
 
 @media screen and (max-width: 480px)

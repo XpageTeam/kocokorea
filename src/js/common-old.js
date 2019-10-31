@@ -78,51 +78,51 @@ let loadScripts = () =>{
 
 	sameHeights($(".a-advantage__title"))
 
-	window.menu = new mobileMenu({
-		burger: ".burger",
-		menu: ".main-nav",
-		submenu: false,
-		menuActiveClass: "js__opened",
-		bodyActiveClass: "js-menu-opened",
-		ignoreWarnings: false,
-		fixBody: true,
-		media: "screen and (max-width: 1200px)"
-	});
+	// window.menu = new mobileMenu({
+	// 	burger: ".burger",
+	// 	menu: ".main-nav",
+	// 	submenu: false,
+	// 	menuActiveClass: "js__opened",
+	// 	bodyActiveClass: "js-menu-opened",
+	// 	ignoreWarnings: false,
+	// 	fixBody: true,
+	// 	media: "screen and (max-width: 1200px)"
+	// });
 
 
-	$(".mobile-search").click(function(){
-		$("body").toggleClass("js__search-opened")
-	});
+	// $(".mobile-search").click(function(){
+	// 	$("body").toggleClass("js__search-opened")
+	// });
 
-	class Menu {
-		set $menu(selector){
-			this._menu = selector;
-		}
-		get $menu(){
-			return $(this._menu);
-		}
-		constructor($obj){
-			this.$menu = $obj;
-		}
+	// class Menu {
+	// 	set $menu(selector){
+	// 		this._menu = selector;
+	// 	}
+	// 	get $menu(){
+	// 		return $(this._menu);
+	// 	}
+	// 	constructor($obj){
+	// 		this.$menu = $obj;
+	// 	}
 
-		open(el){
-			$(el).find(".submenu-cont").addClass("js__opened");
-		}
+	// 	open(el){
+	// 		$(el).find(".submenu-cont").addClass("js__opened");
+	// 	}
 
-		close(){
-			$(".submenu-cont").removeClass("js__opened");
-		}
-	}
+	// 	close(){
+	// 		$(".submenu-cont").removeClass("js__opened");
+	// 	}
+	// }
 
-	let menu = new Menu(".head-bot .main-nav__list");
+	// let menu = new Menu(".head .main-nav__list");
 
-	$(".head-bot .main-nav__list").menuAim({
-		// submenuSelector: ".submenu",
-		activate: menu.open,
-   		deactivate: menu.close,
-   		submenuDirection: "below",
-   		exitMenu: menu.close,
-	})
+	// $(".head .main-nav__list").menuAim({
+	// 	// submenuSelector: ".submenu",
+	// 	activate: menu.open,
+ //   		deactivate: menu.close,
+ //   		submenuDirection: "below",
+ //   		exitMenu: menu.close,
+	// })
 
 
 	if($( "#datepicker").length){
@@ -169,73 +169,47 @@ let loadScripts = () =>{
 
 
 
-		$(".head__menu").append("<div class='head__menu-footer js__moved-phone'><div class='head__menu-footer js__moved-msg'></div></div><div class='head__menu-footer js__moved-soc'></div>");
+		// $(".head__menu").append("<div class='head__menu-footer js__moved-phone'><div class='head__menu-footer js__moved-msg'></div></div><div class='head__menu-footer js__moved-soc'></div>");
 
-		$(".js__moved-soc").append($(".footer__soc .soc").clone())
+		// $(".js__moved-soc").append($(".footer__soc .soc").clone())
 
-		$(".js__moved-msg").append($(".shop-contact__msg .msg").clone());
+		// $(".js__moved-msg").append($(".shop-contact__msg .msg").clone());
 
-		$(".js__moved-phone").append($('.footer-phone').clone())
-			.append($('.footer-call').clone());
+		// $(".js__moved-phone").append($('.footer-phone').clone())
+		// 	.append($('.footer-call').clone());
 
-		$(".js__moved-phone").append('<a href="#feedback-modal" class="head-links__link--bonus js__callback fancybox">Обратная связь</a>');
-		$(".js__moved-phone").append('<a href="/bonus/" class="head-links__link--bonus">Бонусная карта</a>');
+		// $(".js__moved-phone").append('<a href="#feedback-modal" class="head-links__link--bonus js__callback fancybox">Обратная связь</a>');
+		// $(".js__moved-phone").append('<a href="/bonus/" class="head-links__link--bonus">Бонусная карта</a>');
 
 
-		$('.bx-ios .cities-mobile option:disabled').remove();
+		// $('.bx-ios .cities-mobile option:disabled').remove();
 
 		// var city = $('.head .city').clone();
 
 		// $('.head__menu').prepend(city);
 
-		$('.city, .city-btn__close').click(function(){
-			$('body').toggleClass('js__city--open');
-		})
+		// $('.city, .city-btn__close').click(function(){
+		// 	$('body').toggleClass('js__city--open');
+		// })
 
-		let adaptiveLinks = [];
-
-		adaptiveLinks.push({
-			name: "Личный кабинет",
-			link: $(".head-links__link--lc").attr("href"),
-			postfix: "lc",
-		});
+		// let adaptiveLinks = [];
 
 		// adaptiveLinks.push({
-		// 	name: "Избранное",
-		// 	link: $(".head-links__link--favorite").attr("href"),
-		// 	postfix: "favorite",
+		// 	name: "Личный кабинет",
+		// 	link: $(".head-links__link--lc").attr("href"),
+		// 	postfix: "lc",
 		// });
 
-		for (var key in adaptiveLinks){
-			let link = adaptiveLinks[key];
-			$(".menu").prepend("<li class='menu__el js__moved-head-link js__moved-head-link--"+link.postfix+"'>\
-				<a class='menu__link' href='"+link.link+"'>"
-				+link.name+"</a></li>")
-		}
 
-		$(".menu__el.sub .menu__link").click(function(e){
 
-			if ($(window).width() <= 1200){
-				let $this = $(this);
+		// for (var key in adaptiveLinks){
+		// 	let link = adaptiveLinks[key];
+		// 	$(".menu").prepend("<li class='menu__el js__moved-head-link js__moved-head-link--"+link.postfix+"'>\
+		// 		<a class='menu__link' href='"+link.link+"'>"
+		// 		+link.name+"</a></li>")
+		// }
 
-				$(".js-submenu-opened").each((i, el) => {
-					let $this = $(el);
-
-					if ($(e.target).is($this) || $this.has(e.target).length)
-						return
-
-					$this.find(".submenu").slideUp(300);
-
-					$this.removeClass("js-submenu-opened");
-				});
-
-				$this.closest(".sub").toggleClass("js-submenu-opened");
-
-				$this.next(".submenu").slideToggle(300)
-
-				return false;
-			}
-		});
+		
 
 		let $clonedFilterBtn = $(".catalog-filter__btn").clone();
 
@@ -963,6 +937,9 @@ document.addEventListener("DOMContentLoaded", e => {
 
 		observer.observe(lineContainer, config)
 	})()
+
+
+
 })
 
 class giftLine{

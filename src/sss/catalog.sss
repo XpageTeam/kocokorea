@@ -1,8 +1,39 @@
+.countItemInCart
+	&[data-count=""], &[data-count="0"]
+		display: none
+
 .catalog
 	flex-direction: row-reverse
 
 	&__sort
 		margin-bottom: 20px
+
+	.cat2
+		margin: 0 0 100px -20px
+
+		&__one
+			background-color: #fff
+			border-radius: 6px
+
+			&-wrap
+				margin-bottom: -100px
+				transition: box-shadow .3s ease
+
+				&:hover
+					z-index: 1000
+					box-shadow: 0px 0px 20px #E6E6E6
+
+					.cat2__one-buy
+						opacity: 1
+						pointer-events: all
+
+					.cat2__one-img-cont
+						border-color: transparent
+
+			&-buy
+				opacity: 0
+				pointer-events: none
+				transition: opacity .3s ease
 
 
 
@@ -42,3 +73,42 @@
 			margin-top: 15px
 
 
+@media (max-width: 660px)
+	
+	.catalog
+
+		.cat2
+			margin: 0 0 -25px-20px
+
+			&__one
+				border-radius: 6px
+
+				&-wrap
+					margin-bottom: 25px
+					transition: box-shadow .3s ease
+
+
+				&-buy
+					opacity: 1
+					pointer-events: all
+					transition: opacity .3s ease
+
+	.catalog
+		flex-direction: column
+
+		&-filter
+			padding: 1.4rem
+			display: none
+
+		&-filter__cont, &__cat2
+			width: auto
+
+		&__cat2
+
+			.paginator
+
+				&__cont
+					margin: 2rem 0 0
+
+	.catalog__sort
+		margin-bottom: 20px !important

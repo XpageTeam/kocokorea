@@ -178,9 +178,6 @@ li
 		border-radius: 50%
 		flex: none
 
-		img
-			max-width: 17px
-
 		&:not(:last-child)
 			margin-right: 12px
 
@@ -247,6 +244,43 @@ input[type=radio]
 			height: 9px
 			background-color: var(--amin-color)
 			border-radius: 50px
+.checkbox
+	
+	&__input
+		display: none
+
+		&:checked
+
+			+ label
+				
+				&:before
+					opacity: 1
+					background-color: var(--main-color)
+					background-image: url("../img/ico-check.svg")
+					border-color: var(--main-color)
+
+	&__label
+		position: relative
+		padding-left: 30px
+		cursor: pointer
+		min-height: 20px
+		display: flex
+		align-items: center
+		font-size: 14px
+
+		&:before
+			position: absolute
+			content: ""
+
+		&:before
+			background-color: #fff
+			size: 20px
+			left: 0
+			top: 0px
+			border: 1px solid var(--border-color)
+			background-repeat: no-repeat
+			background-position: 50%
+			border-radius: 2px
 
 @media (max-width: 1000px)
 	body
