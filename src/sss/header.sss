@@ -324,42 +324,79 @@
 @media (max-width: 1000px)
 	
 	.burger
+		z-index: 1000000
 		display: flex
-		flex-direction: column
-		size: 26px 18px
-		justify-content: space-between
-		cursor: pointer
-		margin-left: 30px
+		justify-content: flex-end
+		align-items: center
+		box-sizing: content-box
+		size: 15px
+		padding: 15px
+		background: 0 0
+		border: 0
+		user-select: none
+		margin: -15px -15px -15px 30px
 
-		&:before, &:after
-			display: block
-			content: ""
-			transform-origin: left
-			transition: transform .3s ease, width .3s ease
+		&:before 
+			display: none
 
-		span, &:before, &:after
-			background: #000
-			height: 2px
-			width: 100%
 
 		span
-			transition: opacity .3s ease
-
-		&.js-active
-
-			$angle: 42deg
-
-			&:before, &:after
-				width: 94%
+			position: relative
+			display: inline-block
+			width: 15px
+			height: 2px
+			vertical-align: bottom
+			background: #000
+			transition: background .2s .4s
 
 			&:before
-				transform: rotate($angle)
-
+				border-radius: 0
+				transform: none
+				content: ""
+				position: absolute
+				right: 0
+				top: 5px
+				width: 15px
+				height: 2px
+				background: #000
+				transform-origin: 50% 50%
+				transition: top .3s .3s ease, transform .3s ease, width .3s ease
 			&:after
-				transform: rotate(-$angle)
+				content: ""
+				position: absolute
+				right: 0
+				top: -5px
+				width: 15px
+				height: 2px
+				background: #000
+				transform-origin: 50% 50%
+				transition: top .3s .3s ease, transform .3s ease, width .3s ease
 
-			span
-				opacity: 0
+
+
+	.js-menu-opened
+
+
+		.burger 
+			> span
+				background: 0 0
+		.burger 
+			> span
+				&:before
+					transform: rotate3d(0,0,1,45deg)
+					top: 0
+					transition: top .3s,transform .3s .5s
+					width: 15px
+		.burger 
+			> span
+				&:after 
+					transform: rotate3d(0,0,1,-45deg)
+					top: 0
+					transition: top .3s,transform .3s .5s
+					width: 15px
+
+
+
 
 	.head
 		border-bottom: 1px solid var(--border-color)

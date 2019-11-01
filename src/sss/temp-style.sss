@@ -4870,10 +4870,6 @@ body.js__fixed
 
 
 
-	.js-menu-opened
-
-		.mobile-catalog, .head, .content
-			transform: translate3d(280px,0,0)
 
 	.mobile-search
 		background: url("../img/ico-mobile-search.png") no-repeat
@@ -5576,7 +5572,8 @@ body.js__fixed
 
 		&__title
 			width: 100%
-			margin-bottom: 110px
+			// был огромный отступ, возможно не просто так
+			// margin-bottom: 110px
 
 		&:not(:first-child) 
 

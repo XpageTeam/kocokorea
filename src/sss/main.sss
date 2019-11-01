@@ -285,11 +285,6 @@
 					flex-direction: column-reverse
 					position: relative
 
-			&__label
-
-				&:after
-					color: #59aa50 !important
-
 	&__bot
 		display: flex
 		align-items: center
@@ -1927,6 +1922,13 @@ table.title-search-result
 		letter-spacing: .01em
 		font-size: rem(14)
 		line-height: 1.7
+
+		*
+			display: block
+
+		br
+			&:only-child
+				display: none
 
 		a
 			text-decoration: none

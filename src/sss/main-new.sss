@@ -35,6 +35,17 @@
 @import "serach-result.sss"
 
 
+.cart-footer__bonus
+	display: none
+
+#item_add_to_cart
+	.forms__text
+		margin-top: 0
+
+#item_add_to_cart--img
+	text-align: center
+
+
 .cat2__one-add-to-cart
 	&:before
 		content: ''
@@ -138,6 +149,9 @@
 	display: flex
 	flex-direction: column
 
+.footer
+	flex: none
+
 .price
 	font-weight: 600
 	font-size: em(16)
@@ -208,6 +222,14 @@
 
 
 @media (max-width: 660px)
+
+	.cat2 .cat2__one-img-cont figure
+		display: flex
+		align-items: center
+		justify-content: center
+
+	.cart-item__close
+		top: 8px
 	
 	.blog__list
 		grid-template-columns: repeat(1,1fr)

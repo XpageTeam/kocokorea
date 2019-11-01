@@ -19,12 +19,15 @@ if (!Array.from) {
 }
 
 
+if($(window).width() > 667){
 
-$(window).on("load", _ => {
-	$(".cat2__one-img-cont").height(Math.max(...$(".cat2__one-img-cont").map(function(){
-	    return $(this).height()
-	})));
-});
+	$(window).on("load", _ => {
+		$(".cat2__one-img-cont").height(Math.max(...$(".cat2__one-img-cont").map(function(){
+		    return $(this).height()
+		})));
+	});
+
+}
 
 $(window).on("resize", function(){
 	if (window.matchMedia("screen and (max-width: 980px)").matches && $(".fancybox-inner #popup-cart").length)

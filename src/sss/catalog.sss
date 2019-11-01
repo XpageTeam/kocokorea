@@ -92,13 +92,20 @@
 					opacity: 1
 					pointer-events: all
 					transition: opacity .3s ease
+					padding-top: 20px
+
+	
 
 	.catalog
 		flex-direction: column
 
+
 		&-filter
-			padding: 1.4rem
+			padding: 0 1.4rem
 			display: none
+
+			&:first-child
+				padding-top: 20px
 
 		&-filter__cont, &__cat2
 			width: auto
@@ -112,3 +119,4 @@
 
 	.catalog__sort
 		margin-bottom: 20px !important
+

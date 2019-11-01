@@ -1,29 +1,52 @@
 .mobile-menu
-	// transform: translate3d(-100%,0,0)
+	transform: translate3d(-100%,0,0)
 	position: fixed
 	top: 0
 	left: 0
 	bottom: 0
-	width: 250px
+	width: 100%
 	background-color: #fff
 	opacity: 1
 	z-index: 100
 	background-color: #fff4f8
 	overflow-y: auto
-	overflow-x: hidden 
-	opacity: 0
-	pointer-events: none
+	overflow-x: hidden
+	transition: transform .3s ease
+	display: flex
+	flex-direction: column
+
+	&__top
+		display: flex
+		justify-content: space-between
+		order: -1
+		padding: 23px 25px
+		flex: none
+
+		svg
+			display: flex
+			height: 20px
+
+		a
+			display: inline-block
+			width: 80px
+
+	&__footer
+		border: 1px solid #EADBE0
+		margin-top: auto
+		padding: 25px
+		flex: none
+
+	.head-phone, .head-callback
+		display: block
+
+	.head-callback
+		padding-left: 20px
+
 
 	.main-nav
 		&__list
 			flex-direction: column
 
-			a
-				display: block
-				line-height: 1
-				padding: 15px
-				font-size: em(16)
-				border-bottom: 1px solid var(--main-color)
 
 
 		&__item
@@ -38,26 +61,65 @@
 			&--submenu
 				> a
 					position: relative
-					display: none
+					background-color: var(--main-color)
+					padding: 25px
+					font-size: em(14)
+					font-weight: 500
+					color: #fff !important
+
+
+					&:before
+						content: ""
+						display: inline-block
+						margin-right: 20px
+						margin-top: -2px
+						width: 10px
+						height: 8px
+						background-image: url('../img/ico-burger-w.svg')
+						background-repeat: no-repeat
+						background-position: 50%
 
 					&:after
 						content: ''
 						display: block
 						size: 6px
 						position: absolute
-						right: 10px
+						right: 25px
 						left: auto
 						top: calc(50% - 3px)
-						border-right: 1px solid #000
-						border-top: 1px solid #000
+						border-right: 1px solid #fff
+						border-top: 1px solid #fff
 						transform: rotate(45deg)
 
+
+				&.js__submenu-open
+					> .submenu-cont
+						transform: translate3d(0,0,0)
+						pointer-events: all
+
+
 	.submenu-cont
-		position: static
+		position: fixed
 		opacity: 1
 		pointer-events: all
 		padding: 0
 		box-shadow: none
+		margin: 0
+		top: 66px
+		right: 0
+		bottom: 0
+		transform: translate3d(100%,0,0)
+		width: 100%
+		pointer-events: none
+		transition: transform .3s ease
+		display: flex
+		flex-direction: column
+		justify-content: flex-start
+		background-color: #fff4f8
+		border: 0
+
+		.main-nav__link, .submenu__link
+			padding: 15px 30px 15px 25px
 
 	.wrapper
 		padding: 0
@@ -65,30 +127,157 @@
 	.submenu
 		column-count: 1
 		column-gap: 0
-		background-color: #fff
 		z-index: 10
+		margin: 0
+
 
 		> li
 			margin-bottom: 0
 
+			> a
+				position: relative
+				font-weight: 500
+				display: flex
+				align-items: center
+
+
+				&:before
+					content: ''
+					display: block
+					size: 6px
+					border-top: 1px solid #000
+					border-right: 1px solid #000
+					transform: rotate(45deg)
+					position: absolute
+					right: 25px
+					top: calc(50% - 3px)
+
+
 		&__link
 			margin: 0
-
+	
+	.main-nav__link, .submenu a
+		display: block
+		line-height: 1
+		padding: 19px 30px 15px 55px
+		font-size: em(14)
+		background-repeat: no-repeat
 
 	// menu
 
 	.submenu-2
-		position: absolute
+		position: fixed
 		left: 0
 		top: 0
-		transform: translate3d(-100%,0,0)
+		bottom: 0
+		transform: translate3d(100%,0,0)
 		transition: transform .3s ease
-		width: 280px
+		width: 100%
+		background-color: #fff4f8
+		z-index: 1000
+		margin: 0
+		pointer-events: none
+
+		li
+			margin: 0
+
+	.submenu-3
+		margin: 0
 
 
-	.js__submenu-open
-		.submenu
+	.js__sub-submenu-open
+		.submenu-2
 			transform: translate3d(0,0,0)
+			pointer-events: all
+
+	.js__back
+		position: relative
+		display: flex !important
+		align-items: center
+
+		position: relative
+		background-color: var(--main-color)
+		padding: 25px !important
+		font-size: em(14)
+		font-weight: 500
+		color: #fff !important
+		line-height: 1
+		height: 63px
+
+		&:after
+			content: ''
+			display: block
+			size: 6px
+			border-top: 1px solid #fff
+			border-left: 1px solid #fff
+			transform: rotate(-45deg)
+			margin-left: auto
+
+
+
+	// .head-phone
+	// 	margin: 15px
+
+	// 	a
+	// 		display: flex
+	// 		align-items: center
+
+	// .head-callback
+	// 	padding: 15px
+
+	// 	a
+	// 		border: 1px solid var(--main-color)
+	// 		display: inline-block
+	// 		padding: 10px 25px
+
+	.main-nav__link
+
+		&[href="/brands/"]
+			margin-top: 20px
+			background-image: url('../img/ico-star.svg')
+			background-position: left 25px center
+
+		&[href="/blog/"]
+			background-image: url('../img/ico-blog.svg')
+			background-position: left 25px center
+
+		&[href="/about/"]
+			background-image: url('../img/ico-about.svg')
+			background-position: left 25px center
+
+		&[href="/history/"]
+			background-image: url('../img/ico-history.svg')
+			background-position: left 25px center
+
+		&[href*="youtube"]
+			background-image: url('../img/ico-y.svg')
+			background-position: left 25px center
+
+			&:before
+				display: none !important
+
+		&[href*="/reviews/"]
+			background-image: url('../img/ico-reviews.svg')
+			background-position: left 25px center
+
+		&[href*="/contacts/"]
+			background-image: url('../img/ico-conts.svg')
+			background-position: left 25px center
+	
+	.main-nav__link:after
+		display: none
+
+.js-menu-opened
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+
+	.mobile-menu
+		transform: translate3d(0,0,0)
+
+
+
 
 
 
