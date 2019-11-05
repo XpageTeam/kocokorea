@@ -15,6 +15,8 @@
 	display: flex
 	flex-direction: column
 
+
+
 	&__top
 		display: flex
 		justify-content: space-between
@@ -32,9 +34,16 @@
 
 	&__footer
 		border: 1px solid #EADBE0
-		margin-top: auto
-		padding: 25px
+		// margin-top: auto
+		padding: 20px 25px
 		flex: none
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		background-color: #fff4f8
+		position: sticky
+		bottom: 0
 
 	.head-phone, .head-callback
 		display: block
@@ -42,10 +51,18 @@
 	.head-callback
 		padding-left: 20px
 
+	.head-phone a:before
+		top: calc(50% - 5px)
+
 
 	.main-nav
 		&__list
 			flex-direction: column
+			height: calc(100vh - 66px - 80px)
+			overflow-x: hidden
+			overflow-y: auto
+			// margin-bottom: 100px
+
 
 
 
@@ -99,7 +116,7 @@
 
 
 	.submenu-cont
-		position: fixed
+		position: absolute
 		opacity: 1
 		pointer-events: all
 		padding: 0
@@ -159,16 +176,16 @@
 	.main-nav__link, .submenu a
 		display: block
 		line-height: 1
-		padding: 19px 30px 15px 55px
+		padding: 17px 30px 15px 55px
 		font-size: em(14)
 		background-repeat: no-repeat
 
-	// menu
+
 
 	.submenu-2
-		position: fixed
+		position: absolute
 		left: 0
-		top: 0
+		top: 3px
 		bottom: 0
 		transform: translate3d(100%,0,0)
 		transition: transform .3s ease
@@ -177,6 +194,8 @@
 		z-index: 1000
 		margin: 0
 		pointer-events: none
+		overflow-x: hidden
+		overflow-y: auto
 
 		li
 			margin: 0
@@ -185,17 +204,10 @@
 		margin: 0
 
 
-	.js__sub-submenu-open
-		.submenu-2
-			transform: translate3d(0,0,0)
-			pointer-events: all
-
 	.js__back
 		position: relative
 		display: flex !important
 		align-items: center
-
-		position: relative
 		background-color: var(--main-color)
 		padding: 25px !important
 		font-size: em(14)
@@ -203,6 +215,8 @@
 		color: #fff !important
 		line-height: 1
 		height: 63px
+		position: sticky
+		top: 0
 
 		&:after
 			content: ''
@@ -213,22 +227,6 @@
 			transform: rotate(-45deg)
 			margin-left: auto
 
-
-
-	// .head-phone
-	// 	margin: 15px
-
-	// 	a
-	// 		display: flex
-	// 		align-items: center
-
-	// .head-callback
-	// 	padding: 15px
-
-	// 	a
-	// 		border: 1px solid var(--main-color)
-	// 		display: inline-block
-	// 		padding: 10px 25px
 
 	.main-nav__link
 
@@ -277,9 +275,18 @@
 		transform: translate3d(0,0,0)
 
 
+.js__submenu-open
 
+	.submenu-cont
+		transform: translate3d(0,0,0)
+		pointer-events: all
 
+.js__sub-submenu-open
+	.submenu-2
+		transform: translate3d(0,0,0)
+		pointer-events: all
 
+// .js__sub-submenu-open
 
 // @media (max-width: 1000px)
 	

@@ -209,10 +209,12 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	$('.mobile-menu .main-nav__item--submenu > a').click(function(){
 		$(this).closest('li').addClass('js__submenu-open');
+		// $('body').addClass('js__submenu-open');
 	});
 
 	$('.mobile-menu .submenu .submenu__link').click(function(){
 		$(this).closest('li').addClass('js__sub-submenu-open');
+		// $('body').addClass('js__sub-submenu-open');
 	});
 
 
@@ -221,11 +223,13 @@ document.addEventListener("DOMContentLoaded", function(){
 	$('.mobile-menu .submenu-cont').prepend('<a class="js__back">Назад</a>')
 
 	$('.submenu-2 > .js__back').click(function(){
-		$('.js__submenu-open').removeClass('js__submenu-open');
+		// $('.js__submenu-open').removeClass('js__submenu-open');
+		$('.js__sub-submenu-open').removeClass('js__sub-submenu-open');
 	})
 
 	$('.submenu-cont > .js__back').click(function(){
-		$('.js__sub-submenu-open').removeClass('js__sub-submenu-open');
+		// $('.js__sub-submenu-open').removeClass('js__sub-submenu-open');
+		$('.js__submenu-open').removeClass('js__submenu-open');
 	})
 
 
