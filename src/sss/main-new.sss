@@ -34,6 +34,21 @@
 @import "contacts.sss"
 @import "serach-result.sss"
 
+.brend-catalog
+	.cat2__one-fav-add-cont
+		right: 15px
+		top: 15px
+
+	.catalog .cat2__one-wrap
+		margin-bottom: 0
+
+	.catalog .cat2__one-buy
+		opacity: 1
+		pointer-events: all
+
+	+ .news-navbar
+		margin: 22px 0 0
+
 
 .cart-footer__bonus
 	display: none
@@ -204,6 +219,10 @@
 	.tovar__sliders
 		max-width: 100%
 
+	.brend-catalog
+		.cat2__one
+			padding-bottom: 25px
+
 
 @media (max-width: 1000px)
 	
@@ -314,12 +333,24 @@
 		padding: 15px 0
 
 	.sort-select
-		flex-direction: row
-		padding-left: 5px
+		align-items: flex-start
 
 		&__select
 			padding: 0 22px 0 0px
 			margin-top: 0
 			background-position: center right 7px!important
+
+		&__label
+			padding-top: 10px
+
+	.cat2 
+		.cat2__one-tag-cont
+			left: 78px
+			top: 14px
+
+			.label
+				margin: 0
+				min-width: 100%
+				min-height: 100%
 
 
