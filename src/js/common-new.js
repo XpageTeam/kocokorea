@@ -192,29 +192,32 @@ document.addEventListener("DOMContentLoaded", function(){
 	$('.mobile-menu').prepend(menu);
 
 	$('.mobile-menu .submenu > li').each(function(i,el){
-		var $this = $(this);
 
-		var link = $this.children('.submenu__link').clone();
-		$this.children('.submenu__link').removeAttr('href');
+		var $this = $(el);
 
-		$this.find('.submenu-2').prepend(link);
+		if($this.children('div').length){
+			var link = $this.children('.submenu__link').clone();
+			$this.children('.submenu__link').removeAttr('href');
+			$this.find('.submenu-2').prepend(link);
+		}
+		
 
 	})
 
 
 	var linkCatalog = $('.mobile-menu .main-nav__item--submenu > a').clone();
+
+
 	$('.mobile-menu .main-nav__item--submenu > a').removeAttr('href');
 
 	$('.mobile-menu .submenu').prepend(linkCatalog);
 
 	$('.mobile-menu .main-nav__item--submenu > a').click(function(){
 		$(this).closest('li').addClass('js__submenu-open');
-		// $('body').addClass('js__submenu-open');
 	});
 
 	$('.mobile-menu .submenu .submenu__link').click(function(){
 		$(this).closest('li').addClass('js__sub-submenu-open');
-		// $('body').addClass('js__sub-submenu-open');
 	});
 
 
@@ -223,12 +226,10 @@ document.addEventListener("DOMContentLoaded", function(){
 	$('.mobile-menu .submenu-cont').prepend('<a class="js__back">Назад</a>')
 
 	$('.submenu-2 > .js__back').click(function(){
-		// $('.js__submenu-open').removeClass('js__submenu-open');
 		$('.js__sub-submenu-open').removeClass('js__sub-submenu-open');
 	})
 
 	$('.submenu-cont > .js__back').click(function(){
-		// $('.js__sub-submenu-open').removeClass('js__sub-submenu-open');
 		$('.js__submenu-open').removeClass('js__submenu-open');
 	})
 
