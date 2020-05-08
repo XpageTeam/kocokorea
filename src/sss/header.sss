@@ -414,9 +414,27 @@
 		max-width: 350px
 
 @media (max-width: 660px)
+
+	.head
+		.search__input
+			display: none
+
+		&-search-cont
+			order: 3
+			position: relative
+			margin: 0
+			margin-left: auto
+			width: 40px
+			height: 40px
+
 	
-	.head-search-cont
-		display: none
+
+
+	.head-search input[type=submit]
+		position: static
+		background: url('../img/ico-search.svg') no-repeat center,#fff
+		background-size: 17px!important
+	
 
 	.head-top-cont
 		position: relative
@@ -442,4 +460,4 @@
 
 	.burger
 		order: 4
-		margin-left: auto
+		margin-left: 0

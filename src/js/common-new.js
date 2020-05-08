@@ -1,19 +1,5 @@
-// import $ from "jquery"
-
-// import "./faq.js"
-// import "./contacts.js"
 import "./common-old.js"
-// import "./mobile-menu.js"
-
-
-import { TimelineLite, TweenLite, Linear } from 'gsap';
-import ScrollMagic from 'scrollmagic';
-//import ScrollToPlugin from "gsap/ScrollToPlugin.js"
-
-// import animation from 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js';
-
-import 'imports-loader?define=>false!scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators'
-import 'imports-loader?define=>false!scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap'
+import is from "is_js"
 
 import {Swiper, Navigation, EffectFade, Pagination, Autoplay} from "swiper/dist/js/swiper.esm.js";
 
@@ -24,19 +10,19 @@ Swiper.use([Navigation, EffectFade, Pagination, Autoplay])
 // window.jQuery = $;
 
 // require("./countTo.js");
-// window.is = is
+window.is = is
 
-// window.get$ = (element) => {
-// 	return $(element)
-// }
-
-
-// require("./jquery.fancybox.js")
-// require("../css/jquery.fancybox.css")
 
 
 
 document.addEventListener("DOMContentLoaded", function(){
+
+	if(is.ios())
+		$('.rub:contains("₽")').each(function(){
+			const $this = $(this);
+
+			$this.html($this.html().replace('₽', 'Р'));
+		});
 
 
 	var mainSlaiderSwiper = new Swiper('.main-banner', {
