@@ -12,9 +12,6 @@ Swiper.use([Navigation, EffectFade, Pagination, Autoplay])
 // require("./countTo.js");
 window.is = is
 
-
-
-
 document.addEventListener("DOMContentLoaded", function(){
 
 	if(is.ios())
